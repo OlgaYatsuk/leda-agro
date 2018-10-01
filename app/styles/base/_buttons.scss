@@ -1,0 +1,15 @@
+.button {
+  background: linear-gradient(to bottom, $light-green, $dark-green);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  padding: 16px;
+  text-align: center;
+  border-radius: 50px;
+  text-decoration: none;
+  width: 170px;
+  display: block;
+  color: #fff;
+  letter-spacing: 1px;
+  box-shadow:  0 10px 40px 1px rgba(63, 198, 68, 0.4);
+}

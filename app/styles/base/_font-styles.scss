@@ -1,0 +1,16 @@
+.heading {
+  text-transform: uppercase;
+  background: linear-gradient(to right, $red 0%, $light-red 20%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+}
+
+.page-heading {
+  font-size: 2rem;
+  letter-spacing: 3px;
+}
+
+.page-heading--main-page {
+  font-size: 3rem;
+}
