@@ -1,3 +1,5 @@
+//headings
+
 .heading {
   text-transform: uppercase;
   background: linear-gradient(to right, $red 0%, $light-red 20%);
@@ -13,4 +15,26 @@
 
 .page-heading--main-page {
   font-size: 3rem;
+}
+
+.section-heading {
+  font-size: 1.5rem;
+  letter-spacing: 0.24rem;
+  text-align: center;
+}
+
+//text
+
+.text {
+  font-size: 1rem;
+  color: #fff;
+}
+
+.text-small {
+  font-size: 0.625rem;
+}
+
+
+.text-small--accent {
+  text-transform: uppercase;
 }
