@@ -1,11 +1,7 @@
-// bower:scss
-// endbower
-@import 'app';
-
-body {
-  background: #fafafa;
-  font-family: 'Montserrat', sans-serif;
-  line-height: 1.5;
-  color: #ffffff;
-}
-
+@import 'base/fonts';
+@import 'base/base';
+@import 'base/colors';
+@import 'base/font-styles';
+@import 'layouts/header';
+@import 'layouts/footer';
+@import 'components/buttons';
