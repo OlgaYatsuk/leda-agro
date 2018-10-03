@@ -6,8 +6,12 @@
 @import 'base/colors';
 @import 'base/font-styles';
 
+@import 'components/buttons';
+@import 'components/labels';
+
 @import 'layouts/header';
 @import 'layouts/navigation';
 @import 'layouts/footer';
+@import 'layouts/hero';
 
-@import 'components/buttons';
+
