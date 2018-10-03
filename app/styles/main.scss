@@ -1,7 +1,13 @@
+@import 'base/reset';
+@import 'base/breakpoints';
+@import 'base/container';
 @import 'base/fonts';
 @import 'base/base';
 @import 'base/colors';
 @import 'base/font-styles';
+
 @import 'layouts/header';
+@import 'layouts/navigation';
 @import 'layouts/footer';
+
 @import 'components/buttons';
