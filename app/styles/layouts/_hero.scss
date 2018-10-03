@@ -1,5 +1,5 @@
 .hero {
-  padding-top: 110px;
+  padding: 110px 0 70px;
   display: flex;
   justify-content: space-between;
   position: relative;
@@ -55,3 +55,28 @@
   margin-top: 40px;
   width: 170px;
 }
+
+.hero--product {
+  &::after {
+    content: '';
+  }
+}
+
+.product-gallery {
+  position: absolute;
+  bottom: 0;
+  right: 10%;
+  text-align: center;
+}
+
+.product-gallery__img {
+  width: 70px;
+  height: 45px;
+}
+
+.product-gallery__caption {
+  color: $blue;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
