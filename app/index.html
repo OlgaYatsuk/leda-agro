@@ -20,7 +20,7 @@
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
   </head>
-  <body class="nav-open">
+  <body class="">
     <!--[if IE]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -31,13 +31,13 @@
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
-
-        <main>
           @@include('./partials/head.html')
           @@include('./partials/navigation.html')
-          @@include('./partials/footer.html')
+        <main>
+          @@include('./partials/catalog.html')
+          @@include('./partials/calendar.html')
         </main>
-
+          @@include('./partials/footer.html')
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
