@@ -1,0 +1,86 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 12;
+}
+
+.header__wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.header__logo {
+  display: block;
+  margin: 20px auto;
+}
+
+
+.header__nav-toggler {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 20px;
+  width: 30px;
+
+  span {
+    position: absolute;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    transition: all .2s cubic-bezier(.17,.39,.8,.81);
+
+    &:nth-child(2),
+    &:nth-child(3) {
+      width: 50%;
+
+      body.nav-open & {
+        width: 100%;
+      }
+    }
+
+    &:first-child {
+      top: 0;
+      background: $blue;
+
+      body.nav-open & {
+        transform: rotate(45deg) translateY(-30%);
+        top: 50%;
+        height: 2px;
+        border-bottom: 2px solid $green;
+      }
+    }
+
+    &:nth-child(2) {
+      top: 30%;
+      background: $green;
+
+      body.nav-open & {
+        opacity: 0;
+      }
+    }
+
+    &:nth-child(3) {
+      top: 60%;
+      background: $orange;
+
+      body.nav-open & {
+        opacity: 0;
+      }
+    }
+
+    &:last-child {
+      bottom: 0;
+      background: $red;
+
+      body.nav-open & {
+        transform: rotate(-45deg) translateY(10%);
+        top: 50%;
+        bottom: initial;
+        border-top: 2px solid $orange;
+      }
+    }
+  }
+}
