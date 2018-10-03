@@ -23,9 +23,9 @@
 .navigation__wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   height: 100%;
-  max-height: 650px;
+  padding-left: 30px;
 }
 
 .navigation__social {
@@ -55,6 +55,7 @@
   justify-content: space-between;
   max-width: 675px;
   width: 100%;
+  padding-top: 20px;
 }
 
 .navigation__main-nav-link {
@@ -63,6 +64,11 @@
   background: -webkit-linear-gradient(left, #C4161C, #FF486F);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.navigation__pane {
+  padding-left: 30px;
+  padding-top: 60px;
 }
 
 .navigation__pane-links {
@@ -98,9 +104,9 @@
   float: left;
   display: block;
   clear: both;
-  font-size: 0.625rem;
+  font-size: 0.875rem;
   font-weight: 600;
-  line-height: 1.25rem;
+  line-height: 1.75rem;
   color: $gray-2;
   text-transform: uppercase;
   text-decoration: none;
@@ -111,3 +117,48 @@
   }
 }
 
+.navigation__lang {
+  position: absolute;
+  left: 130px;
+  bottom: 40px;
+}
+
+.navigation__lang-link {
+  position: relative;
+  font-size: .625rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $gray-2;
+  margin: 0 3px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 18px;
+    height: 10px;
+    background: url(../images/svg/l_arrow.svg) no-repeat;
+    background-size: 100%;
+    opacity: 0;
+  }
+
+  &.active {
+    &:before {
+      opacity: 1;
+    }
+  }
+
+  &:hover,
+  &.active {
+    color: $white;
+  }
+}
