@@ -6,10 +6,16 @@
 @import 'base/colors';
 @import 'base/font-styles';
 
+@import 'components/buttons';
+@import 'components/labels';
+@import 'components/sliders';
+@import 'components/hits-item';
+@import 'components/innovation';
+@import 'components/blog';
+@import 'components/catalog';
+@import 'components/calendar';
+
 @import 'layouts/header';
 @import 'layouts/navigation';
 @import 'layouts/footer';
-
-@import 'components/buttons';
-@import 'components/catalog';
-@import 'components/calendar';
+@import 'layouts/hero';

@@ -5,10 +5,22 @@
   font-weight: 600;
   padding: 16px;
   text-align: center;
+  border: 0;
   border-radius: 50px;
   text-decoration: none;
   display: block;
   color: #fff;
+  cursor: pointer;
   letter-spacing: 1px;
   box-shadow:  0 10px 40px 1px rgba(63, 198, 68, 0.4);
+  transition: .25s ease;
+
+  &:hover {
+    filter: brightness(85%);
+  }
+}
+
+.button--hero {
+  margin-top: 40px;
+  width: 170px;
 }

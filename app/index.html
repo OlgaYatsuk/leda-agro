@@ -1,45 +1,89 @@
 <!doctype html>
 <html class="no-js" lang="ua">
-  <head>
-    <meta charset="utf-8">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>leda agro</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>leda agro</title>
 
-    <!-- Place favicon.ico in the root directory -->
+  <!-- Place favicon.ico in the root directory -->
 
-    <!-- build:css styles/vendor.css -->
-    <!-- bower:css -->
-    <!-- endbower -->
-    <!-- endbuild -->
+  <!-- build:css styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick.css"/>
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+  <!-- build:js scripts/vendor/modernizr.js -->
+  <script src="/bower_components/modernizr/modernizr.js"></script>
+  <!-- endbuild -->
+</head>
+<body class="nav-open">
+<div class="blend-background">
+  <!--[if IE]>
+  <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a
+    href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+  <![endif]-->
 
-    <!-- build:css styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
-    <!-- endbuild -->
-    <!-- build:js scripts/vendor/modernizr.js -->
-    <script src="/bower_components/modernizr/modernizr.js"></script>
-    <!-- endbuild -->
-  </head>
-  <body class="">
-    <!--[if IE]>
-      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+  <!-- build:js scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="/bower_components/jquery/dist/jquery.js"></script>
+  <script src="/bower_components/modernizr/modernizr.js"></script>
+  <script src="/bower_components/slick-carousel/slick/slick.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+  @@include('./partials/head.html')
+  @@include('./partials/navigation.html')
 
-    <!-- build:js scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="/bower_components/jquery/dist/jquery.js"></script>
-    <script src="/bower_components/modernizr/modernizr.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
-          @@include('./partials/head.html')
-          @@include('./partials/navigation.html')
-        <main>
-          @@include('./partials/catalog.html')
-          @@include('./partials/calendar.html')
-        </main>
-          @@include('./partials/footer.html')
-    <!-- build:js scripts/main.js -->
-    <script src="scripts/main.js"></script>
-    <!-- endbuild -->
-  </body>
+  <main class="main">
+    <section class="container hero-slider">
+      <div class="js-main-slider">
+        <div class="hero hero--main">
+          <img src="./images/hero/hero-img-product.png" alt="tomatoes" class="hero__img hero__img--main">
+          <img src="./images/hero/hero-img-product.png" alt="tomatoes" class="hero__img hero__img--blured">
+          <article>
+            <p class="hero__label novelty-label">Новинка</p>
+            <h2 class="hero__info-heading page-heading--main-page heading">Браун кой f1</h2>
+            <p class="hero__slider-text">Томат який хочеться з'їсти</p>
+            <button class="button button--hero">До каталогу</button>
+          </article>
+        </div>
+        <div class="hero hero--main">
+          <img src="./images/hero/hero-img-product-2.png" alt="tomatoes" class="hero__img hero__img--main">
+          <img src="./images/hero/hero-img-product-2.png" alt="tomatoes" class="hero__img hero__img--blured">
+          <article>
+            <p class="hero__label novelty-label">Новинка</p>
+            <h2 class="hero__info-heading page-heading--main-page heading">Браун кой f1</h2>
+            <p class="hero__slider-text">Томат який хочеться з'їсти</p>
+            <button class="button button--hero">До каталогу</button>
+          </article>
+        </div>
+        <div class="hero hero--main">
+          <img src="./images/hero/hero-img-product-3.png" alt="tomatoes" class="hero__img hero__img--main">
+          <img src="./images/hero/hero-img-product-3.png" alt="tomatoes" class="hero__img hero__img--blured">
+          <article>
+            <p class="hero__label novelty-label">Новинка</p>
+            <h2 class="hero__info-heading page-heading--main-page heading">Браун кой f1</h2>
+            <p class="hero__slider-text">Томат який хочеться з'їсти</p>
+            <button class="button button--hero">До каталогу</button>
+          </article>
+        </div>
+      </div>
+      <p class="slider__text text-small slider__text--prev">БРАУН КОЙ F1</p>
+      <p class="slider__text text-small slider__text--next">AROMA F1</p>
+    </section>
+    @@include('./partials/catalog.html')
+    @@include('./partials/calendar.html')
+  </main>
+
+  @@include('./partials/footer.html')
+
+  <!-- build:js scripts/main.js -->
+  <script src="scripts/main.js"></script>
+  <!-- endbuild -->
+</div>
+</body>
 </html>
