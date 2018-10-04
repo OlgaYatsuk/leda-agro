@@ -39,4 +39,6 @@
 .hits__item-img {
   display: block;
   flex: 0 1 50%;
+  object-fit: cover;
+  max-width: 860px;
 }
