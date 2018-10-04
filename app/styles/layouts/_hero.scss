@@ -1,6 +1,7 @@
 .hero {
   position: relative;
   height: 550px;
+  margin-bottom: 230px;
   max-width: 970px;
   text-align: center;
   background: radial-gradient(560.00px at 0% 100%, rgba(6, 92, 153, 0.5) 0%, rgba(6, 92, 153, 0) 100%), #000000;
@@ -25,6 +26,7 @@
   padding: 110px 0 70px;
   height: auto;
   text-align: left;
+  margin-bottom: 0;
   display: flex!important;
 }
 
