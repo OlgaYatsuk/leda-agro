@@ -12,14 +12,6 @@
   flex-direction: row-reverse;
 }
 
-.hits__item-name {
-  color: $red;
-  font-size: 1.625rem;
-  text-transform: uppercase;
-  letter-spacing: 2.6px;
-  font-weight: 800;
-}
-
 .hits__item-info {
   max-width: 520px;
   margin: 45px 6% 0;
@@ -39,4 +31,6 @@
 .hits__item-img {
   display: block;
   flex: 0 1 50%;
+  object-fit: cover;
+  max-width: 860px;
 }

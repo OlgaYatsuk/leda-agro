@@ -14,7 +14,7 @@ class Slider {
   constructor(sliderSelector, config) {
     const defaultConfig = {
       autoplaySpeed: 4000,
-      autoplay: false,
+      autoplay: true,
       pauseOnHover: true,
       slidesToShow: 1,
       slidesToScroll: 1,

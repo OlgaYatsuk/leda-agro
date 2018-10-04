@@ -1,6 +1,7 @@
 .hero {
   position: relative;
   height: 550px;
+  margin-bottom: 230px;
   max-width: 970px;
   text-align: center;
   background: radial-gradient(560.00px at 0% 100%, rgba(6, 92, 153, 0.5) 0%, rgba(6, 92, 153, 0) 100%), #000000;
@@ -12,7 +13,7 @@
     left: 43%;
     z-index: 0;
     transform: translateX(-50%) translateY(-50%);
-    mix-blend-mode: difference;
+    mix-blend-mode: screen;
   }
 }
 
@@ -25,11 +26,13 @@
   padding: 110px 0 70px;
   height: auto;
   text-align: left;
+  margin-bottom: 0;
   display: flex!important;
 }
 
 .hero-slider {
   position: relative;
+  margin-bottom: 230px;
 
   &::after {
     content: url(../images/hero/hero-bottom-img.png);
@@ -39,7 +42,7 @@
     z-index: 0;
     right: 10%;
     transform: translateX(40%) translateY(-50%);
-    mix-blend-mode: difference;
+    mix-blend-mode: screen;
   }
 }
 
@@ -96,6 +99,7 @@
   object-fit: cover;
   max-width: 50%;
   max-height: 395px;
+  mix-blend-mode: screen;
 }
 
 .hero__img--main {
