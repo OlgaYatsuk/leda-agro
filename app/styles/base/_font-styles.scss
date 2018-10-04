@@ -2,7 +2,7 @@
 
 .heading {
   text-transform: uppercase;
-  background: linear-gradient(to right, $red 0%, $light-red 20%);
+  background: linear-gradient(to right, $red 0%, $light-red 70%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 900;
@@ -16,6 +16,7 @@
 
 .page-heading--main-page {
   font-size: 3rem;
+  margin-top: 50px;
 }
 
 .section-heading {
@@ -35,7 +36,6 @@
   font-size: 0.625rem;
   letter-spacing: 1px;
 }
-
 
 .text-small--accent {
   text-transform: uppercase;

@@ -10,6 +10,7 @@
 
   <!-- build:css styles/vendor.css -->
   <!-- bower:css -->
+  <link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick.css"/>
   <!-- endbower -->
   <!-- endbuild -->
 
@@ -30,28 +31,49 @@
 <!-- bower:js -->
 <script src="/bower_components/jquery/dist/jquery.js"></script>
 <script src="/bower_components/modernizr/modernizr.js"></script>
+<script src="/bower_components/slick-carousel/slick/slick.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 @@include('./partials/head.html')
 @@include('./partials/navigation.html')
 
-<main>
-  <section class="hero container">
-      <article>
-        <p class="hero__label novelty-label">Новинка</p>
-        <div class="hero-info">
-          <img src="./images/hero/hero-img-product.png" alt="product" class="hero__info-img" />
-          <div>
-            <h2 class="hero__info-heading heading">Браун кой f1</h2>
-            <p class="hero__info-text text-small">Ексклюзивне насіння гібриду томату з унікальним смаком та забарвленням</p>
-            <p class="hero__info-amount text-small">Фасування - 10 од.</p>
-          </div>
-        </div>
-        <button class="hero__button button">Придбати</button>
-      </article>
-      <img src="./images/hero/hero-img-tomato.png" alt="tomatoes" class="hero__img">
+<main class="main">
+  <section class="container hero-slider">
+    <div class="js-main-slider">
+      <div class="hero hero--main">
+        <img src="./images/hero/hero-img-product.png" alt="tomatoes" class="hero__img hero__img--main">
+        <img src="./images/hero/hero-img-product.png" alt="tomatoes" class="hero__img hero__img--blured">
+        <article>
+          <p class="hero__label novelty-label">Новинка</p>
+          <h2 class="hero__info-heading page-heading--main-page heading">Браун кой f1</h2>
+          <p class="hero__slider-text">Томат який хочеться з'їсти</p>
+          <button class="button button--hero">До каталогу</button>
+        </article>
+      </div>
+      <div class="hero hero--main">
+        <img src="./images/hero/hero-img-product-2.png" alt="tomatoes" class="hero__img hero__img--main">
+        <img src="./images/hero/hero-img-product-2.png" alt="tomatoes" class="hero__img hero__img--blured">
+        <article>
+          <p class="hero__label novelty-label">Новинка</p>
+          <h2 class="hero__info-heading page-heading--main-page heading">Браун кой f1</h2>
+          <p class="hero__slider-text">Томат який хочеться з'їсти</p>
+          <button class="button button--hero">До каталогу</button>
+        </article>
+      </div>
+      <div class="hero hero--main">
+        <img src="./images/hero/hero-img-product-3.png" alt="tomatoes" class="hero__img hero__img--main">
+        <img src="./images/hero/hero-img-product-3.png" alt="tomatoes" class="hero__img hero__img--blured">
+        <article>
+          <p class="hero__label novelty-label">Новинка</p>
+          <h2 class="hero__info-heading page-heading--main-page heading">Браун кой f1</h2>
+          <p class="hero__slider-text">Томат який хочеться з'їсти</p>
+          <button class="button button--hero">До каталогу</button>
+        </article>
+      </div>
+    </div>
+    <p class="slider__text text-small slider__text--prev">БРАУН КОЙ F1</p>
+    <p class="slider__text text-small slider__text--next">AROMA F1</p>
   </section>
-
 </main>
 
 @@include('./partials/footer.html')

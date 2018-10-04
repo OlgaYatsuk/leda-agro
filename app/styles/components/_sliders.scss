@@ -1,0 +1,26 @@
+.arrow-link {
+  position: absolute;
+  bottom: -3px;
+}
+
+.arrow-link--next {
+  right: 37%;
+}
+
+.arrow-link--prev {
+  left: 37%;
+}
+
+.slider__text {
+  position: absolute;
+  bottom: 0;
+  text-transform: uppercase;
+}
+
+.slider__text--next {
+   right: 41%;
+ }
+
+.slider__text--prev {
+  left: 41%;
+}
