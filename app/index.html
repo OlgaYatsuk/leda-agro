@@ -36,22 +36,19 @@
 @@include('./partials/navigation.html')
 
 <main>
-  <section class="hero container">
+  <section class="container js-main-slider">
+    <div class="hero hero--main">
+      <img src="./images/hero/hero-img-product.png" alt="tomatoes" class="hero__img hero__img--main">
+      <img src="./images/hero/hero-img-product.png" alt="tomatoes" class="hero__img hero__img--blured">
       <article>
-        <p class="hero__label novelty-label">Новинка</p>
-        <div class="hero-info">
-          <img src="./images/hero/hero-img-product.png" alt="product" class="hero__info-img" />
-          <div>
-            <h2 class="hero__info-heading heading">Браун кой f1</h2>
-            <p class="hero__info-text text-small">Ексклюзивне насіння гібриду томату з унікальним смаком та забарвленням</p>
-            <p class="hero__info-amount text-small">Фасування - 10 од.</p>
-          </div>
-        </div>
-        <button class="hero__button button">Придбати</button>
-      </article>
-      <img src="./images/hero/hero-img-tomato.png" alt="tomatoes" class="hero__img">
+          <p class="hero__label novelty-label">Новинка</p>
+              <h2 class="hero__info-heading page-heading--main-page heading">Браун кой f1</h2>
+              <p class="hero__info-text text-small">Ексклюзивне насіння гібриду томату з унікальним смаком та забарвленням</p>
+              <p class="hero__info-amount text-small">Фасування - 10 од.</p>
+          <button class="button button--hero">До каталогу</button>
+        </article>
+    </div>
   </section>
-
 </main>
 
 @@include('./partials/footer.html')
