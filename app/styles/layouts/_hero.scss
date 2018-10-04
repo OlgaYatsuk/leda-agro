@@ -53,6 +53,8 @@
 
 .hero--product {
   justify-content: space-between;
+  background: 0;
+  max-width: 1200px;
 
   &::after {
     content: '';

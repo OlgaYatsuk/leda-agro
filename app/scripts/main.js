@@ -45,7 +45,8 @@ const sliders = [
     isEnabled: true,
     config: {
       pauseOnHover: false,
-      fade: true
+      fade: true,
+      dots: true
     }
   }
 ];

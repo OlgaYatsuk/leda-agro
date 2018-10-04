@@ -24,3 +24,35 @@
 .slider__text--prev {
   left: 41%;
 }
+
+.slick-dots  {
+  max-width: 90px;
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-40%);
+
+  button{
+    cursor: pointer;
+    outline: 0;
+    font-size: 0;
+    border-radius: 50%;
+    height: 14px;
+    border: 0;
+  }
+
+  .slick-active {
+    button {
+      background-color: $blue;
+    }
+  }
+
+  li {
+    display: inline-block;
+    margin-right: 10px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
