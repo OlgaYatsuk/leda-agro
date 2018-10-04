@@ -10,7 +10,7 @@
 
   <!-- build:css styles/vendor.css -->
   <!-- bower:css -->
-  <link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick.css" />
+  <link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick.css"/>
   <!-- endbower -->
   <!-- endbuild -->
 
@@ -22,33 +22,45 @@
   <!-- endbuild -->
 </head>
 <body class="nav-open">
-<!--[if IE]>
-<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
-  your browser</a> to improve your experience.</p>
-<![endif]-->
+<div class="blend-background">
+  <!--[if IE]>
+  <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a
+    href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+  <![endif]-->
 
-<!-- build:js scripts/vendor.js -->
-<!-- bower:js -->
-<script src="/bower_components/jquery/dist/jquery.js"></script>
-<script src="/bower_components/modernizr/modernizr.js"></script>
-<script src="/bower_components/slick-carousel/slick/slick.js"></script>
-<!-- endbower -->
-<!-- endbuild -->
-@@include('./partials/head.html')
-@@include('./partials/navigation.html')
+  <!-- build:js scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="/bower_components/jquery/dist/jquery.js"></script>
+  <script src="/bower_components/modernizr/modernizr.js"></script>
+  <script src="/bower_components/slick-carousel/slick/slick.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+  @@include('./partials/head.html')
+  @@include('./partials/navigation.html')
 
-<main>
-  <section class="hero container">
-    <h2 class="hero__heading hero__heading--centered heading">Блог</h2>
-    <p class="hero__background-heading hero__background-heading--blog">Блог</p>
-  </section>
+  <main class="container">
+    <section class="hero container">
+      <h2 class="hero__heading hero__heading--centered heading">Блог</h2>
+      <p class="hero__background-heading hero__background-heading--blog">Блог</p>
+    </section>
 
-</main>
+    <section class="blog-intro">
+      <p class="blog-intro__text">Ділимось з вами актуальними новинами та цікавими фактами в області вирощування овочів, квітів та трав.</p>
+      <p class="blog-intro__text">Розповідаємо, як садити рослини, як за ними доглядати та що робити, щоб ваш урожай давав багато здорових плодів.</p>
+      <p class="blog-intro__text">Ми маємо для вас безліч порад і радо ділимось ними у своєму блозі!</p>
+      <h5 class="blog-intro__greeting">Вітаємо у нашій спільноті.</h5>
+    </section>
 
-@@include('./partials/footer.html')
+    <section class="posts-wrapper">
+    </section>
+  </main>
 
-<!-- build:js scripts/main.js -->
-<script src="scripts/main.js"></script>
-<!-- endbuild -->
+  @@include('./partials/footer.html')
+
+  <!-- build:js scripts/main.js -->
+  <script src="scripts/main.js"></script>
+  <!-- endbuild -->
+</div>
 </body>
 </html>

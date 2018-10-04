@@ -22,6 +22,7 @@
   <!-- endbuild -->
 </head>
 <body class="nav-open">
+<div class="blend-background">
 <!--[if IE]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
   your browser</a> to improve your experience.</p>
@@ -36,12 +37,13 @@
 <!-- endbuild -->
 @@include('./partials/head.html')
 @@include('./partials/navigation.html')
-
 <main class="container">
-  <section class="hero container">
-    <h2 class="hero__heading hero__heading--centered heading">Інновації</h2>
-    <p class="hero__background-heading">Інновації</p>
-  </section>
+  <div class="hero-wrapper">
+    <section class="hero container">
+      <h2 class="hero__heading hero__heading--centered heading">Інновації</h2>
+      <p class="hero__background-heading">Інновації</p>
+    </section>
+  </div>
   <h3 class="innovation-caption">Леда Агро імпортує  насіння компаній, які розробили безліч новітніх програм, наукових методів та технологій для виведення високоякісних гібридних та сортових овочевих культур і планує займатися цим надалі.</h3>
   <article class="innovation">
     <h4 class="article-heading">Міні-розфасовка</h4>
@@ -68,5 +70,6 @@
 <!-- build:js scripts/main.js -->
 <script src="scripts/main.js"></script>
 <!-- endbuild -->
+</div>
 </body>
 </html>
