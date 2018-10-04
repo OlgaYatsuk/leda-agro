@@ -25,7 +25,30 @@
   padding: 110px 0 70px;
   height: auto;
   text-align: left;
-  display: flex;
+  display: flex!important;
+}
+
+.hero-slider {
+  position: relative;
+
+  &::after {
+    content: url(../images/hero/hero-bottom-img.png);
+    position: absolute;
+    top: 105%;
+    left: 43%;
+    z-index: 0;
+    right: 10%;
+    transform: translateX(40%) translateY(-50%);
+    mix-blend-mode: difference;
+  }
+}
+
+.hero__slider-text {
+  margin: 25px 0 50px;
+  letter-spacing: 1px;
+  text-transform: none!important;
+  font-weight: 400;
+  font-size: 1.625rem;
 }
 
 .hero--product {
@@ -37,12 +60,11 @@
 }
 
 .hero--main {
-  padding: 110px 13% 70px;
+  padding: 110px 17% 70px;
   background: none;
 
   &::after {
-    right: 10%;
-    transform: translateX(40%) translateY(-50%);
+    display: none;
   }
 }
 
@@ -92,7 +114,7 @@
 
 .hero__img--blured {
   filter: blur(5px);
-  transform: rotate(-30deg) translateX(-10%);
+  transform: rotate(-14deg) translateX(21%);
   z-index: -1;
   left: 0;
   top: 160px;
