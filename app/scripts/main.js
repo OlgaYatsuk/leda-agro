@@ -1,4 +1,4 @@
-//
+
 // const burger = document.querySelector('.header__nav-toggler'),
 //       body = document.body;
 
@@ -7,6 +7,13 @@
 //
 //   body.classList.toggle('nav-open');
 // });
+//
+
+
+  // $('.js-blog').masonry({
+  //   itemSelector: '.js-post',
+  //   columnWidth: 200
+  // });
 
 const $mainSlider = $('.js-main-slider');
 
