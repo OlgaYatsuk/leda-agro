@@ -1,0 +1,21 @@
+.peoples-slider__wrapper {
+  position: relative;
+  max-width: 970px;
+  margin: 0 auto;
+  background: #0B0B0B;
+  box-shadow: -100px 50px 100px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+
+.peoples-slider__slide {
+  display: flex !important;
+  align-items: flex-start;
+}
+
+.peoples-slider__img{
+  width: 38.2%;
+  height: 100%;
+}
+
+.peoples-slider__slide-wrapper {
+}
