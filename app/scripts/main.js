@@ -1,27 +1,39 @@
-// const burger = document.querySelector('.header__nav-toggler'),
-//       body = document.body;
-//
-// burger.addEventListener('click', (e) => {
-//   e.preventDefault();
-//
-//   body.classList.toggle('nav-open');
-// });
+const burger = document.querySelector('.header__nav-toggler'),
+      body = document.body;
+
+burger.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  body.classList.toggle('nav-open');
+});
+
+document.addEventListener('scroll', () => {
+  let scrollTop = $(window).scrollTop();
+
+  if(scrollTop > 50) {
+    body.classList.add('header-fill');
+  }
+  else {
+    body.classList.remove('header-fill');
+  }
+});
 
 const $mainSlider = $('.js-main-slider');
+const $personsSlider = $('.js-person-slider');
 const $mediaSlider = $('.js-media');
 
 class Slider {
   constructor(sliderSelector, config) {
     const defaultConfig = {
       autoplaySpeed: 4000,
-      autoplay: true,
+      // autoplay: true,
       pauseOnHover: true,
       slidesToShow: 1,
       slidesToScroll: 1,
       speed: 1000,
       isEnabled: true,
-      prevArrow: '<a href="#" class="arrow-link arrow-link--prev"><img src="../images/svg/arrow-right.svg" alt="previous"></a>',
-      nextArrow:  '<a href="#" class="arrow-link arrow-link--next"><img src="../images/svg/l_arrow.svg" alt="next"></a>'
+      prevArrow: '<a href="#" class="arrow-link arrow-link--prev"><img class="arrow-link__img" src="../images/svg/arrow-right.svg" alt="previous"></a>',
+      nextArrow:  '<a href="#" class="arrow-link arrow-link--next"><img class="arrow-link__img" src="../images/svg/l_arrow.svg" alt="next"></a>'
     };
 
     this.config = Object.assign({}, defaultConfig, config);
@@ -49,6 +61,16 @@ const sliders = [
     }
   },
   {
+    selector: $personsSlider,
+    isEnabled: true,
+    config: {
+      pauseOnHover: false,
+      fade: true,
+      dots: true,
+      appendArrows: $('.peoples-slider__arrows')
+    }
+  },
+  {
     selector: $mediaSlider,
     isEnabled: true,
     config: {
@@ -57,7 +79,7 @@ const sliders = [
       slidesToShow: 5,
       prevArrow: '<button type="button" class="slick-prev">Previous</button>',
       nextArrow: '<button type="button" class="slick-next">Next</button>',
-      speed: 300
+      speed: 300,
     }
   }
 ];
@@ -90,7 +112,6 @@ function buildSlider(slider, content, items, buttons) {
 
       if(e.toElement.classList.contains('calendar__navigation-left')) eTarget = 'left';
       else eTarget = 'right';
-      console.log(eTarget);
 
       if(eTarget === 'left') scrollLeft();
       else scrollRight();
@@ -112,12 +133,42 @@ if(calendarSlider) buildSlider(calendarSlider, calendarContent, calendarTable, c
 
 
 //fix about slider
-if(document.querySelector('.peoples-slider__wrapper')) {
-  let sliderHeight = document.querySelector('.peoples-slider__wrapper').clientHeight;
+$(document).ready(() => {
+  if(document.querySelector('.peoples-slider__wrapper')) {
+    let sliderHeight = document.querySelector('.peoples-slider__wrapper').clientHeight;
 
-  document.querySelectorAll('.peoples-slider__img').forEach((el) => {
-    el.style.height = sliderHeight + 'px';
-  });
+    document.querySelectorAll('.peoples-slider__img').forEach((el) => {
+      el.style.height = sliderHeight + 'px';
+    });
+  }
+});
+
+
+function changeArrowsContent() {
+  let nextIndex, prevIndex, currnetIndex, lastIndex;
+  let prevButtonContent = '',
+    nextButtonContent = '';
+
+  currnetIndex = $('.js-person-slider .slick-active').attr('data-slick-index');
+  lastIndex = $('.js-person-slider .slick-slide').length - 1;
+  nextIndex = parseInt(currnetIndex) + 1;
+  prevIndex = parseInt(currnetIndex) - 1;
+
+  if(currnetIndex == lastIndex) nextIndex = 0;
+  if(currnetIndex == 0) prevIndex = lastIndex;
+
+  let prevPersonImg = document.querySelector('.peoples-slider .slick-slide[data-slick-index="' + prevIndex +'"] .peoples-slider__img').outerHTML,
+    prevPersonName = document.querySelector('.peoples-slider .slick-slide[data-slick-index="' + prevIndex +'"] .peoples-slider__name').innerHTML;
+  let nextPersonImg = document.querySelector('.peoples-slider .slick-slide[data-slick-index="' + nextIndex +'"] .peoples-slider__img').outerHTML,
+    nextPersonName = document.querySelector('.peoples-slider .slick-slide[data-slick-index="' + nextIndex +'"] .peoples-slider__name').innerHTML;
+
+  prevButtonContent = '<p>' + prevPersonName + '</p>' + prevPersonImg;
+  nextButtonContent = '<p>' + nextPersonName + '</p>' + nextPersonImg;
+
+  document.querySelector('.peoples-slider__arrows .arrow-link--prev')
+    .innerHTML = '<img class="arrow-link__img" src="../images/svg/arrow-right.svg" alt="previous">' + prevButtonContent;
+  document.querySelector('.peoples-slider__arrows .arrow-link--next')
+    .innerHTML = nextButtonContent + '<img class="arrow-link__img" src="../images/svg/l_arrow.svg" alt="next">';
 }
 
 const $menu = $('.js-contacts');
@@ -161,3 +212,8 @@ function showTab() {
   $(this).addClass('is-active');
 }
 
+$personsSlider.on('afterChange', () => {
+  changeArrowsContent();
+});
+
+if($('.peoples-slider')) changeArrowsContent();

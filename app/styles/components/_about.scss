@@ -1,22 +1,70 @@
 .peoples-slider {
-  padding-bottom: 100px;
-
-  .arrow-link {
-    bottom: -65px;
-    width: 25px;
-
-    &--prev {
-      left: 15%;
-    }
-
-    &--next {
-      left: 45%;
-    }
-  }
+  position: relative;
+  margin-bottom: 100px;
 
   .slick-dots {
     left: initial;
     right: 14%;
+  }
+}
+
+.peoples-slider__arrows {
+  position: absolute;
+  bottom: -53px;
+  left: 35%;
+  transform: translateX(-35%);
+
+  .arrow-link {
+    position: relative;
+    left: initial;
+    right: initial;
+    bottom: initial;
+    margin-right: 30px;
+    text-decoration: none;
+    color: $white;
+    font-size: 0.625rem;
+    text-transform: uppercase;
+
+    .arrow-link__img {
+      display: inline-block;
+    }
+
+    p {
+      display: inline-block;
+      min-width: 75px;
+    }
+
+    .peoples-slider__img {
+      display: block;
+      position: absolute;
+      width: 100px;
+      height: 60px !important;
+      object-fit: cover;
+      object-position: top;
+      border-radius: 5px;
+      bottom: calc(100% + 10px);
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &.arrow-link--prev {
+
+      p {
+        text-align: right;
+      }
+
+      .peoples-slider__img {
+        right: 0;
+      }
+    }
+
+    &.arrow-link--next {
+      .peoples-slider__img {
+        left: 0;
+      }
+    }
   }
 }
 

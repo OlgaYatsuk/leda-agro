@@ -4,6 +4,15 @@
   left: 0;
   width: 100%;
   z-index: 12;
+  transition: all .8s ease .3s;
+
+  body.header-fill & {
+    background: rgba($black, .7);
+  }
+
+  body.nav-open & {
+    background: transparent;
+  }
 }
 
 .header__wrapper {
