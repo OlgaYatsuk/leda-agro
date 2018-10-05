@@ -119,3 +119,20 @@ if(document.querySelector('.peoples-slider__wrapper')) {
     el.style.height = sliderHeight + 'px';
   });
 }
+
+const $menu = $('.js-contacts');
+const $root = $('body,html');
+
+init();
+
+function init () {
+  $menu.on('click', 'a', scrollToBlock);
+}
+
+function scrollToBlock(e) {
+
+  e.preventDefault();
+  const id = $(this).attr('href');
+  const top = $(id).offset().top;
+  $root.animate({scrollTop: top}, 800);
+}
