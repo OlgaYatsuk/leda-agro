@@ -1,22 +1,22 @@
-const burger = document.querySelector('.header__nav-toggler'),
-      body = document.body;
-
-burger.addEventListener('click', (e) => {
-  e.preventDefault();
-
-  body.classList.toggle('nav-open');
-});
-
-document.addEventListener('scroll', () => {
-  let scrollTop = $(window).scrollTop();
-
-  if(scrollTop > 50) {
-    body.classList.add('header-fill');
-  }
-  else {
-    body.classList.remove('header-fill');
-  }
-});
+// const burger = document.querySelector('.header__nav-toggler'),
+//       body = document.body;
+//
+// burger.addEventListener('click', (e) => {
+//   e.preventDefault();
+//
+//   body.classList.toggle('nav-open');
+// });
+//
+// document.addEventListener('scroll', () => {
+//   let scrollTop = $(window).scrollTop();
+//
+//   if(scrollTop > 50) {
+//     body.classList.add('header-fill');
+//   }
+//   else {
+//     body.classList.remove('header-fill');
+//   }
+// });
 
 const $mainSlider = $('.js-main-slider');
 const $personsSlider = $('.js-person-slider');
@@ -181,7 +181,7 @@ init();
 function init () {
   $menu.on('click', 'a', scrollToBlock);
   $tab.on('click', showTab);
-  $tab.on('click', changeContent)
+  $tab.on('click', changeContent);
 }
 
 function scrollToBlock(e) {
@@ -197,10 +197,12 @@ function changeContent(e) {
   let a = $(this).data('id');
 
   $tabContent.each(function() {
-    if (!$(this).hasClass(a))
-      $(this).addClass('hide');
-    else
-      $(this).removeClass('hide');
+    if (!$(this).hasClass(a)) {
+      $(this).removeClass('is-active');
+    }
+
+  else
+      $(this).addClass('is-active');
   });
 }
 

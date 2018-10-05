@@ -18,7 +18,14 @@
 }
 
 .hero--contacts::after {
-  display: none;
+  content: url(../images/locations.png);
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  z-index: 100;
+  top: 0;
+  left: auto;
+  right: 0;
 }
 
 .hero--product,
@@ -86,8 +93,8 @@
   left: 50%;
   z-index: 1;
   transform: translateX(-50%) translateY(-50%);
-  background: linear-gradient($green 0%, rgba(237, 184, 21, 0) 100%);
-  opacity: 0.1;
+  background: linear-gradient($green 0%, rgba(237, 184, 21, 0) 80%);
+  opacity: 0.15;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   position: absolute;
