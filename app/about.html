@@ -34,16 +34,24 @@
   <script src="/bower_components/jquery/dist/jquery.js"></script>
   <script src="/bower_components/modernizr/modernizr.js"></script>
   <script src="/bower_components/slick-carousel/slick/slick.js"></script>
+  <script src="/bower_components/get-size/get-size.js"></script>
+  <script src="/bower_components/ev-emitter/ev-emitter.js"></script>
+  <script src="/bower_components/desandro-matches-selector/matches-selector.js"></script>
+  <script src="/bower_components/fizzy-ui-utils/utils.js"></script>
+  <script src="/bower_components/outlayer/outlayer.js"></script>
+  <script src="/bower_components/masonry-layout/masonry.js"></script>
   <!-- endbower -->
   <!-- endbuild -->
   @@include('./partials/head.html')
   @@include('./partials/navigation.html')
 
   <main>
-    <section class="hero container">
-      <h2 class="hero__heading hero__heading--centered heading">Про нас</h2>
-      <p class="hero__background-heading">Про нас</p>
-    </section>
+    <div class="hero-wrapper">
+      <p class="hero__background-heading hero__background-heading--main">Про нас</p>
+      <section class="hero container">
+        <h2 class="hero__heading hero__heading--centered heading">Про нас</h2>
+      </section>
+    </div>
     <section class="peoples-slider">
       <div class="container">
           <h4 class="peoples-slider__title section-heading">Лєда Агро - це люди</h4>

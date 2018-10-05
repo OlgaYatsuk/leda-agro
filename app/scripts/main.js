@@ -171,6 +171,47 @@ function changeArrowsContent() {
     .innerHTML = nextButtonContent + '<img class="arrow-link__img" src="../images/svg/l_arrow.svg" alt="next">';
 }
 
+const $menu = $('.js-contacts');
+const $root = $('body,html');
+const $tab = $('.js-tab-link');
+const $tabContent = $('.js-tab-content');
+
+init();
+
+function init () {
+  $menu.on('click', 'a', scrollToBlock);
+  $tab.on('click', showTab);
+  $tab.on('click', changeContent)
+}
+
+function scrollToBlock(e) {
+
+  e.preventDefault();
+  const id = $(this).attr('href');
+  const top = $(id).offset().top;
+  $root.animate({scrollTop: top}, 800);
+}
+
+function changeContent(e) {
+  e.preventDefault();
+  let a = $(this).data('id');
+
+  $tabContent.each(function() {
+    if (!$(this).hasClass(a))
+      $(this).addClass('hide');
+    else
+      $(this).removeClass('hide');
+  });
+}
+
+
+function showTab() {
+  $tab.removeClass('is-active');
+  $tabContent.removeClass('is-active');
+
+  $(this).addClass('is-active');
+}
+
 $personsSlider.on('afterChange', () => {
   changeArrowsContent();
 });

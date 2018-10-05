@@ -33,6 +33,12 @@
 <script src="/bower_components/jquery/dist/jquery.js"></script>
 <script src="/bower_components/modernizr/modernizr.js"></script>
 <script src="/bower_components/slick-carousel/slick/slick.js"></script>
+<script src="/bower_components/get-size/get-size.js"></script>
+<script src="/bower_components/ev-emitter/ev-emitter.js"></script>
+<script src="/bower_components/desandro-matches-selector/matches-selector.js"></script>
+<script src="/bower_components/fizzy-ui-utils/utils.js"></script>
+<script src="/bower_components/outlayer/outlayer.js"></script>
+<script src="/bower_components/masonry-layout/masonry.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 @@include('./partials/head.html')
@@ -57,6 +63,40 @@
     <div class="product-gallery">
       <img src="./images/hero/hero-img-tomato.png" class="product-gallery__img"/>
       <p class="product-gallery__caption text-small">Галерея товару</p>
+    </div>
+  </section>
+
+  <section class="product container">
+    <ul class="tabs">
+      <li class="tabs__link is-active js-tab-link" data-id="id-1"><span>Рослина</span></li>
+      <li class="tabs__link js-tab-link" data-id="id-2"><span>Плід</span></li>
+      <li class="tabs__link js-tab-link" data-id="id-3"><span>Вирощування</span></li>
+    </ul>
+
+    <div class="tabs-content-wrapper">
+      <div class="tabs-content is-active js-tab-content id-1">
+        <img src="images/product-content/product-content-img.svg" alt="img">
+        <div class="tabs-content__info">
+          <p class="text"><strong>Браун Кой</strong> - це унікальний гібрид томата типу Марманде.  Він має ранній термін дозрівання.</p>
+          <p class="text">Браун Кой рослина міцна і велика, з хорошим зав'язуванням плодів та розвиненою кореневою системою. Оптимальний для посадки у відкритому ґрунті та теплицях.</p>
+        </div>
+      </div>
+
+      <div class="tabs-content js-tab-content id-2">
+        <img src="images/product-content/product-content-img.svg" alt="img">
+        <div class="tabs-content__info">
+          <p class="text"><strong>Мармара F1</strong> - це унікальний гібрид томата типу Марманде.  Він має ранній термін дозрівання.</p>
+          <p class="text">Браун Кой рослина міцна і велика, з хорошим зав'язуванням плодів та розвиненою кореневою системою. Оптимальний для посадки у відкритому ґрунті та теплицях.</p>
+        </div>
+      </div>
+
+      <div class="tabs-content js-tab-content id-3">
+        <img src="images/product-content/product-content-img.svg" alt="img">
+        <div class="tabs-content__info">
+          <p class="text"><strong>Вирощування</strong> - це унікальний гібрид томата типу Марманде.  Він має ранній термін дозрівання.</p>
+          <p class="text">Браун Кой рослина міцна і велика, з хорошим зав'язуванням плодів та розвиненою кореневою системою. Оптимальний для посадки у відкритому ґрунті та теплицях.</p>
+        </div>
+      </div>
     </div>
   </section>
 
