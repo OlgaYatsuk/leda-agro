@@ -2,10 +2,6 @@
 
 }
 
-.catalog__title {
-  padding-bottom: 50px;
-}
-
 .catalog__wrapper {
   position: relative;
   display: flex;
@@ -22,10 +18,10 @@
   width: calc(100% - 100px);
   height: 100%;
   object-fit: cover;
-  z-index: -1;
 }
 
 .catalog__item {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;

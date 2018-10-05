@@ -1,21 +1,14 @@
+const burger = document.querySelector('.header__nav-toggler'),
+      body = document.body;
 
-// const burger = document.querySelector('.header__nav-toggler'),
-//       body = document.body;
+burger.addEventListener('click', (e) => {
+  e.preventDefault();
 
-// burger.addEventListener('click', (e) => {
-//   e.preventDefault();
-//
-//   body.classList.toggle('nav-open');
-// });
-//
-
-
-  // $('.js-blog').masonry({
-  //   itemSelector: '.js-post',
-  //   columnWidth: 200
-  // });
+  body.classList.toggle('nav-open');
+});
 
 const $mainSlider = $('.js-main-slider');
+const $mediaSlider = $('.js-media');
 
 class Slider {
   constructor(sliderSelector, config) {
@@ -46,7 +39,6 @@ class Slider {
 }
 
 const sliders = [
-
   {
     selector: $mainSlider,
     isEnabled: true,
@@ -55,11 +47,22 @@ const sliders = [
       fade: true,
       dots: true
     }
+  },
+  {
+    selector: $mediaSlider,
+    isEnabled: true,
+    config: {
+      centerMode: true,
+      centerPadding: '0',
+      slidesToShow: 5,
+      prevArrow: '<button type="button" class="slick-prev">Previous</button>',
+      nextArrow: '<button type="button" class="slick-next">Next</button>',
+      speed: 300
+    }
   }
 ];
 
 sliders.filter((slider) => slider.isEnabled).forEach((slider) => slider.isEnabled && new Slider(slider.selector, slider.config));
-
 
 //calendar slider
 
@@ -105,4 +108,14 @@ function buildSlider(slider, content, items, buttons) {
   }
 }
 
-buildSlider(calendarSlider, calendarContent, calendarTable, calendarButton);
+if(calendarSlider) buildSlider(calendarSlider, calendarContent, calendarTable, calendarButton);
+
+
+//fix about slider
+if(document.querySelector('.peoples-slider__wrapper')) {
+  let sliderHeight = document.querySelector('.peoples-slider__wrapper').clientHeight;
+
+  document.querySelectorAll('.peoples-slider__img').forEach((el) => {
+    el.style.height = sliderHeight + 'px';
+  });
+}
