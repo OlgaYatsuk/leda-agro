@@ -1,4 +1,3 @@
-
 const burger = document.querySelector('.header__nav-toggler'),
       body = document.body;
 
@@ -9,6 +8,7 @@ burger.addEventListener('click', (e) => {
 });
 
 const $mainSlider = $('.js-main-slider');
+const $mediaSlider = $('.js-media');
 
 class Slider {
   constructor(sliderSelector, config) {
@@ -47,18 +47,22 @@ const sliders = [
       fade: true,
       dots: true
     }
+  },
+  {
+    selector: $mediaSlider,
+    isEnabled: true,
+    config: {
+      centerMode: true,
+      centerPadding: '0',
+      slidesToShow: 5,
+      prevArrow: '<button type="button" class="slick-prev">Previous</button>',
+      nextArrow: '<button type="button" class="slick-next">Next</button>',
+      speed: 300
+    }
   }
 ];
 
 sliders.filter((slider) => slider.isEnabled).forEach((slider) => slider.isEnabled && new Slider(slider.selector, slider.config));
-
-//todo
-
-$('.media__wrapper').slick({
-  centerMode: true,
-  centerPadding: '0',
-  slidesToShow: 5,
-});
 
 //calendar slider
 
