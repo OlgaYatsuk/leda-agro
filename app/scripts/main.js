@@ -1,26 +1,27 @@
-const burger = document.querySelector('.header__nav-toggler'),
-      body = document.body;
+// const burger = document.querySelector('.header__nav-toggler'),
+//       body = document.body;
+//
+// burger.addEventListener('click', (e) => {
+//   e.preventDefault();
+//
+//   body.classList.toggle('nav-open');
+// });
+//
+// document.addEventListener('scroll', () => {
+//   let scrollTop = $(window).scrollTop();
+//
+//   if(scrollTop > 50) {
+//     body.classList.add('header-fill');
+//   }
+//   else {
+//     body.classList.remove('header-fill');
+//   }
+// });
 
-burger.addEventListener('click', (e) => {
-  e.preventDefault();
-
-  body.classList.toggle('nav-open');
-});
-
-document.addEventListener('scroll', () => {
-  let scrollTop = $(window).scrollTop();
-
-  if(scrollTop > 50) {
-    body.classList.add('header-fill');
-  }
-  else {
-    body.classList.remove('header-fill');
-  }
-});
-
-const $mainSlider = $('.js-main-slider');
-const $personsSlider = $('.js-person-slider');
+const $mainSlider = '.js-main-slider';
+const $personsSlider = '.js-person-slider';
 const $mediaSlider = $('.js-media');
+const $arrows = $('.js-arrows');
 
 class Slider {
   constructor(sliderSelector, config) {
@@ -52,12 +53,13 @@ class Slider {
 
 const sliders = [
   {
-    selector: $mainSlider,
+    selector: $('.js-main-slider'),
     isEnabled: true,
     config: {
       pauseOnHover: false,
       fade: true,
-      dots: true
+      dots: true,
+      appendArrows: $arrows,
     }
   },
   {
@@ -67,7 +69,7 @@ const sliders = [
       pauseOnHover: false,
       fade: true,
       dots: true,
-      appendArrows: $('.peoples-slider__arrows')
+      appendArrows: $arrows,
     }
   },
   {
@@ -137,39 +139,58 @@ $(document).ready(() => {
   if(document.querySelector('.peoples-slider__wrapper')) {
     let sliderHeight = document.querySelector('.peoples-slider__wrapper').clientHeight;
 
-    document.querySelectorAll('.peoples-slider__img').forEach((el) => {
+    document.querySelectorAll('.js-slider-img').forEach((el) => {
       el.style.height = sliderHeight + 'px';
     });
   }
 });
 
 
-function changeArrowsContent() {
+function changeArrowsContent(selector) {
   let nextIndex, prevIndex, currnetIndex, lastIndex;
   let prevButtonContent = '',
     nextButtonContent = '';
 
-  currnetIndex = $('.js-person-slider .slick-active').attr('data-slick-index');
-  lastIndex = $('.js-person-slider .slick-slide').length - 1;
+  console.log(selector);
+
+  currnetIndex = $(selector + ' .slick-active').attr('data-slick-index');
+  lastIndex = $(selector + ' .slick-slide').length - 1;
   nextIndex = parseInt(currnetIndex) + 1;
   prevIndex = parseInt(currnetIndex) - 1;
 
   if(currnetIndex == lastIndex) nextIndex = 0;
   if(currnetIndex == 0) prevIndex = lastIndex;
 
-  let prevPersonImg = document.querySelector('.peoples-slider .slick-slide[data-slick-index="' + prevIndex +'"] .peoples-slider__img').outerHTML,
-    prevPersonName = document.querySelector('.peoples-slider .slick-slide[data-slick-index="' + prevIndex +'"] .peoples-slider__name').innerHTML;
-  let nextPersonImg = document.querySelector('.peoples-slider .slick-slide[data-slick-index="' + nextIndex +'"] .peoples-slider__img').outerHTML,
-    nextPersonName = document.querySelector('.peoples-slider .slick-slide[data-slick-index="' + nextIndex +'"] .peoples-slider__name').innerHTML;
+  let prevPersonName = document.querySelector(selector + ' .slick-slide[data-slick-index="' + prevIndex +'"] .js-slider-name').innerHTML;
+  let nextPersonName = document.querySelector(selector + ' .slick-slide[data-slick-index="' + nextIndex +'"] .js-slider-name').innerHTML;
 
-  prevButtonContent = '<p>' + prevPersonName + '</p>' + prevPersonImg;
-  nextButtonContent = '<p>' + nextPersonName + '</p>' + nextPersonImg;
+  prevButtonContent = '<p>' + prevPersonName + '</p>';
+  nextButtonContent = '<p>' + nextPersonName + '</p>';
 
-  document.querySelector('.peoples-slider__arrows .arrow-link--prev')
+  if($('.js-slider-img').length > 0) {
+    let prevPersonImg = document.querySelector(selector + ' .slick-slide[data-slick-index="' + prevIndex +'"] .js-slider-img').outerHTML,
+      nextPersonImg = document.querySelector(selector + ' .slick-slide[data-slick-index="' + nextIndex +'"] .js-slider-img').outerHTML;
+
+    prevButtonContent = prevButtonContent + prevPersonImg;
+    nextButtonContent = nextButtonContent + nextPersonImg;
+  }
+
+  document.querySelector('.js-arrows .arrow-link--prev')
     .innerHTML = '<img class="arrow-link__img" src="../images/svg/arrow-right.svg" alt="previous">' + prevButtonContent;
-  document.querySelector('.peoples-slider__arrows .arrow-link--next')
+  document.querySelector('.js-arrows .arrow-link--next')
     .innerHTML = nextButtonContent + '<img class="arrow-link__img" src="../images/svg/l_arrow.svg" alt="next">';
 }
+
+$($personsSlider).on('afterChange', () => {
+  changeArrowsContent($personsSlider);
+});
+
+$($mainSlider).on('afterChange', () => {
+  changeArrowsContent($mainSlider);
+});
+
+if($($personsSlider).length) changeArrowsContent($personsSlider);
+if($($mainSlider).length) changeArrowsContent($mainSlider);
 
 const $menu = $('.js-contacts');
 const $root = $('body,html');
@@ -181,7 +202,7 @@ init();
 function init () {
   $menu.on('click', 'a', scrollToBlock);
   $tab.on('click', showTab);
-  $tab.on('click', changeContent)
+  $tab.on('click', changeContent);
 }
 
 function scrollToBlock(e) {
@@ -197,10 +218,12 @@ function changeContent(e) {
   let a = $(this).data('id');
 
   $tabContent.each(function() {
-    if (!$(this).hasClass(a))
-      $(this).addClass('hide');
-    else
-      $(this).removeClass('hide');
+    if (!$(this).hasClass(a)) {
+      $(this).removeClass('is-active');
+    }
+
+  else
+      $(this).addClass('is-active');
   });
 }
 
@@ -211,9 +234,3 @@ function showTab() {
 
   $(this).addClass('is-active');
 }
-
-$personsSlider.on('afterChange', () => {
-  changeArrowsContent();
-});
-
-if($('.peoples-slider')) changeArrowsContent();

@@ -35,9 +35,14 @@
   &.is-active {
     span {
       border: 1px $blue solid;
+
+      &:hover {
+        cursor: default;
+      }
     }
   }
 }
+
 .tabs-content-wrapper {
   flex: 0 1 50%;
   margin-left: 10%;
@@ -46,10 +51,11 @@
 .tabs-content {
   padding: 0 20px;
   font-weight: 300;
+  display: none;
   transition: opacity 0.4s;
 
-  &.hide{
-    display: none;
+  &.is-active {
+    display: block;
   }
 
   .text{

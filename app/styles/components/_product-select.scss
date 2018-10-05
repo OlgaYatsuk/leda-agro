@@ -1,0 +1,23 @@
+.product-select {
+  display: flex;
+  justify-content: space-between;
+  max-width: 310px;
+  margin: 65px auto;
+}
+
+.product-select__link  {
+  text-decoration: none;
+}
+
+.product-select__img {
+  display: block;
+  margin: 0 auto 30px;
+  width: 98px;
+  height: 160px;
+}
+
+.product-select__name {
+  color: $white;
+  text-transform: uppercase;
+  margin: 0 10px;
+}
