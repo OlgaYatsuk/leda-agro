@@ -56,3 +56,79 @@
     }
   }
 }
+
+.custom-arrows {
+  position: absolute;
+
+  .arrow-link {
+    position: relative;
+    left: initial;
+    right: initial;
+    bottom: initial;
+    margin-right: 30px;
+    text-decoration: none;
+    color: $white;
+    font-size: 0.625rem;
+    text-transform: uppercase;
+
+    .arrow-link__img {
+      display: inline-block;
+    }
+
+    p {
+      display: inline-block;
+    }
+
+    .peoples-slider__img {
+      display: block;
+      position: absolute;
+      width: 100px;
+      height: 60px !important;
+      object-fit: cover;
+      object-position: top;
+      border-radius: 5px;
+      bottom: calc(100% + 10px);
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &.arrow-link--prev {
+
+      p {
+        text-align: right;
+      }
+
+      .peoples-slider__img {
+        right: 0;
+      }
+    }
+
+    &.arrow-link--next {
+      .peoples-slider__img {
+        left: 0;
+      }
+    }
+  }
+}
+
+.custom-arrows--main {
+  bottom: -110px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  p {
+    min-width: 90px;
+  }
+}
+
+.custom-arrows--about {
+  bottom: -53px;
+  left: 35%;
+  transform: translateX(-35%);
+
+  p {
+    min-width: 75px;
+  }
+}
