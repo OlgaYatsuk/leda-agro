@@ -1,12 +1,12 @@
-//
-// const burger = document.querySelector('.header__nav-toggler'),
-//       body = document.body;
 
-// burger.addEventListener('click', (e) => {
-//   e.preventDefault();
-//
-//   body.classList.toggle('nav-open');
-// });
+const burger = document.querySelector('.header__nav-toggler'),
+      body = document.body;
+
+burger.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  body.classList.toggle('nav-open');
+});
 
 const $mainSlider = $('.js-main-slider');
 
@@ -39,7 +39,6 @@ class Slider {
 }
 
 const sliders = [
-
   {
     selector: $mainSlider,
     isEnabled: true,
@@ -53,6 +52,13 @@ const sliders = [
 
 sliders.filter((slider) => slider.isEnabled).forEach((slider) => slider.isEnabled && new Slider(slider.selector, slider.config));
 
+//todo
+
+$('.media__wrapper').slick({
+  centerMode: true,
+  centerPadding: '0',
+  slidesToShow: 5,
+});
 
 //calendar slider
 
@@ -98,4 +104,14 @@ function buildSlider(slider, content, items, buttons) {
   }
 }
 
-buildSlider(calendarSlider, calendarContent, calendarTable, calendarButton);
+if(calendarSlider) buildSlider(calendarSlider, calendarContent, calendarTable, calendarButton);
+
+
+//fix about slider
+if(document.querySelector('.peoples-slider__wrapper')) {
+  let sliderHeight = document.querySelector('.peoples-slider__wrapper').clientHeight;
+
+  document.querySelectorAll('.peoples-slider__img').forEach((el) => {
+    el.style.height = sliderHeight + 'px';
+  });
+}
