@@ -38,7 +38,7 @@ gulp.task('stylesDist', () => {
     }).on('error', $.sass.logError))
     .pipe($.autoprefixer({browsers: ['> 1%', 'last 2 versions', 'Firefox ESR']}))
     .pipe($.if(dev, $.sourcemaps.write()))
-    .pipe(gulp.dest('dist/styles'))
+    .pipe(gulp.dest('../../../../../Applications/MAMP/htdocs/ledaagro.local/themes/new/styles'))
     .pipe(reload({stream: true}));
 });
 
@@ -58,7 +58,7 @@ gulp.task('scriptsDist', () => {
     .pipe($.if(dev, $.sourcemaps.init()))
     .pipe($.babel())
     .pipe($.if(dev, $.sourcemaps.write('.')))
-    .pipe(gulp.dest('dist/scripts'))
+    .pipe(gulp.dest('../../../../../Applications/MAMP/htdocs/ledaagro.local/themes/new/scripts'))
     .pipe(reload({stream: true}));
 });
 
@@ -105,13 +105,13 @@ gulp.task('html', ['styles', 'scripts'], () => {
 gulp.task('images', () => {
   return gulp.src('app/images/**/*')
     .pipe($.cache($.imagemin()))
-    .pipe(gulp.dest('dist/images'));
+    .pipe(gulp.dest('../../../../../Applications/MAMP/htdocs/ledaagro.local/themes/new/images'));
 });
 
 gulp.task('fonts', () => {
   return gulp.src(require('main-bower-files')('**/*.{eot,svg,ttf,woff,woff2}', function (err) {})
     .concat('app/fonts/**/*'))
-    .pipe($.if(dev, gulp.dest('.tmp/fonts'), gulp.dest('dist/fonts')));
+    .pipe($.if(dev, gulp.dest('.tmp/fonts'), gulp.dest('../../../../../Applications/MAMP/htdocs/ledaagro.local/themes/new/fonts')));
 });
 
 gulp.task('extras', () => {
