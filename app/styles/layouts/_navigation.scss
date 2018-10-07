@@ -11,6 +11,12 @@
   transition: transform .45s ease-in-out;
   transform: translate3d(-100%, 0, 0);
 
+  @media (max-width: $max-sm) {
+    padding-top: 80px;
+    padding-bottom: 0;
+    overflow: scroll;
+  }
+
   body.nav-open & {
     transform: translate3d(0,0,0);
   }
@@ -26,10 +32,18 @@
   justify-content: flex-start;
   height: 100%;
   padding-left: 30px;
+
+  @media (max-width: $max-md) {
+    padding-left: 0;
+  }
 }
 
 .navigation__social {
   text-align: right;
+
+  @media (max-width: $max-sm) {
+    text-align: center;
+  }
 }
 
 .navigation__social-link {
@@ -56,6 +70,15 @@
   max-width: 675px;
   width: 100%;
   padding-top: 20px;
+
+  @media (max-width: $max-sm) {
+    justify-content: center;
+  }
+
+  @media (max-width: $max-xs) {
+    display: block;
+    text-align: center;
+  }
 }
 
 .navigation__main-nav-link {
@@ -64,17 +87,33 @@
   background: -webkit-linear-gradient(left, #C4161C, #FF486F);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  height: 100%;
+  margin: 0 15px;
 }
 
 .navigation__pane {
   padding-left: 30px;
   padding-top: 60px;
+
+  @media (max-width: $max-sm) {
+    padding-left: 0;
+    padding-top: 30px;
+  }
 }
 
 .navigation__pane-links {
   display: flex;
   align-items: center;
   padding-bottom: 50px;
+
+  @media (max-width: $max-sm) {
+    padding-bottom: 25px;
+    justify-content: center;
+  }
+
+  @media (max-width: $max-xs) {
+    flex-direction: column;
+  }
 }
 
 .navigation__pane-links-link {
@@ -87,6 +126,11 @@
   border-radius: 5px;
   text-decoration: none;
 
+  @media (max-width: $max-sm) {
+    line-height: 30px;
+    height: 30px;
+  }
+
   &.active {
     color: $white;
     border: 1px solid #2F80ED;;
@@ -98,6 +142,21 @@
   column-width: 290px;
   float: left;
   padding-left: 25px;
+
+  @media (max-width: $max-md) {
+    column-width: auto;
+  }
+
+  @media (max-width: $max-sm) {
+    column-count: 2;
+    padding-left: 0;
+    float: none;
+  }
+
+  @media (max-width: $max-xs) {
+    column-count: 1;
+    padding-bottom: 55px;
+  }
 }
 
 .navigation__pane-content-link {
@@ -111,6 +170,15 @@
   text-transform: uppercase;
   text-decoration: none;
 
+  @media (max-width: $max-md) {
+    line-height: 1.6;
+  }
+
+  @media (max-width: $max-sm) {
+    float: none;
+    text-align: center;
+  }
+
   &.active,
   &:hover {
     color: $white;
@@ -121,6 +189,13 @@
   position: absolute;
   left: 130px;
   bottom: 40px;
+
+  @media (max-width: $max-md) {
+    top: 30px;
+    right: 30px;
+    bottom: initial;
+    left: initial;
+  }
 }
 
 .navigation__lang-link {

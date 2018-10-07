@@ -1,22 +1,22 @@
-// const burger = document.querySelector('.header__nav-toggler'),
-//       body = document.body;
-//
-// burger.addEventListener('click', (e) => {
-//   e.preventDefault();
-//
-//   body.classList.toggle('nav-open');
-// });
-//
-// document.addEventListener('scroll', () => {
-//   let scrollTop = $(window).scrollTop();
-//
-//   if(scrollTop > 50) {
-//     body.classList.add('header-fill');
-//   }
-//   else {
-//     body.classList.remove('header-fill');
-//   }
-// });
+const burger = document.querySelector('.header__nav-toggler'),
+      body = document.body;
+
+burger.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  body.classList.toggle('nav-open');
+});
+
+document.addEventListener('scroll', () => {
+  let scrollTop = $(window).scrollTop();
+
+  if(scrollTop > 50) {
+    body.classList.add('header-fill');
+  }
+  else {
+    body.classList.remove('header-fill');
+  }
+});
 
 const $mainSlider = '.js-main-slider';
 const $personsSlider = '.js-person-slider';
@@ -101,12 +101,20 @@ function buildSlider(slider, content, items, buttons) {
       currentPosition = 0;
 
   items.forEach((el) => {
-    el.style.width =   sliderWidth + 'px';
+    if(sliderWidth > 569) {
+      el.style.width =   sliderWidth + 'px';
+    } else {
+      el.style.width = '440px';
+    }
   });
 
   content.style.width = (sliderWidth * itemsCount) + 'px';
 
-  buttons.forEach((button) => {
+  if(sliderWidth <= 569) {
+    content.style.width = (sliderWidth * itemsCount + 500) + 'px';
+  }
+
+    buttons.forEach((button) => {
     button.addEventListener('click', (e) => {
       e.preventDefault();
       e.stopPropagation();
@@ -132,6 +140,9 @@ function buildSlider(slider, content, items, buttons) {
 }
 
 if(calendarSlider) buildSlider(calendarSlider, calendarContent, calendarTable, calendarButton);
+window.addEventListener('resize', () => {
+  if(calendarSlider) buildSlider(calendarSlider, calendarContent, calendarTable, calendarButton);
+});
 
 
 //fix about slider

@@ -23,6 +23,10 @@
 .header__logo {
   display: block;
   margin: 20px auto;
+
+  @media (max-width: $max-xs) {
+    width: 150px;
+  }
 }
 
 

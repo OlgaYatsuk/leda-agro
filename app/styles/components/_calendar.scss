@@ -1,5 +1,11 @@
 .calendar {
   padding-top: 140px;
+  padding-bottom: 100px;
+
+  @media (max-width: $max-sm) {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
 }
 
 
@@ -18,12 +24,22 @@
   padding: 10px 13px 10px 16px;
   border-radius: 7px;
   z-index: 2;
+
+  @media (max-width: $max-xs) {
+    top: -55px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 .calendar__navigation {
   position: absolute;
   left: -10px;
   top: 65px;
+
+  @media (max-width: $max-xs) {
+    display: none;
+  }
 }
 
 .calendar__navigation-button {
@@ -52,6 +68,11 @@
   margin: auto;
   width: 100%;
   max-width: calc(100% - 100px);
+
+  @media (max-width: $max-xs) {
+    overflow: scroll;
+    max-width: 100%;
+  }
 }
 
 .calendar__scrolled-content {
@@ -59,6 +80,7 @@
 }
 
 .calendar__table {
+  min-width: 440px;
   display: inline-block;
 
   thead {
@@ -89,5 +111,9 @@
     font-weight: 800;
     font-size: 0.875rem;
     padding-right: 85px;
+
+    @media (max-width: $max-md) {
+      padding-right: 25px;
+    }
   }
 }

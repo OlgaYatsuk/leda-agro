@@ -21,7 +21,7 @@
   <script src="/bower_components/modernizr/modernizr.js"></script>
   <!-- endbuild -->
 </head>
-<body class="nav-open">
+<body class="">
 <div class="blend-background">
   <!--[if IE]>
   <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a
@@ -59,9 +59,7 @@
         <a href="#shops" class="contacts__item contacts__item--anchor">До магазинів <img src="images/svg/arrow-down.svg" class="contacts__item-arrow"/> </a>
       </div>
     </section>
-    <section class="shops" id="shops">
-      <h3 class="section-heading">де придбати</h3>
-    </section>
+    @@include('./partials/map.html')
   </main>
 
   @@include('./partials/footer.html')
