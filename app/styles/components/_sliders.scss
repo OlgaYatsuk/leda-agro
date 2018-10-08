@@ -88,6 +88,10 @@
       object-position: top;
       border-radius: 5px;
       bottom: calc(100% + 10px);
+
+      @media (max-width: $max-sm) {
+        display: none;
+      }
     }
 
     &:last-child {
@@ -132,6 +136,8 @@
   @media (max-width: $max-sm) {
     left: 50%;
     transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
   }
 
   p {

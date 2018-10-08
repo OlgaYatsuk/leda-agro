@@ -12,6 +12,10 @@
 
   body.nav-open & {
     background: transparent;
+
+    @media (max-width: $max-md) {
+      background: rgba($black, 1);
+    }
   }
 }
 
@@ -23,6 +27,7 @@
 .header__logo {
   display: block;
   margin: 20px auto;
+  width: 170px;
 
   @media (max-width: $max-xs) {
     width: 150px;

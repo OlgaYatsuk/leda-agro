@@ -3,6 +3,7 @@ const burger = document.querySelector('.header__nav-toggler'),
       productsToggler = document.querySelector('.products__dropdown-toggler'),
       productsFilter = document.querySelectorAll('.products .js-form-item label');
 
+
 burger.addEventListener('click', (e) => {
   e.preventDefault();
 
@@ -19,7 +20,6 @@ document.addEventListener('scroll', () => {
     body.classList.remove('header-fill');
   }
 });
-
 
 //scripts for catalog page
 if(productsToggler) {
@@ -40,7 +40,6 @@ if(productsFilter.length)
     });
   });
 //end scripts for catalog page
-
 
 const $mainSlider = '.js-main-slider';
 const $personsSlider = '.js-person-slider';
