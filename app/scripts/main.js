@@ -1,26 +1,27 @@
-// const burger = document.querySelector('.header__nav-toggler'),
-//       body = document.body;
-//
-// burger.addEventListener('click', (e) => {
-//   e.preventDefault();
-//
-//   body.classList.toggle('nav-open');
-// });
-//
-// document.addEventListener('scroll', () => {
-//   let scrollTop = $(window).scrollTop();
-//
-//   if(scrollTop > 50) {
-//     body.classList.add('header-fill');
-//   }
-//   else {
-//     body.classList.remove('header-fill');
-//   }
-// });
+const burger = document.querySelector('.header__nav-toggler'),
+      body = document.body;
+
+burger.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  body.classList.toggle('nav-open');
+});
+
+document.addEventListener('scroll', () => {
+  let scrollTop = $(window).scrollTop();
+
+  if(scrollTop > 50) {
+    body.classList.add('header-fill');
+  }
+  else {
+    body.classList.remove('header-fill');
+  }
+});
 
 const $mainSlider = '.js-main-slider';
 const $personsSlider = '.js-person-slider';
 const $mediaSlider = $('.js-media');
+const $productsSlider = '.js-products-slider';
 const $arrows = $('.js-arrows');
 
 class Slider {
@@ -53,12 +54,22 @@ class Slider {
 
 const sliders = [
   {
-    selector: $('.js-main-slider'),
+    selector: $mainSlider,
     isEnabled: true,
     config: {
       pauseOnHover: false,
       fade: true,
       dots: true,
+      appendArrows: $arrows,
+    }
+  },
+  {
+    selector: $productsSlider,
+    isEnabled: true,
+    config: {
+      pauseOnHover: false,
+      fade: true,
+      dots: false,
       appendArrows: $arrows,
     }
   },
@@ -192,6 +203,10 @@ function changeArrowsContent(selector) {
     .innerHTML = nextButtonContent + '<img class="arrow-link__img" src="../images/svg/l_arrow.svg" alt="next">';
 }
 
+$($productsSlider).on('afterChange', () => {
+  changeArrowsContent($productsSlider);
+});
+
 $($personsSlider).on('afterChange', () => {
   changeArrowsContent($personsSlider);
 });
@@ -202,6 +217,7 @@ $($mainSlider).on('afterChange', () => {
 
 if($($personsSlider).length) changeArrowsContent($personsSlider);
 if($($mainSlider).length) changeArrowsContent($mainSlider);
+if($($productsSlider).length) changeArrowsContent($productsSlider);
 
 const $menu = $('.js-contacts');
 const $root = $('body,html');

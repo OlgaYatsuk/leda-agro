@@ -200,7 +200,7 @@
   display: none !important;
 
   @media screen and (min-width: $max-sm) {
-    display: block;
+    display: block!important;
     filter: blur(5px);
     transform: rotate(-14deg) translateX(21%);
     z-index: -1;
@@ -263,3 +263,11 @@
   margin-top: 10px;
 }
 
+.hero--catalog {
+  display: block!important;
+  margin: 0 auto;
+
+  &::before {
+    display: none;
+  }
+}
