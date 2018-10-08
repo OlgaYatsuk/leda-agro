@@ -3,9 +3,15 @@
 }
 
 .post {
-  max-width: 370px;
+  max-width: 360px;
   height: auto;
+  width: 83%;
+  overflow-x: hidden;
   margin-bottom: 65px;
+
+  @media screen and (min-width: $max-md){
+    max-width: 360px;
+  }
 }
 
 .post__img {
