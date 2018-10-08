@@ -1,6 +1,12 @@
 // bower:scss
 // endbower
 
+html {
+  @media (max-width: $max-sm) {
+    font-size: 12px;
+  }
+}
+
 body {
   width: 100%;
   font-family: 'Montserrat', sans-serif;

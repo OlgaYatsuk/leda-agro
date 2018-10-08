@@ -4,7 +4,7 @@
   margin-bottom: 230px;
   max-width: 970px;
   text-align: center;
-  background: radial-gradient(560.00px at 0% 100%, rgba(6, 92, 153, 0.5) 0%, rgba(6, 92, 153, 0) 100%), #000000;
+  background: linear-gradient(25deg, rgba(#065c99, .5) 0%,rgba(#000000, 0) 46%, rgba(#065c99, .5) 100%), #000000;
 
   &::after {
     content: url(../images/hero/hero-bottom-img.png);
@@ -15,6 +15,10 @@
     transform: translateX(-50%) translateY(-50%);
     mix-blend-mode: screen;
   }
+}
+
+.hero--contacts {
+  margin-bottom: 100px;
 }
 
 .hero--contacts::after {

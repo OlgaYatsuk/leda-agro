@@ -2,6 +2,10 @@
   background: $black;
   border-top: 30px solid $green;
   padding: 55px 0 110px;
+
+  @media (max-width: $max-md) {
+    padding: 30px 0 50px;
+  }
 }
 
 .footer__wrapper {
@@ -10,12 +14,20 @@
   justify-content: space-between;
   align-items: flex-start;
 
+  @media (max-width: $max-md) {
+    flex-direction: column;
+  }
+
   &_align-center {
     align-items: center;
   }
 
   &--extra-padding {
     padding-top: 70px;
+
+    @media (max-width: $max-md) {
+      padding-top: 30px;
+    }
   }
 }
 
@@ -25,6 +37,16 @@
   padding-left: 30px;
   width: 100%;
   justify-content: space-between;
+
+  @media (max-width: $max-md) {
+    padding: 30px 15px 0;
+  }
+
+  @media (max-width: $max-xs) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 }
 
 .footer__nav-link {
@@ -32,6 +54,10 @@
   text-decoration: none;
   color: $white;
   margin: 0 15px;
+
+  @media (max-width: $max-xs) {
+    margin: 5px 0;
+  }
 
   &:first-child {
     margin-left: 0;
@@ -48,6 +74,13 @@
   align-items: flex-start;
   width: 100%;
   max-width: 670px;
+
+  @media (max-width: $max-md) {
+    flex-direction: column;
+    max-width: none;
+    align-items: center;
+    text-align: center;
+  }
 }
 
 .footer__contact-mail {
@@ -56,6 +89,10 @@
   font-size: 2.625rem;
   text-decoration: none;
   line-height: 1;
+
+  @media (max-width: $max-xs) {
+    font-size: 2.025rem;
+  }
 }
 
 .footer__address {
@@ -67,6 +104,12 @@
   display: block;
   margin-top: 25px;
   color: $gray;
+}
+
+.footer__social {
+  @media (max-width: $max-md) {
+    margin: 15px auto;
+  }
 }
 
 .footer__social-link {
@@ -88,4 +131,9 @@
   font-size: 1rem;
   letter-spacing: 0.03em;
   color: #9DAFBD;
+
+  @media (max-width: $max-md) {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
