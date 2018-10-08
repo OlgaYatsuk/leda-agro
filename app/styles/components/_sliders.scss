@@ -129,6 +129,11 @@
   left: 35%;
   transform: translateX(-35%);
 
+  @media (max-width: $max-sm) {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
   p {
     min-width: 75px;
   }

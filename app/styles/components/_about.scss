@@ -5,6 +5,12 @@
   .slick-dots {
     left: initial;
     right: 14%;
+
+    @media (max-width: $max-sm) {
+      right: 50%;
+      transform: translateX(50%);
+      bottom: -80px;
+    }
   }
 }
 
@@ -20,12 +26,23 @@
 .peoples-slider__slide {
   display: flex !important;
   align-items: flex-start;
+
+  @media (max-width: $max-sm) {
+    flex-direction: column-reverse;
+  }
 }
 
 .peoples-slider__img{
   width: 38.2%;
   height: 100%;
   object-fit: cover;
+
+  @media (max-width: $max-sm) {
+    width: 200px;
+    max-height: 240px;
+    align-self: center;
+    margin-top: 30px;
+  }
 }
 
 .peoples-slider__slide-wrapper {
@@ -45,6 +62,7 @@
 .peoples-slider__text {
   color: $gray-2;
   padding-left: 25px;
+  padding-bottom: 40px;
 }
 
 .peoples-slider__social {
@@ -79,6 +97,10 @@
   position: relative;
   padding-bottom: 100px;
 
+  @media (max-width: $max-sm) {
+    padding-bottom: 40px;
+  }
+
   &:last-child {
     padding-bottom: 0;
   }
@@ -88,6 +110,11 @@
   position: relative;
   width: calc(100% - 500px);
   margin: auto;
+
+  @media (max-width: $max-md) {
+    width: 100%;
+    padding: 0 15px;
+  }
 
   p {
     margin-bottom: 30px;
@@ -121,10 +148,22 @@
     right: 70px;
     left: initial;
   }
+
+  @media (max-width: $max-md) {
+    position: relative;
+    top: initial !important;
+    left: initial !important;
+    right: initial !important;
+    padding-bottom: 30px;
+  }
 }
 
 .plans {
   padding-top: 200px;
+
+  @media (max-width: $max-md) {
+    padding-top: 80px;
+  }
 }
 
 .plans__wrapper {
@@ -142,6 +181,10 @@
   overflow: hidden;
   padding-top: 170px;
   margin-bottom: 150px;
+
+  @media (max-width: $max-md) {
+    padding-top: 80px;
+  }
 
   .slick-slide {
     transition: all .4s ease;
