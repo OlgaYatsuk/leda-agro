@@ -45,6 +45,7 @@
     }
   },
   "dependencies": {
-    "gulp-file-include": "^2.0.1"
+    "gulp-file-include": "^2.0.1",
+    "slick-carousel": "^1.8.1"
   }
 }

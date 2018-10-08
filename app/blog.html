@@ -1,0 +1,204 @@
+<!doctype html>
+<html class="no-js" lang="ua">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>leda agro</title>
+
+  <!-- Place favicon.ico in the root directory -->
+
+  <!-- build:css styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick.css" />
+  <!-- endbower -->
+  <!-- endbuild -->
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+  <!-- build:css styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+  <!-- build:js scripts/vendor/modernizr.js -->
+  <script src="/bower_components/modernizr/modernizr.js"></script>
+  <!-- endbuild -->
+</head>
+<body class="">
+<div class="blend-background">
+  <!--[if IE]>
+  <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a
+    href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+  <![endif]-->
+  <!-- build:js scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="/bower_components/jquery/dist/jquery.js"></script>
+  <script src="/bower_components/modernizr/modernizr.js"></script>
+  <script src="/bower_components/slick-carousel/slick/slick.js"></script>
+  <script src="/bower_components/get-size/get-size.js"></script>
+  <script src="/bower_components/ev-emitter/ev-emitter.js"></script>
+  <script src="/bower_components/desandro-matches-selector/matches-selector.js"></script>
+  <script src="/bower_components/fizzy-ui-utils/utils.js"></script>
+  <script src="/bower_components/outlayer/outlayer.js"></script>
+  <script src="/bower_components/masonry-layout/masonry.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+  @@include('./partials/head.html')
+  @@include('./partials/navigation.html')
+
+  <main class="blog">
+    <div class="container">
+    <section class="hero container">
+      <h2 class="hero__heading hero__heading--centered heading">Блог</h2>
+      <p class="hero__background-heading hero__background-heading--blog">Блог</p>
+    </section>
+
+    <section class="blog-intro">
+      <p class="blog-intro__text">Ділимось з вами актуальними новинами та цікавими фактами в області вирощування овочів, квітів та трав.</p>
+      <p class="blog-intro__text">Розповідаємо, як садити рослини, як за ними доглядати та що робити, щоб ваш урожай давав багато здорових плодів.</p>
+      <p class="blog-intro__text">Ми маємо для вас безліч порад і радо ділимось ними у своєму блозі!</p>
+      <h5 class="blog-intro__greeting">Вітаємо у нашій спільноті.</h5>
+    </section>
+
+    <section class="posts-wrapper js-blog"  data-masonry='{ "itemSelector": ".post", "columnWidth": 200 }'>
+      <div class="post js-post"><img src="./images/blog/post-1.png" alt="tomatoes" class="post__img">
+        <div class="post__social">
+          <a href="" class="post__social-comment"><img src="./images/svg/comment.svg" alt="comments"><span>12</span></a>
+          <a href="#"><img src="images/svg/insta.svg" alt="" class="post__social-network"></a>
+        </div>
+        <div class="post_info">
+          <h5 class="article-heading article-heading--post">Міні-розфасовка</h5>
+          <p class="post__text text-medium">
+            Завдяки цьому, всі створені ними сорти стійкі до хвороб, мають гарантовано високу врожайність .
+          </p>
+        </div>
+        <a href="#" class="post__link">Читати <img src="./images/svg/l_arrow.svg" alt="go"></a>
+      </div>
+
+      <div class="post js-post"><img src="./images/blog/post-3.png" alt="tomatoes" class="post__img">
+        <div class="post__social">
+          <div class="post__social-comment"><img src="./images/svg/comment.svg" alt="comments"><span>7</span></div>
+          <img src="images/svg/facebook.svg" alt="" class="post__social-network">
+        </div>
+        <div class="post_info">
+          <h5 class="article-heading article-heading--post"></h5>
+          <h5 class="article-heading article-heading--post">Міні-розфасовка</h5>
+          <p class="post__text text-medium">
+            Завдяки цьому, всі створені ними сорти стійкі до хвороб, мають гарантовано високу врожайність .
+          </p>
+        </div>
+        <a href="#" class="post__link">Читати <img src="./images/svg/l_arrow.svg" alt="go"></a>
+      </div>
+
+      <div class="post js-post"><img src="./images/blog/post-3.png" alt="tomatoes" class="post__img">
+        <div class="post__social">
+          <div class="post__social-comment"><img src="./images/svg/comment.svg" alt="comments"><span>7</span></div>
+          <img src="images/svg/insta.svg" alt="" class="post__social-network">
+        </div>
+        <div class="post_info">
+          <h5 class="article-heading article-heading--post"></h5>
+          <h5 class="article-heading article-heading--post">Міні-розфасовка</h5>
+          <p class="post__text text-medium">
+            Завдяки цьому, всі створені ними сорти стійкі до хвороб, мають гарантовано високу врожайність .
+          </p>
+        </div>
+        <a href="#" class="post__link">Читати <img src="./images/svg/l_arrow.svg" alt="go"></a>
+      </div>
+
+      <div class="post js-post"><img src="./images/blog/post-3.png" alt="tomatoes" class="post__img">
+        <div class="post__social">
+          <div class="post__social-comment"><img src="./images/svg/comment.svg" alt="comments"><span>7</span></div>
+          <img src="images/svg/facebook.svg" alt="" class="post__social-network">
+        </div>
+        <div class="post_info">
+          <h5 class="article-heading article-heading--post"></h5>
+          <h5 class="article-heading article-heading--post">Міні-розфасовка</h5>
+          <p class="post__text text-medium">
+            Завдяки цьому, всі створені ними сорти стійкі до хвороб, мають гарантовано високу врожайність .
+          </p>
+        </div>
+        <a href="#" class="post__link">Читати <img src="./images/svg/l_arrow.svg" alt="go"></a>
+      </div>
+
+      <div class="post js-post"><img src="./images/blog/post-3.png" alt="tomatoes" class="post__img">
+        <div class="post__social">
+          <div class="post__social-comment"><img src="./images/svg/comment.svg" alt="comments"><span>7</span></div>
+          <img src="images/svg/insta.svg" alt="" class="post__social-network">
+        </div>
+        <div class="post_info">
+          <h5 class="article-heading article-heading--post"></h5>
+          <h5 class="article-heading article-heading--post">Міні-розфасовка</h5>
+          <p class="post__text text-medium">
+            Завдяки цьому, всі створені ними сорти стійкі до хвороб, мають гарантовано високу врожайність .
+          </p>
+        </div>
+        <a href="#" class="post__link">Читати <img src="./images/svg/l_arrow.svg" alt="go"></a>
+      </div>
+
+      <div class="post js-post"><img src="./images/blog/post-3.png" alt="tomatoes" class="post__img">
+        <div class="post__social">
+          <div class="post__social-comment"><img src="./images/svg/comment.svg" alt="comments"><span>7</span></div>
+          <img src="images/svg/facebook.svg" alt="" class="post__social-network">
+        </div>
+        <div class="post_info">
+          <h5 class="article-heading article-heading--post"></h5>
+          <h5 class="article-heading article-heading--post">Міні-розфасовка</h5>
+          <p class="post__text text-medium">
+            Завдяки цьому, всі створені ними сорти стійкі до хвороб, мають гарантовано високу врожайність .
+          </p>
+        </div>
+        <a href="#" class="post__link">Читати <img src="./images/svg/l_arrow.svg" alt="go"></a>
+      </div>
+
+      <div class="post js-post"><img src="./images/blog/post-3.png" alt="tomatoes" class="post__img">
+        <div class="post__social">
+          <div class="post__social-comment"><img src="./images/svg/comment.svg" alt="comments"><span>7</span></div>
+          <img src="images/svg/insta.svg" alt="" class="post__social-network">
+        </div>
+        <div class="post_info">
+          <h5 class="article-heading article-heading--post"></h5>
+          <h5 class="article-heading article-heading--post">Міні-розфасовка</h5>
+          <p class="post__text text-medium">
+            Завдяки цьому, всі створені ними сорти стійкі до хвороб, мають гарантовано високу врожайність .
+          </p>
+        </div>
+        <a href="#" class="post__link">Читати <img src="./images/svg/l_arrow.svg" alt="go"></a>
+      </div>
+      <div class="post js-post"><img src="./images/blog/post-3.png" alt="tomatoes" class="post__img">
+        <div class="post__social">
+          <div class="post__social-comment"><img src="./images/svg/comment.svg" alt="comments"><span>7</span></div>
+          <img src="images/svg/insta.svg" alt="" class="post__social-network">
+        </div>
+        <div class="post_info">
+          <h5 class="article-heading article-heading--post"></h5>
+          <h5 class="article-heading article-heading--post">Міні-розфасовка</h5>
+          <p class="post__text text-medium">
+            Завдяки цьому, всі створені ними сорти стійкі до хвороб, мають гарантовано високу врожайність .
+          </p>
+        </div>
+        <a href="#" class="post__link">Читати <img src="./images/svg/l_arrow.svg" alt="go"></a>
+      </div>
+      <div class="post js-post"><img src="./images/blog/post-3.png" alt="tomatoes" class="post__img">
+        <div class="post__social">
+          <div class="post__social-comment"><img src="./images/svg/comment.svg" alt="comments"><span>7</span></div>
+          <img src="images/svg/insta.svg" alt="" class="post__social-network">
+        </div>
+        <div class="post_info">
+          <h5 class="article-heading article-heading--post"></h5>
+          <h5 class="article-heading article-heading--post">Міні-розфасовка</h5>
+          <p class="post__text text-medium">
+            Завдяки цьому, всі створені ними сорти стійкі до хвороб, мають гарантовано високу врожайність .
+          </p>
+        </div>
+        <a href="#" class="post__link">Читати <img src="./images/svg/l_arrow.svg" alt="go"></a>
+      </div>
+    </section>
+    </div>
+  </main>
+
+  @@include('./partials/footer.html')
+
+  <!-- build:js scripts/main.js -->
+  <script src="scripts/main.js"></script>
+  <!-- endbuild -->
+</div>
+</body>
+</html>

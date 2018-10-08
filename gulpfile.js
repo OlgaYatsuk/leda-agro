@@ -138,16 +138,18 @@ gulp.task('serve', () => {
       }
     });
 
+    gulp.watch('app/styles/**/*.scss', ['styles']);
+    gulp.watch('app/scripts/**/*.js', ['scripts']);
+    gulp.watch('app/fonts/**/*', ['fonts']);
+    gulp.watch('bower.json', ['wiredep', 'fonts']);
+
     gulp.watch([
       'app/*.html',
       'app/images/**/*',
       '.tmp/fonts/**/*'
     ]).on('change', reload);
 
-    gulp.watch('app/styles/**/*.scss', ['styles']);
-    gulp.watch('app/scripts/**/*.js', ['scripts']);
-    gulp.watch('app/fonts/**/*', ['fonts']);
-    gulp.watch('bower.json', ['wiredep', 'fonts']);
+
   });
 });
 
@@ -163,11 +165,14 @@ gulp.task('serve:dist', ['default'], () => {
   gulp.watch([
     'app/*.html',
     'app/images/**/*',
+    'app/styles/**/*',
     '.tmp/fonts/**/*'
   ]).on('change', reload);
 
-  gulp.watch('app/styles/**/*.scss', ['styles']);
-  gulp.watch('app/scripts/**/*.js', ['scripts']);
+  gulp.watch('app/*.html', ['html']);
+  gulp.watch('app/**/*.html', ['html']);
+  gulp.watch('app/styles/**/*.scss', ['stylesDist']);
+  gulp.watch('app/scripts/**/*.js', ['scriptsDist']);
   gulp.watch('app/fonts/**/*', ['fonts']);
   gulp.watch('bower.json', ['wiredep', 'fonts']);
 });

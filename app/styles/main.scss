@@ -1,7 +1,28 @@
+@import 'base/reset';
+@import 'base/breakpoints';
+@import 'base/container';
 @import 'base/fonts';
 @import 'base/base';
 @import 'base/colors';
 @import 'base/font-styles';
-@import 'layouts/header';
-@import 'layouts/footer';
+
 @import 'components/buttons';
+@import 'components/labels';
+@import 'components/sliders';
+@import 'components/hits-item';
+@import 'components/innovation';
+@import 'components/blog';
+@import 'components/post';
+@import 'components/catalog';
+@import 'components/calendar';
+@import 'components/about';
+@import 'components/contacts';
+@import 'components/tabs';
+@import 'components/product-select';
+@import 'components/map';
+@import 'components/products';
+
+@import 'layouts/header';
+@import 'layouts/navigation';
+@import 'layouts/footer';
+@import 'layouts/hero';

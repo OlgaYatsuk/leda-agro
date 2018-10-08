@@ -1,0 +1,183 @@
+<!doctype html>
+<html class="no-js" lang="ua">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>leda agro</title>
+
+  <!-- Place favicon.ico in the root directory -->
+
+  <!-- build:css styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick.css" />
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:css styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+  <!-- build:js scripts/vendor/modernizr.js -->
+  <script src="/bower_components/modernizr/modernizr.js"></script>
+  <!-- endbuild -->
+</head>
+<body class="">
+<div class="blend-background">
+  <!--[if IE]>
+  <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a
+    href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <!-- build:js scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="/bower_components/jquery/dist/jquery.js"></script>
+  <script src="/bower_components/modernizr/modernizr.js"></script>
+  <script src="/bower_components/slick-carousel/slick/slick.js"></script>
+  <script src="/bower_components/get-size/get-size.js"></script>
+  <script src="/bower_components/ev-emitter/ev-emitter.js"></script>
+  <script src="/bower_components/desandro-matches-selector/matches-selector.js"></script>
+  <script src="/bower_components/fizzy-ui-utils/utils.js"></script>
+  <script src="/bower_components/outlayer/outlayer.js"></script>
+  <script src="/bower_components/masonry-layout/masonry.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+  @@include('./partials/head.html')
+  @@include('./partials/navigation.html')
+
+  <main>
+    <div class="hero-wrapper">
+      <p class="hero__background-heading hero__background-heading--main">Про нас</p>
+      <section class="hero container">
+        <h2 class="hero__heading hero__heading--centered heading">Про нас</h2>
+      </section>
+    </div>
+    <section class="peoples-slider">
+      <div class="container">
+          <h4 class="peoples-slider__title section-heading">Лєда Агро - це люди</h4>
+      	<div class="peoples-slider__wrapper js-person-slider"><!--js-main-slider-->
+      	  <div class="peoples-slider__slide">
+      	    <div class="peoples-slider__slide-wrapper">
+      	      <div class="peoples-slider__social">
+      	        <a href="#" class="peoples-slider__social-link">
+                  <img src="./images/svg/facebook.svg" alt="">
+                </a>
+                <a href="#" class="peoples-slider__social-link">
+                  <img src="./images/svg/insta.svg" alt="">
+                </a>
+              </div>
+      	      <p class="peoples-slider__name js-slider-name">Андрій</p>
+      	      <p class="peoples-slider__pos">директор</p>
+      	      <p class="peoples-slider__text js-slider-text">Лєда Агро - це моє життя. Це команда однодумців, захоплених своєю справою.  Ми постійно слідкуємо за інноваціями, новинками та розробками в аграрній галузі та впевнено доносимо все найважливіше кожному, хто цікавиться агро сферою - від дачника любителя, до професійного фермера. Завдяки нашій злагодженій роботі, овочі на вашому столі смачніші та корисніші!</p>
+            </div>
+      	    <img class="peoples-slider__img js-slider-img" src="./images/people-slide-1.jpg" alt="">
+          </div>
+          <div class="peoples-slider__slide">
+            <div class="peoples-slider__slide-wrapper">
+              <div class="peoples-slider__social">
+                <a href="#" class="peoples-slider__social-link">
+                  <img src="./images/svg/facebook.svg" alt="">
+                </a>
+                <a href="#" class="peoples-slider__social-link">
+                  <img src="./images/svg/insta.svg" alt="">
+                </a>
+              </div>
+              <p class="peoples-slider__name js-slider-name">Натали</p>
+              <p class="peoples-slider__pos">директор</p>
+              <p class="peoples-slider__text js-slider-text">Лєда Агро - це моє життя. Це команда однодумців, захоплених своєю справою.  Ми постійно слідкуємо за інноваціями, новинками та розробками в аграрній галузі та впевнено доносимо все найважливіше кожному, хто цікавиться агро сферою - від дачника любителя, до професійного фермера. Завдяки нашій злагодженій роботі, овочі на вашому столі смачніші та корисніші!</p>
+            </div>
+            <img class="peoples-slider__img js-slider-img" src="./images/people-slide-2.jpg" alt="">
+          </div>
+          <div class="peoples-slider__slide">
+            <div class="peoples-slider__slide-wrapper">
+              <div class="peoples-slider__social">
+                <a href="#" class="peoples-slider__social-link">
+                  <img src="./images/svg/facebook.svg" alt="">
+                </a>
+                <a href="#" class="peoples-slider__social-link">
+                  <img src="./images/svg/insta.svg" alt="">
+                </a>
+              </div>
+              <p class="peoples-slider__name js-slider-name">Даша</p>
+              <p class="peoples-slider__pos">директор</p>
+              <p class="peoples-slider__text js-slider-text">Лєда Агро - це моє життя. Це команда однодумців, захоплених своєю справою.  Ми постійно слідкуємо за інноваціями, новинками та розробками в аграрній галузі та впевнено доносимо все найважливіше кожному, хто цікавиться агро сферою - від дачника любителя, до професійного фермера. Завдяки нашій злагодженій роботі, овочі на вашому столі смачніші та корисніші!</p>
+            </div>
+            <img class="peoples-slider__img js-slider-img" src="./images/people-slide-3.jpg" alt="">
+          </div>
+        </div>
+        <div class="custom-arrows custom-arrows--about js-arrows"></div>
+      </div>
+    </section>
+    <section class="steps">
+      <div class="container">
+        <div class="step">
+          <h6 class="step__title">Крок <br>перший</h6>
+          <div class="step__text">
+            <p>Наша історія почалася ще у 2001 році з маленької компанії, яка однією з перших в Україні почала продавати високоякісне голландське насіння. Спочатку робота велась тільки з професійними фермерськими господарствами переважно в центральній частині України. Завдяки високій якості насіння та першокласній агрономічній підтримці компанія швидко розвивалась.</p>
+          </div>
+        </div>
+        <div class="step">
+          <h6 class="step__title">Крок <br>другий</h6>
+          <div class="step__text">
+            <p>В 2008 році ми відкрили перший роздрібний магазин в місті Києві, для того щоб забезпечити найкращим насінням не тільки великі господарства а й дачників, садівників та любителів балконних грядок. Відчувши нестачу якісного посівного матеріалу в хоббі сегменті ми зробили ще один важливий крок – розфасували професійне, якісне та інноваційне насіння у маленькі пакети, щоб воно стало доступним кожному, хто бажає вирощувати овочі, ягоди та квіти для себе та своєї родини!</p>
+            <p>Ми добре знаємо скільки зусиль потрібно докласти, щоб виростити багатий та здоровий урожай. Тому хочемо, щоб наші споживачі були так само впевнені у плодах своє праці, як ми у своїй продукції!</p>
+            <p>Великим плюсом насіння Леда Агро є те, що воно одразу готове до використання, його не потрібно окремо замочувати, сушити або робити інші маніпуляції, тому що у кожному пакетику відібране, протестоване та здорове насіння, яке достатньо посіяти та просто займатися вирощуванням рослини, залежно від її класу та вимог. Це суттєво економить час господарів та дає змогу зробити роботу по догляду за городиною набагато легшою, приємнішою та більш економною!</p>
+          </div>
+        </div>
+        <div class="step">
+          <h6 class="step__title">Крок <br>третій</h6>
+          <div class="step__text">
+            <p>Ключовим поворотом у розвитку та позиціонуванні на ринку України, стало підписання у 2010 році  ексклюзивного партнерства з турецькою селекційною компанією Yuksel Seeds. Компанія Yuksel Seeds використовує найновітніші технології та потужності для селекції нових гібридів овочів, які є стійкими до хвороб, відмінно плодовиті та пристосовуються до будь-яких умов вирощування. Ми зрозуміли, що дивимось в одному напрямку та несемо однакову місію - забезпечити населення України та всього світу якісною та здоровою їжею! З тих пір ми стали ексклюзивним імпортером продукції компанії Yuksel Seeds на території України, Білорусі та Молдови.</p>
+            <p>Завдяки беззаперечній якості імпортованої продукції,  вже у 2014 році ми зайняли лідируючі позиції на ринку насіння для професіоналів. Більшість українських фермерів обирають нашу продукцію, тому що завжди впевнені у вирощеному врожаї та якості плодів.</p>
+          </div>
+        </div>
+        <div class="step">
+          <h6 class="step__title">Крок <br>четвертий</h6>
+          <div class="step__text">
+            <p>Команда Леда Агро ставить собі великі цілі. В <b>2016 році</b> ми стаємо партнерами багатьох міжнародних насіннєвих компаній – <a href="#">Hild Samen</a> з Німеччини, <a href="#">Hem Zaden</a> та <a href="#">Hem Genetics</a> з Голландії, <a href="#">Cerny Seed</a> з Чехії та інші.</p>
+            <p>Ми хочемо, щоб наші огірки, помідори, всі інші овочі з асортименту та квіти, росли в усіх куточках України, Білорусі та Молдови! </p>
+          </div>
+        </div>
+        <div class="step">
+          <h6 class="step__title">Крок <br>п'ятий</h6>
+          <div class="step__text">
+            <p>Як ви знаєте, для росту рослин потрібні добрива. Саме тому в 2016 році ми підписали ексклюзивний контракт с інноваційним бельгійським виробником добрив – компанією Lima Europe. Професійні фермери гідно оцінили першокласне добриво. Тому вже в 2018 році Леда Агро запустили лінію по фасуванню добрив в міні пакет. Щоб дачники, садівники теж могли отримати задоволення від використання якісних добрив.</p>
+            <p>Ми пишаємось своїми ексклюзивними сортами та гібридами, адже кожен з них виведений та вирощений кращими селекціонерами світу, кожен з них має унікальні властивості та якості, з якими ви можете ознайомитись у каталозі продукції (посилання на каталог).</p>
+            <p>Ми впевнені у першокласній якості своїх добрив. Наші добрива ретельно підібрані для кожної стадії вирощування рослин та турботливо розфасовані в зручну та доступну упаковку як для власника 6 соток, так і для фермера 100 та більше Га.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="plans">
+      <div class="container">
+        <div class="plans__wrapper">
+          <h3 class="plans__title section-heading">Наші плани на майбутнє</h3>
+          <p class="text">Розширювати свій асортимент новим ексклюзивним насінням та добривами. Надалі забезпечувати своїх споживачів якісним продуктом!</p>
+        </div>
+      </div>
+    </section>
+    <section class="media">
+      <div class="container">
+        <h3 class="media__title section-heading">Медіа</h3>
+
+        <div class="media__wrapper js-media">
+          <img src="./images/svg/logo.svg" alt="">
+          <img src="./images/svg/logo.svg" alt="">
+          <img src="./images/svg/logo.svg" alt="">
+          <img src="./images/svg/logo.svg" alt="">
+          <img src="./images/svg/logo.svg" alt="">
+          <img src="./images/svg/logo.svg" alt="">
+          <img src="./images/svg/logo.svg" alt="">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  @@include('./partials/footer.html')
+
+  <!-- build:js scripts/main.js -->
+  <script src="scripts/main.js"></script>
+  <!-- endbuild -->
+</div>
+</body>
+</html>

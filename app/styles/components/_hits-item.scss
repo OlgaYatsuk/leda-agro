@@ -1,0 +1,40 @@
+.hits {
+  margin-top: 100px;
+}
+
+.hits__item {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.hits__item:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
+.hits__item-info {
+  max-width: 520px;
+  margin: 45px 6% 0;
+  flex: 0 1 50%;
+}
+
+.hits__item-description {
+  line-height: 1.8;
+  font-weight: 300;
+  margin-top: 25px;
+
+  p {
+    margin-top: 20px;
+  }
+}
+
+.hits__item-img {
+  display: block;
+  flex: 0 1 50%;
+  object-fit: cover;
+  max-width: 860px;
+}
+
+.product__icons {
+  mix-blend-mode: screen;
+}

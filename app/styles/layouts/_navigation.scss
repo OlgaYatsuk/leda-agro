@@ -1,0 +1,251 @@
+.navigation {
+  position: fixed;
+  z-index: 11;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding-top: 120px;
+  padding-bottom: 80px;
+  background: radial-gradient(472.00px at 0% 100%, rgba(6, 92, 153, 0.5) 0%, rgba(6, 92, 153, 0) 100%), #000000;
+  transition: transform .45s ease-in-out;
+  transform: translate3d(-100%, 0, 0);
+
+  @media (max-width: $max-sm) {
+    padding-top: 100px;
+    padding-bottom: 0;
+    overflow: scroll;
+  }
+
+  body.nav-open & {
+    transform: translate3d(0,0,0);
+  }
+
+  .container {
+    height: 100%;
+  }
+}
+
+.navigation__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  padding-left: 30px;
+
+  @media (max-width: $max-md) {
+    padding-left: 0;
+  }
+}
+
+.navigation__social {
+  text-align: right;
+
+  @media (max-width: $max-sm) {
+    text-align: center;
+  }
+}
+
+.navigation__social-link {
+  text-decoration: none;
+  margin: 0 15px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.navigation__main-nav {
+  display: flex;
+  justify-content: space-between;
+  max-width: 675px;
+  width: 100%;
+  padding-top: 20px;
+
+  @media (max-width: $max-sm) {
+    justify-content: center;
+  }
+
+  @media (max-width: $max-xs) {
+    display: block;
+    text-align: center;
+  }
+}
+
+.navigation__main-nav-link {
+  font-size: 1.625rem;
+  font-weight: 600;
+  background: -webkit-linear-gradient(left, #C4161C, #FF486F);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  height: 100%;
+  margin: 0 15px;
+
+  @media (max-width: $max-xs) {
+    display: block;
+  }
+}
+
+.navigation__pane {
+  padding-left: 30px;
+  padding-top: 60px;
+
+  @media (max-width: $max-sm) {
+    padding-left: 0;
+    padding-top: 30px;
+  }
+}
+
+.navigation__pane-links {
+  display: flex;
+  align-items: center;
+  padding-bottom: 50px;
+
+  @media (max-width: $max-sm) {
+    padding-bottom: 25px;
+    justify-content: center;
+  }
+
+  @media (max-width: $max-xs) {
+    flex-direction: column;
+  }
+}
+
+.navigation__pane-links-link {
+  display: block;
+  font-size: 1rem;
+  color: #4F4F4F;
+  line-height: 60px;
+  height: 60px;
+  padding: 0 20px;
+  border-radius: 5px;
+  text-decoration: none;
+
+  @media (max-width: $max-sm) {
+    line-height: 40px;
+    height: 40px;
+    font-size: 1.4rem;
+  }
+
+  &.active {
+    color: $white;
+    border: 1px solid #2F80ED;;
+  }
+}
+
+.navigation__pane-content {
+  column-count: 3;
+  column-width: 290px;
+  float: left;
+  padding-left: 25px;
+
+  @media (max-width: $max-md) {
+    column-width: auto;
+  }
+
+  @media (max-width: $max-sm) {
+    column-count: 2;
+    padding-left: 0;
+    float: none;
+  }
+
+  @media (max-width: $max-xs) {
+    column-count: 1;
+    padding-bottom: 55px;
+  }
+}
+
+.navigation__pane-content-link {
+  float: left;
+  display: block;
+  clear: both;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.75rem;
+  color: $gray-2;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  @media (max-width: $max-md) {
+    line-height: 1.6;
+  }
+
+  @media (max-width: $max-sm) {
+    float: none;
+    text-align: center;
+    margin: 15px 0;
+    font-size: 1rem;
+  }
+
+  &.active,
+  &:hover {
+    color: $white;
+  }
+}
+
+.navigation__lang {
+  position: absolute;
+  left: 130px;
+  bottom: 40px;
+
+  @media (max-width: $max-md) {
+    top: 30px;
+    right: 30px;
+    bottom: initial;
+    left: initial;
+  }
+
+  @media (max-width: $max-sm) {
+    right: 15px;
+  }
+}
+
+.navigation__lang-link {
+  display: inline-block;
+  position: relative;
+  font-size: .625rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $gray-2;
+  margin: 0 3px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 18px;
+    height: 10px;
+    background: url(../images/svg/l_arrow.svg) no-repeat;
+    background-size: 100%;
+    opacity: 0;
+  }
+
+  &.active {
+    &:before {
+      opacity: 1;
+    }
+  }
+
+  &:hover,
+  &.active {
+    color: $white;
+  }
+}

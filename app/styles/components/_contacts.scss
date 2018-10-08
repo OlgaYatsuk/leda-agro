@@ -1,0 +1,56 @@
+.contacts {
+  position: relative;
+  top: -35%;
+  z-index: 2;
+
+  @media screen and (min-width: $max-xs) {
+    top: -40%;
+  }
+}
+
+.mail {
+  color: $blue;
+  font-weight: normal;
+  font-size: 1rem;
+  text-decoration: none;
+  line-height: 1;
+  display: block;
+  margin-bottom: 25px;
+}
+
+.contacts__item {
+  display: block;
+  color: $white;
+  max-width: 180px;
+  font-size: 0.625rem;
+  margin: 0 auto;
+  line-height: 2;
+  text-transform: uppercase;
+  text-decoration: none;
+  z-index: 1;
+
+  &:first-of-type:hover {
+    color: $white;
+    cursor: default;
+  }
+
+  &:hover {
+    color: $blue;
+  }
+}
+
+.contacts__item--anchor {
+  color: $blue;
+  margin-top: 8px;
+
+  @media screen and (min-width: $max-md) {
+    margin-top: 45px;
+  }
+}
+
+.contacts__item-arrow {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -40px;
+}
