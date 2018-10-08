@@ -7,6 +7,12 @@ html {
   }
 }
 
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   width: 100%;
   font-family: 'Montserrat', sans-serif;
