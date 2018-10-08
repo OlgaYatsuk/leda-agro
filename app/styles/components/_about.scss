@@ -43,12 +43,25 @@
     align-self: center;
     margin-top: 30px;
   }
+
+  @media (max-width: $max-xs) {
+    width: 150px;
+    max-height: 190px;
+  }
 }
 
 .peoples-slider__slide-wrapper {
   position: relative;
   padding: 0 100px;
   margin: auto 0;
+
+  @media (max-width: $max-md) {
+    padding: 30px 40px 0 80px;
+  }
+
+  @media (max-width: $max-xs) {
+    padding: 15px 15px 0 15px;
+  }
 }
 
 .peoples-slider__name {
@@ -69,18 +82,36 @@
   position: absolute;
   top: 120px;
   left: 75px;
+
+  @media (max-width: $max-md) {
+    top: 155px;
+    left: 65px;
+  }
+
+  @media (max-width: $max-xs) {
+    left: initial;
+    top: initial;
+    position: relative;
+  }
 }
 
 .peoples-slider__social-link {
   display: block;
   margin: 20px 0;
 
+  @media (max-width: $max-xs) {
+    display: inline-block;
+    margin: 0 10px;
+  }
+
   &:first-child {
     margin-top: 0;
+    margin-left: 0;
   }
 
   &:last-child {
     margin-bottom: 0;
+    margin-right: 0;
   }
 
   img {
@@ -112,7 +143,7 @@
   margin: auto;
 
   @media (max-width: $max-md) {
-    width: 100%;
+    width: calc(100% - 15px);
     padding: 0 15px;
   }
 
