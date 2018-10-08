@@ -13,9 +13,13 @@
 }
 
 .hits__item-info {
-  max-width: 520px;
-  margin: 45px 6% 0;
-  flex: 0 1 50%;
+  margin: 45px 6%;
+  flex: 1 0 50%;
+
+  @media screen and (min-width: $max-md) {
+    max-width: 520px;
+    margin: 45px 6% 0;
+  }
 }
 
 .hits__item-description {
@@ -30,9 +34,14 @@
 
 .hits__item-img {
   display: block;
-  flex: 0 1 50%;
+  flex: 1 0 50%;
   object-fit: cover;
-  max-width: 860px;
+  max-width: 840px;
+  max-height: 250px;
+
+  @media screen and (min-width: $max-md) {
+    max-height: none;
+  }
 }
 
 .product__icons {

@@ -3,6 +3,7 @@
   justify-content: space-between;
   max-width: 310px;
   margin: 65px auto;
+  width: 66%;
 }
 
 .product-select__link  {
@@ -17,8 +18,11 @@
 .product-select__img {
   display: block;
   margin: 0 auto 30px;
-  width: 98px;
-  height: 160px;
+  max-width: 70px;
+
+  @media screen and (min-width: $max-xs) {
+    max-width: 98px;
+  }
 }
 
 .product-select__name {
