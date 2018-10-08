@@ -1,5 +1,8 @@
 const burger = document.querySelector('.header__nav-toggler'),
-      body = document.body;
+      body = document.body,
+      productsToggler = document.querySelector('.products__dropdown-toggler'),
+      productsFilter = document.querySelectorAll('.products .js-form-item label');
+
 
 burger.addEventListener('click', (e) => {
   e.preventDefault();
@@ -17,6 +20,26 @@ document.addEventListener('scroll', () => {
     body.classList.remove('header-fill');
   }
 });
+
+//scripts for catalog page
+if(productsToggler) {
+  if(document.body.clientWidth < 768) {
+    document.querySelector('.products').style.minHeight = document.querySelector('#views-exposed-form-catalog-page-1').clientHeight + 'px';
+  }
+
+  productsToggler.addEventListener('click', (e) => {
+    productsToggler.classList.toggle('active');
+  });
+}
+
+if(productsFilter.length)
+  productsFilter.forEach((el) => {
+    el.addEventListener('click', () => {
+      el.classList.toggle('active');
+      productsToggler.classList.remove('active');
+    });
+  });
+//end scripts for catalog page
 
 const $mainSlider = '.js-main-slider';
 const $personsSlider = '.js-person-slider';
