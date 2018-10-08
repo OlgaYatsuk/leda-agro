@@ -7,6 +7,11 @@
 
 .product-select__link  {
   text-decoration: none;
+  transition: transform .25s;
+
+  &:hover {
+    transform: scale(1.07);
+  }
 }
 
 .product-select__img {

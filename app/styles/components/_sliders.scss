@@ -28,7 +28,7 @@
 .slick-dots  {
   max-width: 90px;
   position: absolute;
-  bottom: -50px;
+  bottom: -60px;
   left: 50%;
   transform: translateX(-40%);
 
@@ -114,9 +114,10 @@
 }
 
 .custom-arrows--main {
-  bottom: -110px;
+  bottom: auto;
   left: 50%;
   transform: translateX(-50%);
+  width: 254px;
 
   p {
     min-width: 90px;
@@ -127,6 +128,11 @@
   bottom: -53px;
   left: 35%;
   transform: translateX(-35%);
+
+  @media (max-width: $max-sm) {
+    left: 50%;
+    transform: translateX(-50%);
+  }
 
   p {
     min-width: 75px;

@@ -41,11 +41,11 @@
   <script src="/bower_components/masonry-layout/masonry.js"></script>
   <!-- endbower -->
   <!-- endbuild -->
-  @@include('./partials/head.html')
-  @@include('./partials/navigation.html')
+  <!--@@include('./partials/head.html')-->
+  <!--@@include('./partials/navigation.html')-->
 
   <main class="main">
-    <section class="container ">
+    <section class="container">
       <div class="js-main-slider ">
         <div class="hero hero--main">
           <img src="./images/hero/hero-img-product.png" alt="tomatoes" class="hero__img hero__img--main">
@@ -80,12 +80,455 @@
       </div>
       <div class="custom-arrows custom-arrows--main js-arrows"></div>
     </section>
-    @@include('./partials/catalog.html')
-    @@include('./partials/calendar.html')
-    @@include('./partials/map.html')
+    <section class="calendar">
+      <div class="container">
+        <h4 class="calendar__title section-heading">Посівний календар</h4>
+        <div class="calendar__wrapper">
+          <div class="calendar__year">2018</div>
+          <div class="calendar__navigation">
+            <a href="#" class="calendar__navigation-button calendar__navigation-left"></a>
+            <a href="#" class="calendar__navigation-button calendar__navigation-right"></a>
+          </div>
+          <div class="calendar__slider">
+            <div class="calendar__scrolled-content">
+              <table class="calendar__table">
+                <thead>
+                <th></th>
+                <td>Вересень</td>
+                <td>Жовтень</td>
+                <td>Листопад</td>
+                </thead>
+                <tbody>
+                <tr>
+                  <th>Баклажани</th>
+                  <td>13, 14, 16, 17, 23, 24</td>
+                  <td>12, 13, 15, 16, 20, 21</td>
+                  <td>Листопад</td>
+                </tr>
+                <tr>
+                  <th>Гарбуз</th>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                </tr>
+                <tr>
+                  <th>Зелень: цибуля на перо, петрушка, селера листкова, кріп, салат</th>
+                  <td>13, 14, 16, 17, 23, 24</td>
+                  <td>1-5, 11, 29-31</td>
+                  <td>8, 11, 16-18</td>
+                </tr>
+                <tr>
+                  <th>Кавун, диня</th>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                </tr>
+                <tr>
+                  <th>Кабачки, патисони</th>
+                  <td>12, 14-16, 18, 23-24</td>
+                  <td>10, 12-14, 20</td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                </tr>
+                <tr>
+                  <th>Картопля</th>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                </tr>
+                <tr>
+                  <th>Капуста білоголова, цвітна</th>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                </tr>
+                <tr>
+                  <th>Капуста червоноголова</th>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                </tr>
+                <tr>
+                  <th>Квасоля, горох, боби</th>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                </tr>
+                <tr>
+                  <th>Морква, буряк</th>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                </tr>
+                <tr>
+                  <th>Огірки</th>
+                  <td>12, 14, 15, 17, 23</td>
+                  <td>10, 11, 13, 15</td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                </tr>
+                <tr>
+                  <th>Перець солодкий</th>
+                  <td>11, 12, 14, 15, 16, 18, 23, 24</td>
+                  <td>11, 12, 14, 15, 20, 21</td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                </tr>
+                <tr>
+                  <th>Петрушка коренева</th>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                </tr>
+                <tr>
+                  <th>Помідори</th>
+                  <td>11, 12, 14, 15, 17, 19, 23</td>
+                  <td>11, 12, 14, 15, 21</td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                </tr>
+                <tr>
+                  <th>Редиска, редька</th>
+                  <td>5, 6, 27, 29</td>
+                  <td>2, 3, 25, 26, 30</td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                </tr>
+                <tr>
+                  <th>Цибуля ріпчаста</th>
+                  <td>5, 6, 27, 29</td>
+                  <td>3, 8, 26, 29</td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                </tr>
+                <tr>
+                  <th>Часник</th>
+                  <td>4-5, 1-15</td>
+                  <td>11-13</td>
+                  <td>8, 15-18</td>
+                </tr>
+                <tr>
+                  <th>Плодові кущі</th>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                  <td>12, 13, 15, 16, 17, 19, 23</td>
+                  <td>12, 13, 15, 16, 20</td>
+                </tr>
+                <tr>
+                  <th>Плодові дерева</th>
+                  <td>12, 13, 14, 16, 17, 19, 23</td>
+                  <td>11, 13, 14, 16, 20, 21</td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                </tr>
+                <tr>
+                  <th>Багаторічні квіти</th>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                </tr>
+                <tr>
+                  <th>Однорічні квіти</th>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                </tr>
+                <tr>
+                  <th>Квіти з цибулин</th>
+                  <td>12, 13, 15, 16, 18, 23, 24</td>
+                  <td>10, 11, 12, 15, 16, 20</td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                </tr>
+                </tbody>
+              </table>
+              <table class="calendar__table">
+                <thead>
+                <th></th>
+                <td>Вересень</td>
+                <td>Жовтень</td>
+                <td>Листопад</td>
+                </thead>
+                <tbody>
+                <tr>
+                  <th>Баклажани</th>
+                  <td>13, 14, 16, 17, 23, 24</td>
+                  <td>12, 13, 15, 16, 20, 21</td>
+                  <td>Листопад</td>
+                </tr>
+                <tr>
+                  <th>Гарбуз</th>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                </tr>
+                <tr>
+                  <th>Зелень: цибуля на перо, петрушка, селера листкова, кріп, салат</th>
+                  <td>13, 14, 16, 17, 23, 24</td>
+                  <td>1-5, 11, 29-31</td>
+                  <td>8, 11, 16-18</td>
+                </tr>
+                <tr>
+                  <th>Кавун, диня</th>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                </tr>
+                <tr>
+                  <th>Кабачки, патисони</th>
+                  <td>12, 14-16, 18, 23-24</td>
+                  <td>10, 12-14, 20</td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                </tr>
+                <tr>
+                  <th>Картопля</th>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                </tr>
+                <tr>
+                  <th>Капуста білоголова, цвітна</th>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                </tr>
+                <tr>
+                  <th>Капуста червоноголова</th>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                </tr>
+                <tr>
+                  <th>Квасоля, горох, боби</th>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                </tr>
+                <tr>
+                  <th>Морква, буряк</th>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                </tr>
+                <tr>
+                  <th>Огірки</th>
+                  <td>12, 14, 15, 17, 23</td>
+                  <td>10, 11, 13, 15</td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                </tr>
+                <tr>
+                  <th>Перець солодкий</th>
+                  <td>11, 12, 14, 15, 16, 18, 23, 24</td>
+                  <td>11, 12, 14, 15, 20, 21</td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                </tr>
+                <tr>
+                  <th>Петрушка коренева</th>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                </tr>
+                <tr>
+                  <th>Помідори</th>
+                  <td>11, 12, 14, 15, 17, 19, 23</td>
+                  <td>11, 12, 14, 15, 21</td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                </tr>
+                <tr>
+                  <th>Редиска, редька</th>
+                  <td>5, 6, 27, 29</td>
+                  <td>2, 3, 25, 26, 30</td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                </tr>
+                <tr>
+                  <th>Цибуля ріпчаста</th>
+                  <td>5, 6, 27, 29</td>
+                  <td>3, 8, 26, 29</td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                </tr>
+                <tr>
+                  <th>Часник</th>
+                  <td>4-5, 1-15</td>
+                  <td>11-13</td>
+                  <td>8, 15-18</td>
+                </tr>
+                <tr>
+                  <th>Плодові кущі</th>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                  <td>12, 13, 15, 16, 17, 19, 23</td>
+                  <td>12, 13, 15, 16, 20</td>
+                </tr>
+                <tr>
+                  <th>Плодові дерева</th>
+                  <td>12, 13, 14, 16, 17, 19, 23</td>
+                  <td>11, 13, 14, 16, 20, 21</td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                </tr>
+                <tr>
+                  <th>Багаторічні квіти</th>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                </tr>
+                <tr>
+                  <th>Однорічні квіти</th>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                </tr>
+                <tr>
+                  <th>Квіти з цибулин</th>
+                  <td>12, 13, 15, 16, 18, 23, 24</td>
+                  <td>10, 11, 12, 15, 16, 20</td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                </tr>
+                </tbody>
+              </table>
+              <table class="calendar__table">
+                <thead>
+                <th></th>
+                <td>Вересень</td>
+                <td>Жовтень</td>
+                <td>Листопад</td>
+                </thead>
+                <tbody>
+                <tr>
+                  <th>Баклажани</th>
+                  <td>13, 14, 16, 17, 23, 24</td>
+                  <td>12, 13, 15, 16, 20, 21</td>
+                  <td>Листопад</td>
+                </tr>
+                <tr>
+                  <th>Гарбуз</th>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                </tr>
+                <tr>
+                  <th>Зелень: цибуля на перо, петрушка, селера листкова, кріп, салат</th>
+                  <td>13, 14, 16, 17, 23, 24</td>
+                  <td>1-5, 11, 29-31</td>
+                  <td>8, 11, 16-18</td>
+                </tr>
+                <tr>
+                  <th>Кавун, диня</th>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                </tr>
+                <tr>
+                  <th>Кабачки, патисони</th>
+                  <td>12, 14-16, 18, 23-24</td>
+                  <td>10, 12-14, 20</td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                </tr>
+                <tr>
+                  <th>Картопля</th>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                </tr>
+                <tr>
+                  <th>Капуста білоголова, цвітна</th>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                </tr>
+                <tr>
+                  <th>Капуста червоноголова</th>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                </tr>
+                <tr>
+                  <th>Квасоля, горох, боби</th>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                </tr>
+                <tr>
+                  <th>Морква, буряк</th>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                </tr>
+                <tr>
+                  <th>Огірки</th>
+                  <td>12, 14, 15, 17, 23</td>
+                  <td>10, 11, 13, 15</td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                </tr>
+                <tr>
+                  <th>Перець солодкий</th>
+                  <td>11, 12, 14, 15, 16, 18, 23, 24</td>
+                  <td>11, 12, 14, 15, 20, 21</td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                </tr>
+                <tr>
+                  <th>Петрушка коренева</th>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                </tr>
+                <tr>
+                  <th>Помідори</th>
+                  <td>11, 12, 14, 15, 17, 19, 23</td>
+                  <td>11, 12, 14, 15, 21</td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                </tr>
+                <tr>
+                  <th>Редиска, редька</th>
+                  <td>5, 6, 27, 29</td>
+                  <td>2, 3, 25, 26, 30</td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                </tr>
+                <tr>
+                  <th>Цибуля ріпчаста</th>
+                  <td>5, 6, 27, 29</td>
+                  <td>3, 8, 26, 29</td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                </tr>
+                <tr>
+                  <th>Часник</th>
+                  <td>4-5, 1-15</td>
+                  <td>11-13</td>
+                  <td>8, 15-18</td>
+                </tr>
+                <tr>
+                  <th>Плодові кущі</th>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                  <td>12, 13, 15, 16, 17, 19, 23</td>
+                  <td>12, 13, 15, 16, 20</td>
+                </tr>
+                <tr>
+                  <th>Плодові дерева</th>
+                  <td>12, 13, 14, 16, 17, 19, 23</td>
+                  <td>11, 13, 14, 16, 20, 21</td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                </tr>
+                <tr>
+                  <th>Багаторічні квіти</th>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                </tr>
+                <tr>
+                  <th>Однорічні квіти</th>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                </tr>
+                <tr>
+                  <th>Квіти з цибулин</th>
+                  <td>12, 13, 15, 16, 18, 23, 24</td>
+                  <td>10, 11, 12, 15, 16, 20</td>
+                  <td><img src="./images/svg/cross.svg" alt="" class="calendar__cross-img"></td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!--@@include('./partials/catalog.html')-->
+    <!--@@include('./partials/calendar.html')-->
+    <!--@@include('./partials/map.html')-->
   </main>
 
-  @@include('./partials/footer.html')
+  <!--@@include('./partials/footer.html')-->
 
   <!-- build:js scripts/main.js -->
   <script src="scripts/main.js"></script>
