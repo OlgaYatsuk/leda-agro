@@ -1,6 +1,7 @@
 .product {
   display: flex;
   margin-top: 30px;
+  flex-wrap: wrap;
 
   @media screen and (min-width: $max-sm) {
     margin-top: 130px;
@@ -8,8 +9,12 @@
 }
 
 .tabs{
-  max-width: 300px;
-  flex: 0 1 50%;
+
+  @media screen and (min-width: $max-md) {
+    width: 20%;
+    max-width: 300px;
+    flex: 1 0 50%;
+  }
 }
 
 .tabs__link {
@@ -19,9 +24,14 @@
   flex: 1 0 13%;
   cursor: pointer;
   height: 30px;
+  display: inline-block;
   text-align: left;
   transition: all 0.25s;
   margin: 0 0 20px 0;
+
+  @media screen and (min-width: $max-xs) {
+    display: block;
+  }
 
   span {
     padding: 14px 20px;
@@ -48,8 +58,11 @@
 }
 
 .tabs-content-wrapper {
-  flex: 0 1 50%;
-  margin-left: 10%;
+  flex: 1 0 50%;
+
+  @media screen and (min-width: $max-xs) {
+    margin-left: 10%;
+  }
 }
 
 .tabs-content {

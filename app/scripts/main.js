@@ -1,49 +1,51 @@
-const burger = document.querySelector('.header__nav-toggler'),
-      body = document.body,
-      productsToggler = document.querySelector('.products__dropdown-toggler'),
-      productsFilter = document.querySelectorAll('.products .js-form-item label');
+// const burger = document.querySelector('.header__nav-toggler'),
+//   body = document.body,
+//   productsToggler = document.querySelector('.products__dropdown-toggler'),
+//   productsFilter = document.querySelectorAll('.products .js-form-item label');
+//
+//
+// burger.addEventListener('click', (e) => {
+//   e.preventDefault();
+//
+//   body.classList.toggle('nav-open');
+// });
+//
+// document.addEventListener('scroll', () => {
+//   let scrollTop = $(window).scrollTop();
+//
+//   if(scrollTop > 50) {
+//     body.classList.add('header-fill');
+//   }
+//   else {
+//     body.classList.remove('header-fill');
+//   }
+// });
 
-
-burger.addEventListener('click', (e) => {
-  e.preventDefault();
-
-  body.classList.toggle('nav-open');
-});
-
-document.addEventListener('scroll', () => {
-  let scrollTop = $(window).scrollTop();
-
-  if(scrollTop > 50) {
-    body.classList.add('header-fill');
-  }
-  else {
-    body.classList.remove('header-fill');
-  }
-});
 
 //scripts for catalog page
-if(productsToggler) {
-  if(document.body.clientWidth < 768) {
-    document.querySelector('.products').style.minHeight = document.querySelector('#views-exposed-form-catalog-page-1').clientHeight + 'px';
-  }
-
-  productsToggler.addEventListener('click', (e) => {
-    productsToggler.classList.toggle('active');
-  });
-}
-
-if(productsFilter.length)
-  productsFilter.forEach((el) => {
-    el.addEventListener('click', () => {
-      el.classList.toggle('active');
-      productsToggler.classList.remove('active');
-    });
-  });
+// if(productsToggler) {
+//   if(document.body.clientWidth < 768) {
+//     document.querySelector('.products').style.minHeight = document.querySelector('#views-exposed-form-catalog-page-1').clientHeight + 'px';
+//   }
+//
+//   productsToggler.addEventListener('click', (e) => {
+//     productsToggler.classList.toggle('active');
+//   });
+// }
+//
+// if(productsFilter.length)
+//   productsFilter.forEach((el) => {
+//     el.addEventListener('click', () => {
+//       el.classList.toggle('active');
+//       productsToggler.classList.remove('active');
+//     });
+//   });
 //end scripts for catalog page
 
 const $mainSlider = '.js-main-slider';
 const $personsSlider = '.js-person-slider';
 const $mediaSlider = $('.js-media');
+const $productsSlider = '.js-products-slider';
 const $arrows = $('.js-arrows');
 
 class Slider {
@@ -76,12 +78,22 @@ class Slider {
 
 const sliders = [
   {
-    selector: $('.js-main-slider'),
+    selector: $mainSlider,
     isEnabled: true,
     config: {
       pauseOnHover: false,
       fade: true,
       dots: true,
+      appendArrows: $arrows,
+    }
+  },
+  {
+    selector: $productsSlider,
+    isEnabled: true,
+    config: {
+      pauseOnHover: false,
+      fade: true,
+      dots: false,
       appendArrows: $arrows,
     }
   },
@@ -215,6 +227,10 @@ function changeArrowsContent(selector) {
     .innerHTML = nextButtonContent + '<img class="arrow-link__img" src="../images/svg/l_arrow.svg" alt="next">';
 }
 
+$($productsSlider).on('afterChange', () => {
+  changeArrowsContent($productsSlider);
+});
+
 $($personsSlider).on('afterChange', () => {
   changeArrowsContent($personsSlider);
 });
@@ -225,6 +241,7 @@ $($mainSlider).on('afterChange', () => {
 
 if($($personsSlider).length) changeArrowsContent($personsSlider);
 if($($mainSlider).length) changeArrowsContent($mainSlider);
+if($($productsSlider).length) changeArrowsContent($productsSlider);
 
 const $menu = $('.js-contacts');
 const $root = $('body,html');
