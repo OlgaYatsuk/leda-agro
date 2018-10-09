@@ -63,6 +63,29 @@
   display: flex !important;
 }
 
+.hero--catalog {
+  margin: 0 auto;
+
+  .hero::before {
+    display: none;
+  }
+
+  .hero__background-heading {
+    display: none;
+
+    @media screen and (min-width: $max-md){
+      display: block;
+      top: 42%;
+      left: 0;
+      text-align: center;
+      width: 100%;
+      transform: translateY(-50%);
+      font-size: 10rem;
+      line-height: 1;
+    }
+  }
+}
+
 .hero-slider {
   position: relative;
   margin-bottom: 230px;
@@ -243,13 +266,4 @@
   margin-top: 10px;
   color: $gray-2;
   text-transform: uppercase;
-}
-
-.hero--catalog {
-  display: block!important;
-  margin: 0 auto;
-
-  &::before {
-    display: none;
-  }
 }
