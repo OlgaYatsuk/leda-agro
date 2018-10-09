@@ -46,6 +46,7 @@ const $mainSlider = '.js-main-slider';
 const $personsSlider = '.js-person-slider';
 const $mediaSlider = $('.js-media');
 const $productsSlider = '.js-products-slider';
+const $gallerySlider = '.js-gallery-slider';
 const $arrows = $('.js-arrows');
 
 class Slider {
@@ -79,6 +80,16 @@ class Slider {
 const sliders = [
   {
     selector: $mainSlider,
+    isEnabled: true,
+    config: {
+      pauseOnHover: false,
+      fade: true,
+      dots: true,
+      appendArrows: $arrows,
+    }
+  },
+  {
+    selector: $gallerySlider,
     isEnabled: true,
     config: {
       pauseOnHover: false,
@@ -239,9 +250,20 @@ $($mainSlider).on('afterChange', () => {
   changeArrowsContent($mainSlider);
 });
 
+const $nameContainer = $('.js-name-container');
+// const $activeSlide = $('.slick-active');
+
+function changeName() {
+  let $name = $('.slick-active').find($('.js-slider-name'));
+  $nameContainer.text($name.text());
+}
+
+$($gallerySlider).on('afterChange', changeName);
+
 if($($personsSlider).length) changeArrowsContent($personsSlider);
 if($($mainSlider).length) changeArrowsContent($mainSlider);
 if($($productsSlider).length) changeArrowsContent($productsSlider);
+if($($gallerySlider).length)  changeName();
 
 const $menu = $('.js-contacts');
 const $root = $('body,html');
@@ -285,3 +307,25 @@ function showTab() {
 
   $(this).addClass('is-active');
 }
+
+const $gallery = $('.js-gallery');
+const $popUp = $('.js-pop-up');
+const $close = $('.js-close');
+// $(document).on('mousedown', handleDocumentClick);
+
+$gallery.on('click', showGallery);
+$close.on('click', hideGallery);
+
+function showGallery () {
+  $popUp.addClass('is-visible');
+}
+
+function hideGallery  () {
+  $popUp.removeClass('is-visible');
+}
+
+// function handleDocumentClick (e) {
+//   if ($popUp.has(e.target).length === 0){
+//     $popUp.fadeOut();
+//   }
+// }

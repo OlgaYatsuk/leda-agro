@@ -241,29 +241,6 @@
   text-transform: uppercase;
 }
 
-.product-gallery {
-  position: absolute;
-  right: 10%;
-  text-align: center;
-  bottom: 67px;
-
-  @media screen and (min-width: $max-sm) {
-    bottom: 0;
-  }
-}
-
-.product-gallery__img {
-  width: 70px;
-  height: 45px;
-  mix-blend-mode: screen;
-}
-
-.product-gallery__caption {
-  color: $blue;
-  text-transform: uppercase;
-  margin-top: 10px;
-}
-
 .hero--catalog {
   display: block!important;
   margin: 0 auto;
