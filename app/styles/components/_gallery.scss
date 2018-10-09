@@ -39,8 +39,13 @@
   opacity: 0;
   z-index: 100;
   width: 95vw;
-  height: 95vh;
   transition: all .5s;
+  max-height: 600px;
+
+  @media screen and (min-width: $max-md) {
+    height: 80%;
+    max-height: none;
+  }
 
   &.is-visible {
     opacity: 1;
@@ -55,7 +60,7 @@
 }
 
 .product-gallery-item__controlls {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   width: 79vw;
   display: flex;
@@ -73,11 +78,19 @@
   }
 
   .arrow-link--prev {
-    left: 45%;
+    left: 42%;
+
+    @media screen and (min-width: $max-sm) {
+      left: 46%;
+    }
   }
 
   .arrow-link--next {
-    right: 45%;
+    right: 42%;
+
+    @media screen and (min-width: $max-sm) {
+      right: 46%;
+    }
   }
 }
 
@@ -85,7 +98,6 @@
   font-size: 0.75rem;
   font-weight: 900;
   text-transform: uppercase;
-  margin-left: 20px;
   background: linear-gradient(to right, $red 0%, $light-red 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -94,6 +106,9 @@
 .product-gallery-item__close {
   cursor: pointer;
   transition: transform 0.8s;
+  background: none;
+  border: 0;
+  outline: 0;
 
   &:hover {
     transform: rotate(180deg);
