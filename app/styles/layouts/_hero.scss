@@ -78,6 +78,9 @@
 
     @media screen and (min-width: $max-md){
       display: block;
+      background: linear-gradient(-5deg, $orange 0%, rgba(237, 184, 21, 0) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
       top: 42%;
       left: 0;
       text-align: center;
