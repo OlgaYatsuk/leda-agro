@@ -43,7 +43,7 @@
   max-height: 600px;
 
   @media screen and (min-width: $max-md) {
-    height: 80%;
+    height: 90%;
     max-height: none;
   }
 
@@ -62,7 +62,10 @@
 .product-gallery-item__controlls {
   position: absolute;
   bottom: 0;
-  width: 79vw;
+  width: 100%;
+  max-width: 670px;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   justify-content: space-between;
   align-items: center;

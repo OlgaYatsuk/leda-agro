@@ -40,7 +40,7 @@ if(productsFilter.length)
       productsToggler.classList.remove('active');
     });
   });
-//end scripts for catalog page
+// end scripts for catalog page
 
 const $mainSlider = '.js-main-slider';
 const $personsSlider = '.js-person-slider';
@@ -93,7 +93,7 @@ const sliders = [
     isEnabled: true,
     config: {
       pauseOnHover: false,
-      fade: true,
+      fade: false,
       dots: true,
       appendArrows: $arrows,
     }
