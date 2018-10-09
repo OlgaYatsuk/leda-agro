@@ -107,6 +107,10 @@
     }
   }
 
+  .hero__img {
+    object-fit: contain;
+  }
+
   &::before {
     display: none;
   }
