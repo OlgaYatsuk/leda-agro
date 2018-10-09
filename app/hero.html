@@ -45,26 +45,31 @@
   @@include('./partials/navigation.html')
 
   <main class="">
-    <section class="">
-      <div class="js-products-slider container">
-        <div class="hero hero--catalog">
-          <img class="products-slider__img js-slider-img" src="./images/product-icon-1.png" alt="">
-          <h2 class="hero__heading hero__heading--centered heading js-slider-name">Насіння овочів</h2>
-        </div>
-        <div class="hero hero--catalog">
-          <div class="hero hero--catalog">
-            <h2 class="hero__heading hero__heading--centered heading js-slider-name">Насіння квітів</h2>
-            <img class="products-slider__img js-slider-img" src="./images/product-icon-2.png" alt="">
+    <section class="hero--catalog">
+      <p class="hero__background-heading">Насіння овочів</p>
+        <div class="hero container">
+          <h2 class="hero__heading hero__heading--centered heading">Насіння овочів</h2>
+
+          <div class="page-select page-select--catalog">
+            <a href="#" class="page-select__link">
+              <img src="./images/product-icon-2.png" class="page-select__img"/>
+              <img src="./images/svg/arrow-right.svg" alt="prev"/>
+              <span class="page-select__name text-small">Браун Кой</span>
+            </a>
+            <a href="#" class="page-select__link">
+              <img src="./images/product-icon-1.png" class="page-select__img"/>
+              <span class="page-select__name text-small">Мармара F1</span>
+              <img src="./images/svg/l_arrow.svg" alt="next"/>
+            </a>
           </div>
         </div>
-        <div class="hero hero--catalog">
-          <div class="hero hero--catalog">
-            <h2 class="hero__heading hero__heading--centered heading js-slider-name">Добрива</h2>
-            <img class="products-slider__img js-slider-img" src="./images/product-icon-1.png" alt="">
-          </div>
-        </div>
-      </div>
-      <div class="custom-arrows custom-arrows--catalog js-arrows"></div>
+
+      <!--<div class="container">-->
+        <!--<div class="hero">-->
+          <!--<img class="products-slider__img" src="./images/product-icon-1.png" alt="">-->
+          <!--<h2 class="hero__heading hero__heading&#45;&#45;centered heading">Насіння овочів</h2>-->
+        <!--</div>-->
+      <!--</div>-->
     </section>
   </main>
 
