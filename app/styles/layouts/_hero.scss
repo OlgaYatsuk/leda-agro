@@ -150,6 +150,10 @@
   padding: 60px 7% 40px;
   background: none;
 
+  .hero__img {
+    mix-blend-mode: unset;
+  }
+
   &::before {
     display: none;
   }
