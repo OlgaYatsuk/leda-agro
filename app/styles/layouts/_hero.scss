@@ -150,6 +150,10 @@
   padding: 60px 7% 40px;
   background: none;
 
+  .hero__img {
+    mix-blend-mode: unset;
+  }
+
   &::before {
     display: none;
   }
@@ -240,7 +244,7 @@
 
   @media screen and (min-width: $max-sm) {
     display: block!important;
-    filter: blur(5px);
+    filter: blur(3px);
     transform: rotate(-14deg) translateX(21%);
     z-index: -1;
     left: 0;

@@ -59,8 +59,8 @@ class Slider {
       slidesToScroll: 1,
       speed: 1000,
       isEnabled: true,
-      prevArrow: '<a href="#" class="arrow-link arrow-link--prev"><img class="arrow-link__img" src="../images/svg/arrow-right.svg" alt="previous"></a>',
-      nextArrow:  '<a href="#" class="arrow-link arrow-link--next"><img class="arrow-link__img" src="../images/svg/l_arrow.svg" alt="next"></a>'
+      prevArrow: '<a href="#" class="arrow-link arrow-link--prev"><img class="arrow-link__img" src="/themes/new/images/svg/arrow-right.svg" alt="previous"></a>',
+      nextArrow:  '<a href="#" class="arrow-link arrow-link--next"><img class="arrow-link__img" src="/themes/new/images/svg/l_arrow.svg" alt="next"></a>'
     };
 
     this.config = Object.assign({}, defaultConfig, config);
@@ -233,9 +233,9 @@ function changeArrowsContent(selector) {
   }
 
   document.querySelector('.js-arrows .arrow-link--prev')
-    .innerHTML = '<img class="arrow-link__img" src="../images/svg/arrow-right.svg" alt="previous">' + prevButtonContent;
+    .innerHTML = '<img class="arrow-link__img" src="/themes/new/images/svg/arrow-right.svg" alt="previous">' + prevButtonContent;
   document.querySelector('.js-arrows .arrow-link--next')
-    .innerHTML = nextButtonContent + '<img class="arrow-link__img" src="../images/svg/l_arrow.svg" alt="next">';
+    .innerHTML = nextButtonContent + '<img class="arrow-link__img" src="/themes/new/images/svg/l_arrow.svg" alt="next">';
 }
 
 $($productsSlider).on('afterChange', () => {
