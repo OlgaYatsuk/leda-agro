@@ -63,7 +63,8 @@
   height: auto;
   text-align: left;
   margin-bottom: 0;
-  flex-direction: row;
+  display: flex!important;
+  flex-direction: row!important;
 }
 
 .hero--catalog {
