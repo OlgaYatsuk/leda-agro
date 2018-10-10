@@ -1,45 +1,45 @@
-// const burger = document.querySelector('.header__nav-toggler'),
-//   body = document.body,
-//   productsToggler = document.querySelector('.products__dropdown-toggler'),
-//   productsFilter = document.querySelectorAll('.products .js-form-item label');
-//
-//
-// burger.addEventListener('click', (e) => {
-//   e.preventDefault();
-//
-//   body.classList.toggle('nav-open');
-// });
-//
-// document.addEventListener('scroll', () => {
-//   let scrollTop = $(window).scrollTop();
-//
-//   if(scrollTop > 50) {
-//     body.classList.add('header-fill');
-//   }
-//   else {
-//     body.classList.remove('header-fill');
-//   }
-// });
+const burger = document.querySelector('.header__nav-toggler'),
+  body = document.body,
+  productsToggler = document.querySelector('.products__dropdown-toggler'),
+  productsFilter = document.querySelectorAll('.products .js-form-item label');
+
+
+burger.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  body.classList.toggle('nav-open');
+});
+
+document.addEventListener('scroll', () => {
+  let scrollTop = $(window).scrollTop();
+
+  if(scrollTop > 50) {
+    body.classList.add('header-fill');
+  }
+  else {
+    body.classList.remove('header-fill');
+  }
+});
 
 
 // scripts for catalog page
-// if(productsToggler) {
-//   if(document.body.clientWidth < 768) {
-//     document.querySelector('.products').style.minHeight = document.querySelector('#views-exposed-form-catalog-page-1').clientHeight + 'px';
-//   }
-//
-//   productsToggler.addEventListener('click', (e) => {
-//     productsToggler.classList.toggle('active');
-//   });
-// }
-//
-// if(productsFilter.length)
-//   productsFilter.forEach((el) => {
-//     el.addEventListener('click', () => {
-//       el.classList.toggle('active');
-//       productsToggler.classList.remove('active');
-//     });
-//   });
+if(productsToggler) {
+  if(document.body.clientWidth < 768) {
+    document.querySelector('.products').style.minHeight = document.querySelector('#views-exposed-form-catalog-page-1').clientHeight + 'px';
+  }
+
+  productsToggler.addEventListener('click', (e) => {
+    productsToggler.classList.toggle('active');
+  });
+}
+
+if(productsFilter.length)
+  productsFilter.forEach((el) => {
+    el.addEventListener('click', () => {
+      el.classList.toggle('active');
+      productsToggler.classList.remove('active');
+    });
+  });
 // end scripts for catalog page
 
 const $mainSlider = '.js-main-slider';
@@ -59,8 +59,8 @@ class Slider {
       slidesToScroll: 1,
       speed: 1000,
       isEnabled: true,
-      prevArrow: '<a href="#" class="arrow-link arrow-link--prev"><img class="arrow-link__img" src="../images/svg/arrow-right.svg" alt="previous"></a>',
-      nextArrow:  '<a href="#" class="arrow-link arrow-link--next"><img class="arrow-link__img" src="../images/svg/l_arrow.svg" alt="next"></a>'
+      prevArrow: '<a href="#" class="arrow-link arrow-link--prev"><img class="arrow-link__img" src="/themes/new/images/svg/arrow-right.svg" alt="previous"></a>',
+      nextArrow:  '<a href="#" class="arrow-link arrow-link--next"><img class="arrow-link__img" src="/themes/new/images/svg/l_arrow.svg" alt="next"></a>'
     };
 
     this.config = Object.assign({}, defaultConfig, config);
@@ -233,9 +233,9 @@ function changeArrowsContent(selector) {
   }
 
   document.querySelector('.js-arrows .arrow-link--prev')
-    .innerHTML = '<img class="arrow-link__img" src="../images/svg/arrow-right.svg" alt="previous">' + prevButtonContent;
+    .innerHTML = '<img class="arrow-link__img" src="/themes/new/images/svg/arrow-right.svg" alt="previous">' + prevButtonContent;
   document.querySelector('.js-arrows .arrow-link--next')
-    .innerHTML = nextButtonContent + '<img class="arrow-link__img" src="../images/svg/l_arrow.svg" alt="next">';
+    .innerHTML = nextButtonContent + '<img class="arrow-link__img" src="/themes/new/images/svg/l_arrow.svg" alt="next">';
 }
 
 $($productsSlider).on('afterChange', () => {
