@@ -136,7 +136,7 @@
     font-size: 1.4rem;
   }
 
-  &.active {
+  &.is-active {
     color: $white;
     border: 1px solid #2F80ED;;
   }
@@ -147,6 +147,13 @@
   column-width: 290px;
   float: left;
   padding-left: 25px;
+  position: absolute;
+  opacity: 0;
+  transition: opacity .25s;
+
+  &.is-active {
+    opacity: 1;
+  }
 
   @media (max-width: $max-md) {
     column-width: auto;
@@ -161,6 +168,8 @@
   @media (max-width: $max-xs) {
     column-count: 1;
     padding-bottom: 55px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 
