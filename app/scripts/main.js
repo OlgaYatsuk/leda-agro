@@ -23,23 +23,23 @@ document.addEventListener('scroll', () => {
 
 
 // scripts for catalog page
-if(productsToggler) {
-  if(document.body.clientWidth < 768) {
-    document.querySelector('.products').style.minHeight = document.querySelector('#views-exposed-form-catalog-page-1').clientHeight + 'px';
-  }
-
-  productsToggler.addEventListener('click', (e) => {
-    productsToggler.classList.toggle('active');
-  });
-}
-
-if(productsFilter.length)
-  productsFilter.forEach((el) => {
-    el.addEventListener('click', () => {
-      el.classList.toggle('active');
-      productsToggler.classList.remove('active');
-    });
-  });
+// if(productsToggler) {
+//   if(document.body.clientWidth < 768) {
+//     document.querySelector('.products').style.minHeight = document.querySelector('#views-exposed-form-catalog-page-1').clientHeight + 'px';
+//   }
+//
+//   productsToggler.addEventListener('click', (e) => {
+//     productsToggler.classList.toggle('active');
+//   });
+// }
+//
+// if(productsFilter.length)
+//   productsFilter.forEach((el) => {
+//     el.addEventListener('click', () => {
+//       el.classList.toggle('active');
+//       productsToggler.classList.remove('active');
+//     });
+//   });
 // end scripts for catalog page
 
 const $mainSlider = '.js-main-slider';
@@ -233,9 +233,9 @@ function changeArrowsContent(selector) {
   }
 
   document.querySelector('.js-arrows .arrow-link--prev')
-    .innerHTML = '<img class="arrow-link__img" src="/themes/new/images/svg/arrow-right.svg" alt="previous">' + prevButtonContent;
+    .innerHTML = '<img class="arrow-link__img" src="../images/svg/arrow-right.svg" alt="previous">' + prevButtonContent;
   document.querySelector('.js-arrows .arrow-link--next')
-    .innerHTML = nextButtonContent + '<img class="arrow-link__img" src="/themes/new/images/svg/l_arrow.svg" alt="next">';
+    .innerHTML = nextButtonContent + '<img class="arrow-link__img" src="../images/svg/l_arrow.svg" alt="next">';
 }
 
 $($productsSlider).on('afterChange', () => {

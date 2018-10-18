@@ -12,6 +12,14 @@
   @media (max-width: 400px) {
     flex-direction: column;
   }
+
+  &::before {
+    content: url("../images/veggie.png");
+    position: absolute;
+    left: -13%;
+    top: 80%;
+    mix-blend-mode: screen;
+  }
 }
 
 .catalog__bg {
