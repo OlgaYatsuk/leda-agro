@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  height: 35vh;
+  height: 35%;
   min-height: 275px;
   margin-bottom: 150px;
   max-width: 970px;
@@ -14,7 +14,6 @@
     content: '';
     background: url(../images/hero/hero-bottom-img.png) center center no-repeat;
     background-size: 100%;
-
     position: absolute;
     top: 98%;
     left: 40%;
@@ -50,8 +49,8 @@
     position: absolute;
     width: 200px;
     height: 200px;
-    z-index: 100;
-    top: 0;
+    z-index: 3;
+    top: -70px;
     left: auto;
     right: 0;
   }
@@ -149,6 +148,10 @@
 .hero--main {
   padding: 60px 7% 40px;
   background: none;
+
+   .slick-list {
+     overflow-y: visible;
+   }
 
   .hero__img {
     mix-blend-mode: unset;
@@ -281,4 +284,22 @@
   margin-top: 10px;
   color: $gray-2;
   text-transform: uppercase;
+}
+
+.main-hero-wrapper {
+  margin-bottom: 180px;
+
+  &::before {
+    content: '';
+    background: url(../images/hero/hero-bottom-img.png) center center no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 70%;
+    z-index: 0;
+    width: 50%;
+    height: 60%;
+    mix-blend-mode: screen;
+    left: auto;
+    right: -10%;
+  }
 }

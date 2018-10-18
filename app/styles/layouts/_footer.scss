@@ -85,7 +85,7 @@
 
 .footer__contact-mail {
   color: $blue;
-  font-weight: normal;
+  font-weight: 300;
   font-size: 2.625rem;
   text-decoration: none;
   line-height: 1;
@@ -103,7 +103,13 @@
 .footer__contact-tel {
   display: block;
   margin-top: 25px;
+  text-decoration: none;
   color: $gray;
+  transition: color 0.15s;
+
+  &:hover {
+    color: $blue;
+  }
 }
 
 .footer__social {
@@ -126,11 +132,16 @@
 }
 
 .footer__allright {
-  font-weight: normal;
   line-height: 30px;
   font-size: 1rem;
+  text-decoration: none;
   letter-spacing: 0.03em;
   color: #9DAFBD;
+  transition: color 0.15s;
+
+  &:hover {
+    color: $green;
+  }
 
   @media (max-width: $max-md) {
     margin-left: auto;
