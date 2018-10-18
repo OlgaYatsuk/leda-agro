@@ -311,7 +311,6 @@ function showTab() {
 const $gallery = $('.js-gallery');
 const $popUp = $('.js-pop-up');
 const $close = $('.js-close');
-// $(document).on('mousedown', handleDocumentClick);
 
 $gallery.on('click', showGallery);
 $close.on('click', hideGallery);
@@ -324,8 +323,5 @@ function hideGallery  () {
   $popUp.removeClass('is-visible');
 }
 
-// function handleDocumentClick (e) {
-//   if ($popUp.has(e.target).length === 0){
-//     $popUp.fadeOut();
-//   }
-// }
+const $productNum = document.location.search.slice(-1);
+$('.js-form-item-tid-'+ $productNum).find('.option').addClass('active');
