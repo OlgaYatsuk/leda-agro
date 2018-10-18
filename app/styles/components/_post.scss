@@ -17,14 +17,14 @@
 .post__img {
   max-height: 360px;
   border-radius: 5px;
+  width: 100%;
+  object-fit: cover;
 }
 
 .post:nth-child(odd) {
 
   .post__img {
     max-height: 180px;
-    width: 100%;
-    object-fit: cover;
   }
 }
 
