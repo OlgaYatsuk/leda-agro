@@ -23,23 +23,23 @@ document.addEventListener('scroll', () => {
 
 
 // scripts for catalog page
-// if(productsToggler) {
-//   if(document.body.clientWidth < 768) {
-//     document.querySelector('.products').style.minHeight = document.querySelector('#views-exposed-form-catalog-page-1').clientHeight + 'px';
-//   }
-//
-//   productsToggler.addEventListener('click', (e) => {
-//     productsToggler.classList.toggle('active');
-//   });
-// }
-//
-// if(productsFilter.length)
-//   productsFilter.forEach((el) => {
-//     el.addEventListener('click', () => {
-//       el.classList.toggle('active');
-//       productsToggler.classList.remove('active');
-//     });
-//   });
+if(productsToggler) {
+  if(document.body.clientWidth < 768) {
+    document.querySelector('.products').style.minHeight = document.querySelector('#views-exposed-form-catalog-page-1').clientHeight + 'px';
+  }
+
+  productsToggler.addEventListener('click', (e) => {
+    productsToggler.classList.toggle('active');
+  });
+}
+
+if(productsFilter.length)
+  productsFilter.forEach((el) => {
+    el.addEventListener('click', () => {
+      el.classList.toggle('active');
+      productsToggler.classList.remove('active');
+    });
+  });
 // end scripts for catalog page
 
 const $mainSlider = '.js-main-slider';
