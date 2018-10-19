@@ -148,6 +148,7 @@
 .hero--main {
   padding: 120px 7% 40px;
   background: none;
+  position: relative;
   max-width: none!important;
 
   .hero__img {
@@ -160,7 +161,7 @@
   }
 
   @media screen and (min-width: $max-md) {
-    padding: 190px 17% 80px;
+    padding: 190px 0 80px;
   }
 }
 
@@ -225,7 +226,7 @@
 }
 
 .hero__img--main {
-  margin-left: 10%;
+  margin-left: 25%;
   margin-right: 65px;
 }
 
@@ -297,7 +298,7 @@
       background-size: 100%;
       position: absolute;
       top: 62%;
-      z-index: 0;
+      z-index: 1;
       width: 34%;
       height: 74%;
       mix-blend-mode: screen;
@@ -310,7 +311,20 @@
 .hero--main__background {
   position: absolute;
   top: 0;
-  left: 37%;
+  left: auto;
+  right: 0;
+  width: 50%;
+  object-fit: cover;
+  height: 100%;
+
+  &::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.24) 0%, rgba(0, 0, 0, 0) 60%);
+    bottom: 0;
+  }
 }
 
 .hero--main__article {

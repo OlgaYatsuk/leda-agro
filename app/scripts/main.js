@@ -324,4 +324,11 @@ function hideGallery  () {
 }
 
 const $productNum = document.location.search.slice(-1);
-$('.js-form-item-tid-'+ $productNum).find('.option').addClass('active');
+const $selectedFilter = $('.js-form-item-tid-'+ $productNum);
+$selectedFilter.find('.option').addClass('active');
+
+$selectedFilter.on('click', resetSearch);
+
+function resetSearch () {
+  location.search = "";
+}
