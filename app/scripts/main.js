@@ -42,6 +42,16 @@ if(productsFilter.length)
   });
 // end scripts for catalog page
 
+$('.map').on('click', function () {
+  $(this).find('iframe').addClass('is-clicked')
+});
+
+$('.map').on('mouseleave', function () {
+    $(this).find('iframe').removeClass('is-clicked')
+  }
+);
+
+
 const $mainSlider = '.js-main-slider';
 const $personsSlider = '.js-person-slider';
 const $mediaSlider = $('.js-media');
@@ -60,7 +70,7 @@ class Slider {
       speed: 1000,
       isEnabled: true,
       prevArrow: '<a href="#" class="arrow-link arrow-link--prev"><img class="arrow-link__img" src="/themes/new/images/svg/arrow-right.svg" alt="previous"></a>',
-      nextArrow:  '<a href="#" class="arrow-link arrow-link--next"><img class="arrow-link__img" src="/themes/new/images/svg/l_arrow.svg" alt="next"></a>'
+      nextArrow: '<a href="#" class="arrow-link arrow-link--next"><img class="arrow-link__img" src="/themes/new/images/svg/l_arrow.svg" alt="next"></a>'
     };
 
     this.config = Object.assign({}, defaultConfig, config);
@@ -137,18 +147,18 @@ sliders.filter((slider) => slider.isEnabled).forEach((slider) => slider.isEnable
 //calendar slider
 
 const calendarSlider = document.querySelector('.calendar__slider'),
-      calendarContent = document.querySelector('.calendar__scrolled-content'),
-      calendarTable = document.querySelectorAll('.calendar__table'),
-      calendarButton = document.querySelectorAll('.calendar__navigation-button');
+  calendarContent = document.querySelector('.calendar__scrolled-content'),
+  calendarTable = document.querySelectorAll('.calendar__table'),
+  calendarButton = document.querySelectorAll('.calendar__navigation-button');
 
 function buildSlider(slider, content, items, buttons) {
   let sliderWidth = slider.clientWidth,
-      itemsCount = items.length,
-      currentPosition = 0;
+    itemsCount = items.length,
+    currentPosition = 0;
 
   items.forEach((el) => {
-    if(sliderWidth > 569) {
-      el.style.width =   sliderWidth + 'px';
+    if (sliderWidth > 569) {
+      el.style.width = sliderWidth + 'px';
     } else {
       el.style.width = '440px';
     }
@@ -156,26 +166,26 @@ function buildSlider(slider, content, items, buttons) {
 
   content.style.width = (sliderWidth * itemsCount) + 'px';
 
-  if(sliderWidth <= 569) {
+  if (sliderWidth <= 569) {
     content.style.width = (sliderWidth * itemsCount + 500) + 'px';
   }
 
-    buttons.forEach((button) => {
+  buttons.forEach((button) => {
     button.addEventListener('click', (e) => {
       e.preventDefault();
       e.stopPropagation();
       let eTarget;
 
-      if(e.toElement.classList.contains('calendar__navigation-left')) eTarget = 'left';
+      if (e.toElement.classList.contains('calendar__navigation-left')) eTarget = 'left';
       else eTarget = 'right';
 
-      if(eTarget === 'left') scrollLeft();
+      if (eTarget === 'left') scrollLeft();
       else scrollRight();
     });
   });
 
   function scrollLeft() {
-    if(Math.abs(currentPosition - sliderWidth) <= sliderWidth * (itemsCount - 1)) currentPosition = currentPosition - sliderWidth;
+    if (Math.abs(currentPosition - sliderWidth) <= sliderWidth * (itemsCount - 1)) currentPosition = currentPosition - sliderWidth;
     content.style.transform = 'translateX(' + currentPosition + 'px)';
   }
 
@@ -185,15 +195,15 @@ function buildSlider(slider, content, items, buttons) {
   }
 }
 
-if(calendarSlider) buildSlider(calendarSlider, calendarContent, calendarTable, calendarButton);
+if (calendarSlider) buildSlider(calendarSlider, calendarContent, calendarTable, calendarButton);
 window.addEventListener('resize', () => {
-  if(calendarSlider) buildSlider(calendarSlider, calendarContent, calendarTable, calendarButton);
+  if (calendarSlider) buildSlider(calendarSlider, calendarContent, calendarTable, calendarButton);
 });
 
 
 //fix about slider
 $(document).ready(() => {
-  if(document.querySelector('.peoples-slider__wrapper')) {
+  if (document.querySelector('.peoples-slider__wrapper')) {
     let sliderHeight = document.querySelector('.peoples-slider__wrapper').clientHeight;
 
     document.querySelectorAll('.js-slider-img').forEach((el) => {
@@ -215,18 +225,18 @@ function changeArrowsContent(selector) {
   nextIndex = parseInt(currnetIndex) + 1;
   prevIndex = parseInt(currnetIndex) - 1;
 
-  if(currnetIndex == lastIndex) nextIndex = 0;
-  if(currnetIndex == 0) prevIndex = lastIndex;
+  if (currnetIndex == lastIndex) nextIndex = 0;
+  if (currnetIndex == 0) prevIndex = lastIndex;
 
-  let prevPersonName = document.querySelector(selector + ' .slick-slide[data-slick-index="' + prevIndex +'"] .js-slider-name').innerHTML;
-  let nextPersonName = document.querySelector(selector + ' .slick-slide[data-slick-index="' + nextIndex +'"] .js-slider-name').innerHTML;
+  let prevPersonName = document.querySelector(selector + ' .slick-slide[data-slick-index="' + prevIndex + '"] .js-slider-name').innerHTML;
+  let nextPersonName = document.querySelector(selector + ' .slick-slide[data-slick-index="' + nextIndex + '"] .js-slider-name').innerHTML;
 
   prevButtonContent = '<p>' + prevPersonName + '</p>';
   nextButtonContent = '<p>' + nextPersonName + '</p>';
 
-  if($('.js-slider-img').length > 0) {
-    let prevPersonImg = document.querySelector(selector + ' .slick-slide[data-slick-index="' + prevIndex +'"] .js-slider-img').outerHTML,
-      nextPersonImg = document.querySelector(selector + ' .slick-slide[data-slick-index="' + nextIndex +'"] .js-slider-img').outerHTML;
+  if ($('.js-slider-img').length > 0) {
+    let prevPersonImg = document.querySelector(selector + ' .slick-slide[data-slick-index="' + prevIndex + '"] .js-slider-img').outerHTML,
+      nextPersonImg = document.querySelector(selector + ' .slick-slide[data-slick-index="' + nextIndex + '"] .js-slider-img').outerHTML;
 
     prevButtonContent = prevButtonContent + prevPersonImg;
     nextButtonContent = nextButtonContent + nextPersonImg;
@@ -251,6 +261,7 @@ $($mainSlider).on('afterChange', () => {
 });
 
 const $nameContainer = $('.js-name-container');
+
 // const $activeSlide = $('.slick-active');
 
 function changeName() {
@@ -260,20 +271,20 @@ function changeName() {
 
 $($gallerySlider).on('afterChange', changeName);
 
-if($($personsSlider).length) changeArrowsContent($personsSlider);
-if($($mainSlider).length) changeArrowsContent($mainSlider);
-if($($productsSlider).length) changeArrowsContent($productsSlider);
-if($($gallerySlider).length)  changeName();
+if ($($personsSlider).length) changeArrowsContent($personsSlider);
+if ($($mainSlider).length) changeArrowsContent($mainSlider);
+if ($($productsSlider).length) changeArrowsContent($productsSlider);
+if ($($gallerySlider).length) changeName();
 
-const $menu = $('.js-contacts');
+const $anchor = $('.js-anchor');
 const $root = $('body,html');
 const $tab = $('.js-tab-link');
 const $tabContent = $('.js-tab-content');
 
 init();
 
-function init () {
-  $menu.on('click', 'a', scrollToBlock);
+function init() {
+  $anchor.on('click', scrollToBlock);
   $tab.on('click', showTab);
   $tab.on('click', changeContent);
 }
@@ -290,12 +301,12 @@ function changeContent(e) {
   e.preventDefault();
   let a = $(this).data('id');
 
-  $tabContent.each(function() {
+  $tabContent.each(function () {
     if (!$(this).hasClass(a)) {
       $(this).removeClass('is-active');
     }
 
-  else
+    else
       $(this).addClass('is-active');
   });
 }
@@ -315,20 +326,20 @@ const $close = $('.js-close');
 $gallery.on('click', showGallery);
 $close.on('click', hideGallery);
 
-function showGallery () {
+function showGallery() {
   $popUp.addClass('is-visible');
 }
 
-function hideGallery  () {
+function hideGallery() {
   $popUp.removeClass('is-visible');
 }
 
 const $productNum = document.location.search.slice(-1);
-const $selectedFilter = $('.js-form-item-tid-'+ $productNum);
+const $selectedFilter = $('.js-form-item-tid-' + $productNum);
 $selectedFilter.find('.option').addClass('active');
 
 $selectedFilter.on('click', resetSearch);
 
-function resetSearch () {
+function resetSearch() {
   location.search = "";
 }

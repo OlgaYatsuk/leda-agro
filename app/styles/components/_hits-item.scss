@@ -34,13 +34,13 @@
 
 .hits__item-img {
   display: block;
-  flex: 1 0 50%;
+  flex: 0 1 100%;
   object-fit: cover;
-  max-width: 840px;
   max-height: 250px;
 
   @media screen and (min-width: $max-md) {
     max-height: none;
+    flex: 0 1 50%;
   }
 }
 

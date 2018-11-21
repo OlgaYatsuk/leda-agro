@@ -36,6 +36,7 @@
   span {
     padding: 14px 20px;
     transition: border 0.25s;
+    border-radius: 5px;
   }
 
   &:last-child {
@@ -49,6 +50,7 @@
   &.is-active {
     span {
       border: 1px $blue solid;
+      color: #fff;
 
       &:hover {
         cursor: default;
