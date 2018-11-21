@@ -9,6 +9,8 @@
   align-items: center;
   text-align: center;
   background: linear-gradient(25deg, rgba(#065c99, .5) 0%, rgba(#000000, 0) 46%, rgba(#065c99, .5) 100%), #000000;
+  margin-top: 45vh;
+  transform: translateY(-50%);
 
   &::before {
     content: '';
@@ -92,6 +94,7 @@
   }
 }
 
+
 .hero-slider {
   position: relative;
   margin-bottom: 230px;
@@ -113,6 +116,29 @@
 
 .hero-wrapper {
   position: relative;
+
+  &::before {
+    content: '';
+    background: url(../images/hero/hero-bottom-img.png) center center no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 47%;
+    left: 46%;
+    z-index: 2;
+    width: 30%;
+    height: 70%;
+    object-fit: contain;
+    transform: translateX(-50%) translateY(-50%);
+    mix-blend-mode: screen;
+  }
+
+  .hero__background-heading {
+    top: 0;
+  }
+
+  .hero::before {
+    display: none;
+  }
 }
 
 .hero__slider-text {
@@ -206,6 +232,7 @@
   width: 100%;
   text-align: center;
   left: 0;
+  top: 45vh;
   transform: translateY(-50%);
 
   @media screen and (min-width: $max-md) {

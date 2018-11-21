@@ -114,7 +114,7 @@ const sliders = [
     config: {
       pauseOnHover: false,
       fade: true,
-      dots: true,
+      dots: false,
       appendArrows: $arrows,
     }
   },
