@@ -154,7 +154,7 @@ function buildSlider(slider, content, items, buttons) {
     }
   });
 
-  content.style.width = (sliderWidth * itemsCount) + 'px';
+  content.style.width = (sliderWidth * itemsCount + 10) + 'px';
 
   if(sliderWidth <= 569) {
     content.style.width = (sliderWidth * itemsCount + 500) + 'px';
