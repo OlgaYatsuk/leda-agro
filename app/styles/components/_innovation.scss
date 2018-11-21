@@ -4,6 +4,10 @@
   @media screen and (min-width: $max-md) {
     padding-bottom: 200px;
   }
+
+  .hero {
+    margin-bottom: 0;
+  }
 }
 
 .innovation__text {
@@ -36,12 +40,16 @@
 }
 
 .innovation-caption {
-  font-weight: 600;
+  font-weight: 400;
   max-width: 770px;
   width: 90%;
   text-align: center;
   line-height: 1.8;
   margin: 123px auto 70px;
+
+  &:first-of-type {
+    margin: 0 auto 70px;
+  }
 }
 
 .innovation__img {

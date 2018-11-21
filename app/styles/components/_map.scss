@@ -5,5 +5,11 @@
 
   iframe {
     display: inherit;
+    pointer-events: none;
+    position: relative;
+
+    &.is-clicked {
+      pointer-events: auto;
+    }
   }
 }
