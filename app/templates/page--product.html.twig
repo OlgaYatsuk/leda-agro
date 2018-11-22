@@ -12,7 +12,7 @@
                     <p class="hero__info-amount text-small">{% if node.field_product_packing.value != null %}{{ 'Фасовка'|t }} - {{ node.field_product_packing.value }} {% endif %}{% if node.field_product_pack_unit.value != null %}{{ node.field_product_pack_unit.value|t }}{% endif %}</p>
                 </div>
             </div>
-            <button class="button button--hero">{{ 'Приобрести'|t }}</button>
+            <button class="button button--hero js-anchor">{{ 'Приобрести'|t }}</button>
         </article>
 		{% if node.field_product_image.entity.uri.value != null %}<img src="{{ file_url(node.field_product_image.entity.uri.value) }}" alt="tomatoes" class="hero__img">{% endif %}
         
@@ -41,7 +41,7 @@
     <section class="product container">
         <ul class="tabs">
             {% for entity in node.field_product_char %}
-                <li class="tabs__link js-tab-link" data-id="id-{{ loop.index0 }}"><span>{% if language == 'uk' %}{{ node.field_product_char[loop.index0].entity.field_label_ua.value }}{% else %}{{ node.field_product_char[loop.index0].entity.field_label.value }}{% endif %}</span></li>
+                <li class="tabs__link js-tab-link {% if loop.index0 == 0 %}is-active{% endif %}" data-id="id-{{ loop.index0 }}"><span>{% if language == 'uk' %}{{ node.field_product_char[loop.index0].entity.field_label_ua.value }}{% else %}{{ node.field_product_char[loop.index0].entity.field_label.value }}{% endif %}</span></li>
             {% endfor %}
         </ul>
         <div class="tabs-content-wrapper">
@@ -60,12 +60,14 @@
 	
     <section class="hits">
         <h2 class="section-heading">{{ 'Хиты категорий'|t }}</h2>
-		<div class="hits__item">{{ hit_render.0 }}{{ hit_render.1 }}{{ hit_render.2 }} </div>
+		<div class="hits__item">{{ hit_render.0 }}</div>
+		<div class="hits__item">{{ hit_render.1 }}</div>
+		<div class="hits__item">{{ hit_render.2 }}</div>
     </section>
 	<section class="map" id="shops">
 		<div class="container">
 			<h4 class="catalog__title section-heading">{{ 'Где купить'|t }}</h4>
 		</div>
-		<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1Igd7ceRCWB1ZJCf-sYFibPIao0gJ-nlY" width="100%" height="500"></iframe>
+		<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1Igd7ceRCWB1ZJCf-sYFibPIao0gJ-nlY" width="100%" height="500" scrolling="no"></iframe>
 	</section>
 </main>

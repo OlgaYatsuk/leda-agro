@@ -6,6 +6,10 @@
   @media screen and (min-width: $max-sm) {
     margin-top: 130px;
   }
+
+  @media (max-width: $max-xs) {
+    flex-direction: column;
+  }
 }
 
 .tabs{

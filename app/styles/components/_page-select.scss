@@ -29,6 +29,16 @@
   color: $white;
   text-transform: uppercase;
   margin: 0 10px;
+  white-space: nowrap;
+  width: 95px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: text-bottom;
+
+  @media (max-width: $max-xs) {
+    width: 75px;
+  }
 }
 
 .page-select--catalog {

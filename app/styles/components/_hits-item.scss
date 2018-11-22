@@ -15,6 +15,11 @@
 .hits__item-info {
   margin: 45px 6%;
   flex: 1 0 50%;
+  align-self: center;
+
+  @media (max-width: $max-xl + 1px) and (min-width: $max-md + 1px) {
+    max-width: 36% !important;
+  }
 
   @media screen and (min-width: $max-md) {
     max-width: 520px;
@@ -39,8 +44,9 @@
   max-height: 250px;
 
   @media screen and (min-width: $max-md) {
-    max-height: none;
+    max-height: 700px;
     flex: 0 1 50%;
+    width: 50%;
   }
 }
 

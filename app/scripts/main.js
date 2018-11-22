@@ -243,9 +243,9 @@ function changeArrowsContent(selector) {
   }
 
   document.querySelector('.js-arrows .arrow-link--prev')
-    .innerHTML = '<img class="arrow-link__img" src="../images/svg/arrow-right.svg" alt="previous">' + prevButtonContent;
+    .innerHTML = '<img class="arrow-link__img" src="/themes/new/images/svg/arrow-right.svg" alt="previous">' + prevButtonContent;
   document.querySelector('.js-arrows .arrow-link--next')
-    .innerHTML = nextButtonContent + '<img class="arrow-link__img" src="../images/svg/l_arrow.svg" alt="next">';
+    .innerHTML = nextButtonContent + '<img class="arrow-link__img" src="/themes/new/images/svg/l_arrow.svg" alt="next">';
 }
 
 $($productsSlider).on('afterChange', () => {
@@ -341,5 +341,5 @@ $selectedFilter.find('.option').addClass('active');
 $selectedFilter.on('click', resetSearch);
 
 function resetSearch() {
-  location.search = "";
+  location.search = '';
 }
