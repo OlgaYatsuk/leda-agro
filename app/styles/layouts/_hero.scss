@@ -2,7 +2,6 @@
   position: relative;
   height: 35%;
   min-height: 275px;
-  margin-bottom: 150px;
   max-width: 970px;
   display: flex;
   flex-direction: column;
@@ -33,7 +32,6 @@
 
   @media screen and (min-width: $max-md) {
     height: 550px;
-    margin-bottom: 230px;
   }
 }
 
@@ -63,6 +61,7 @@
   padding: 110px 15px 70px;
   height: auto;
   text-align: left;
+  max-height: 400px;
   margin-bottom: 0;
   display: flex!important;
   flex-direction: row!important;
@@ -97,7 +96,7 @@
 
 .hero-slider {
   position: relative;
-  margin-bottom: 230px;
+  margin-bottom: 150px;
 
   &:after {
     display: none;
@@ -116,13 +115,14 @@
 
 .hero-wrapper {
   position: relative;
+  max-height: 500px;
 
   &::before {
     content: '';
     background: url(../images/hero/hero-bottom-img.png) center center no-repeat;
     background-size: 100%;
     position: absolute;
-    top: 47%;
+    bottom: -23%;
     left: 46%;
     z-index: 2;
     width: 30%;
@@ -332,6 +332,10 @@
       left: auto;
       right: 3%;
     }
+  }
+
+  .slick-list {
+    max-height: 90vh!important;
   }
 }
 
