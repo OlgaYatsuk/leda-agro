@@ -56,3 +56,16 @@
     margin: 10px 5px;
   }
 }
+
+.hero--catalog {
+  .page-select {
+    max-width: none!important;
+    width: auto!important;
+  }
+
+  .page-select__name {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 175px!important;
+  }
+}
