@@ -1,12 +1,12 @@
 .product-gallery {
   position: absolute;
-  right: 10%;
+  right: 20%;
   text-align: center;
-  bottom: 67px;
+  bottom: 40%;
   cursor: pointer;
 
   @media screen and (min-width: $max-sm) {
-    bottom: 0;
+    bottom: 28%;
   }
 
   &:hover {
@@ -38,8 +38,9 @@
   visibility: hidden;
   opacity: 0;
   z-index: 100;
-  width: 100%;
-  height: 100%;
+  background-color: #000;
+  width: 100vw;
+  height: 100vh;
   transition: all .5s;
 
   @media screen and (min-width: $max-md) {
