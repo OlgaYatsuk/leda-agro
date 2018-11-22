@@ -1,0 +1,14 @@
+<main class="blog">
+    <div class="container">
+		<p class="hero__background-heading hero__background-heading--blog">Блог</p>
+        <section class="hero container">
+            <h2 class="hero__heading hero__heading--centered heading">Блог</h2>
+        </section>
+        <section class="blog-intro">
+            {{ node.field_page_text_field.value|raw }}
+        </section>
+        <section class="posts-wrapper js-blog" data-masonry='{ "itemSelector": ".post", "columnWidth": 190 }'>
+            {{ views_blog_ua }}
+        </section>
+    </div>
+</main>

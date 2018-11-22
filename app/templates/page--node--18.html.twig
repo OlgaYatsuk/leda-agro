@@ -1,0 +1,36 @@
+<main>
+    <div class="hero-wrapper">
+        <p class="hero__background-heading hero__background-heading--about">Про нас</p>
+        <section class="hero container">
+            <h2 class="hero__heading hero__heading--centered heading">Про нас</h2>
+        </section>
+    </div>
+    <section class="peoples-slider">
+        <div class="container">
+            <h4 class="peoples-slider__title section-heading">Лєда Агро - це люди</h4>
+            <div class="peoples-slider__wrapper js-person-slider">
+                {{ views_worker_ua }}
+            </div>
+            <div class="custom-arrows custom-arrows--about js-arrows"></div>
+        </div>
+    </section>
+    <section class="steps">
+        <div class="container">
+            {{ views_about_item_ua }}
+        </div>
+    </section>
+    <section class="plans">
+        <div class="container">
+            <div class="plans__wrapper">
+                <h3 class="plans__title section-heading">Наші плани на майбутнє</h3>
+                <p class="text">{{ node.field_page_text_field.value|raw }}</p>
+            </div>
+        </div>
+    </section>
+    <section class="media">
+        <div class="container">
+            <h3 class="media__title section-heading">Медіа</h3>
+            {{ views_about_media_ua }}
+        </div>
+    </section>
+</main>

@@ -1,0 +1,27 @@
+<main class="main">
+    {{ page.front }}
+    <section class="main-hero-wrapper">
+        <div class="js-main-slider">
+            {% if language == 'uk' %}{{ views_front_slider_ua }}{% else %}{{ views_front_slider }}{% endif %}
+        </div>
+        <div class="custom-arrows custom-arrows--main js-arrows"></div>
+    </section>
+    <section class="catalog">
+        <div class="container">
+            <h4 class="catalog__title section-heading">{{ 'Каталог'|t }}</h4>
+            <div class="catalog__wrapper">
+                <img src="/themes/new/images/catalog_bg.jpg" alt="" class="catalog__bg">
+                <a href="{{ '/vegetables'|t }}" class="catalog__item"><img class="catalog__item-img" src="/themes/new/images/svg/catalog_i_1.svg" alt=""><p class="catalog__item-name text">{{ 'Семена овощей и ягод'|t }}</p></a>
+                <a href="{{ '/flowers'|t }}" class="catalog__item"><img class="catalog__item-img" src="/themes/new/images/svg/catalog_i_2.svg" alt=""><p class="catalog__item-name text">{{ 'Семена цветов'|t }}</p></a>
+                <a href="{{ '/fertilizers'|t }}" class="catalog__item"><img class="catalog__item-img" src="/themes/new/images/svg/catalog_i_3.svg" alt=""><p class="catalog__item-name text">{{ 'Удобрения'|t }}</p></a>
+            </div>
+        </div>
+    </section>
+	{{ include('/themes/new/templates/calendar.html.twig') }}
+	<section class="map" id="shops">
+		<div class="container">
+			<h4 class="catalog__title section-heading">{{ 'Где купить'|t }}</h4>
+		</div>
+		<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1Igd7ceRCWB1ZJCf-sYFibPIao0gJ-nlY" width="100%" height="500"></iframe>
+	</section>
+</main>

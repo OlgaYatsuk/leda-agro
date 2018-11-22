@@ -1,0 +1,29 @@
+<!doctype html>
+<html class="no-js" lang="en" xmlns="http://www.w3.org/1999/html">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>{{ head_title|safe_join(' | ') }}</title>
+        <link rel="stylesheet" href="/themes/new/styles/vendor.css">
+        <link rel="stylesheet" href="/themes/new/styles/main.css">
+		<link rel="shortcut icon" href="/themes/new/favicon.png" type="image/x-icon">
+        <script src="/themes/new/scripts/vendor/modernizr.js"></script>
+		<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+	<css-placeholder token="{{ placeholder_token }}">
+	<js-placeholder token="{{ placeholder_token }}">
+    </head>
+    <body>
+        {{ page_top }}
+        <div class="blend-background">
+            <!--[if IE]><p class="browserupgrade">You are using an <strong>outdated</strong>browser. Please <a href="http://browsehappy.com/">upgrade your browser</a>to improve your experience.</p><![endif]-->
+            <script src="/themes/new/scripts/vendor.js"></script>
+            {{ include('/themes/new/templates/header.html.twig') }}	
+            {{ page }}
+            {{ page_bottom }}
+            {{ include('/themes/new/templates/footer.html.twig') }}
+            <script src="/themes/new/scripts/main.js"></script>
+        </div>
+        <js-bottom-placeholder token="{{ placeholder_token }}">
+    </body>
+</html>

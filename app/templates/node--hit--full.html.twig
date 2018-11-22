@@ -1,0 +1,13 @@
+{% if language == 'uk' %}
+	<img src="{% spaceless %}{{ content.field_hit_image }}{% endspaceless %}" alt="" class="hits__item-img">
+	<div class="hits__item-info">
+		<h3 class="article-heading">{{ content.field_hit_title_ua }}</h3>
+		<div class="hits__item-description">{% spaceless %}{{ content.field_hit_description_ua }}{% endspaceless %}</div>
+	</div>
+{% else %}
+	<img src="{% spaceless %}{{ content.field_hit_image }}{% endspaceless %}" alt="" class="hits__item-img">
+	<div class="hits__item-info">
+		<h3 class="article-heading">{{ label }}</h3>
+		<div class="hits__item-description">{% spaceless %}{{ content.field_hit_description }}{% endspaceless %}</div>
+	</div>
+{% endif %}

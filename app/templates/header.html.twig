@@ -1,0 +1,60 @@
+<!--begin header-->
+<header class="header">
+    <div class="container">
+        <div class="header__wrapper">
+            <a href="#" class="header__nav-toggler"><span></span><span></span><span></span><span></span></a>
+            <a href="{{ '/'|t }}" class="header__logo"><img src="/themes/new/images/logo.png" alt=""></a>
+        </div>
+    </div>
+</header>
+<!--end header-->
+
+<!--begin navigation-->
+<div class="navigation">
+  <div class="container">
+    <div class="navigation__wrapper">
+      <div class="navigation__social">
+        <a href="https://www.facebook.com/LedaAgroUA/?ref=bookmarks" target="_blank" class="navigation__social-link">
+          <img src="/themes/new/images/svg/facebook.svg" alt="">
+        </a>
+        <a href="https://www.instagram.com/ledaagroua/?hl=uk" target="_blank" class="navigation__social-link">
+          <img src="/themes/new/images/svg/insta.svg" alt="">
+        </a>
+      </div>
+      <nav class="navigation__main-nav">
+        <a href="{{ '/about'|t }}" class="navigation__main-nav-link">{{ 'О нас'|t }}</a>
+        <a href="{{ '/blog'|t }}" class="navigation__main-nav-link">{{ 'Блоги'|t }}</a>
+        <a href="{{ '/innovations'|t }}" class="navigation__main-nav-link">{{ 'Инновации'|t }}</a>
+        <a href="{{ '/contacts'|t }}" class="navigation__main-nav-link">{{ 'Контакты'|t }}</a>
+      </nav>
+      <div class="navigation__pane">
+        <div class="navigation__pane-links">
+          <a href="{{ '/vegetables'|t }}" class="navigation__pane-links-link js-tab-link is-active" data-id="id-1">{{ 'Семена овощей'|t }}</a>
+          <a href="{{ '/flowers'|t }}" class="navigation__pane-links-link js-tab-link" data-id="id-2">{{ 'Семена цветов'|t }}</a>
+          <a href="{{ '/fertilizers'|t }}" class="navigation__pane-links-link js-tab-link" data-id="id-3">{{ 'Удобрения'|t }}</a>
+        </div>
+        <div class="navigation__pane-content js-tab-content id-1 is-active">
+          {{ views_vegetables }}
+        </div>
+
+        <div class="navigation__pane-content js-tab-content id-2">
+          {{ views_flowers }}
+        </div>
+
+        <div class="navigation__pane-content js-tab-content id-3">
+          {{ views_fertilizers }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="navigation__lang">
+  {% if language == 'uk' %}
+	<a href="/uk{{ url }}" class="navigation__lang-link active">Укр</a>
+	<a href="{{ url }}" class="navigation__lang-link">Рус</a>
+  {% else %}
+	<a href="/uk{{ url_ua }}" class="navigation__lang-link">Укр</a>
+	<a href="{{ url_ua }}" class="navigation__lang-link active">Рус</a>
+  {% endif %}
+  </div>
+</div>
+<!--end navigation-->
