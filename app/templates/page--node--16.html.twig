@@ -1,9 +1,11 @@
 <main class="blog">
-    <div class="container">
-		<p class="hero__background-heading hero__background-heading--blog">Блог</p>
+    <div class="hero-wrapper">
+		    <p class="hero__background-heading hero__background-heading--blog">Блог</p>
         <section class="hero container">
             <h2 class="hero__heading hero__heading--centered heading">Блог</h2>
         </section>
+    </div>
+    <div class="container">	
         <section class="blog-intro">
             {{ node.field_page_text_field.value|raw }}
         </section>
