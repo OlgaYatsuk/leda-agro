@@ -40,9 +40,10 @@
 
 .navigation__social {
   text-align: right;
+  display: none;
 
-  @media (max-width: $max-sm) {
-    text-align: center;
+  @media (min-width: $max-sm) {
+    display: inline;
   }
 }
 
@@ -205,7 +206,7 @@
 
 .navigation__lang {
   position: absolute;
-  left: 130px;
+  left: 85px;
   bottom: 40px;
 
   @media (max-width: $max-md) {
