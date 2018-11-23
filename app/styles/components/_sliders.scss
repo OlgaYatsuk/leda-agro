@@ -124,7 +124,17 @@
   transform: translateX(-50%);
 
   p {
-    min-width: 135px;
+    min-width: 56px;
+
+    @media screen and (min-width: $max-sm){
+      min-width: 135px;
+    }
+  }
+
+  .arrow-link--next p {
+    @media screen and (max-width: $max-sm){
+      text-align: right;
+    }
   }
 }
 

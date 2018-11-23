@@ -9,7 +9,17 @@
 .blog > .container {
   max-width: 1220px;
   width: 110%;
-  padding: 0 4%;
+  padding: 0 5%;
+
+  @media screen and (max-width: $max-sm){
+    width: 109%;
+  }
+}
+
+.blog-intro {
+  @media screen and (max-width: $max-sm){
+    width: 87%;
+  }
 }
 
 .blog-intro__text {
