@@ -338,10 +338,12 @@ const $productNum = document.location.search.slice(-2);
 const $selectedFilter = $('.js-form-item-tid-' + $productNum);
 $selectedFilter.find('.option').addClass('active');
 
-console.log($productNum, $selectedFilter);
+$('.js-form-item .option').click(function(){
+  $('.js-form-item .option').not(this).removeClass('active');
+});
 
-$selectedFilter.on('click', resetSearch);
+// $selectedFilter.on('click', resetSearch);
 
-function resetSearch() {
-  location.search = '';
-}
+// function resetSearch() {
+//   location.search = '';
+// }

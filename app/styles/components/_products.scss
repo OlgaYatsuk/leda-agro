@@ -70,11 +70,15 @@
 
 .js-form-item {
 
+  .option {
+    cursor: pointer;
+  }
+
   @media (max-width: $max-sm) {
     margin: 5px 0;
   }
 
-  input[type="checkbox"] {
+  input[type="radio"] {
     display: none;
   }
 
