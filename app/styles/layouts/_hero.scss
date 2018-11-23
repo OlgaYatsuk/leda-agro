@@ -58,13 +58,17 @@
 
 .hero--product,
 .hero--main {
-  padding: 110px 15px 70px;
+  padding: 210px 15px 70px;
   height: auto;
   text-align: left;
   max-height: 400px;
   margin-bottom: 0;
   display: flex!important;
   flex-direction: row!important;
+
+  @media screen and (min-width: $max-md) {
+    padding: 110px 15px 70px;
+  }
 }
 
 .hero--catalog {
@@ -122,14 +126,20 @@
     background: url(../images/hero/hero-bottom-img.png) center center no-repeat;
     background-size: 100%;
     position: absolute;
-    bottom: -23%;
-    left: 46%;
+    bottom: -18%;
+    left: 43%;
     z-index: 2;
-    width: 30%;
+    width: 80%;
     height: 70%;
     object-fit: contain;
     transform: translateX(-50%) translateY(-50%);
     mix-blend-mode: screen;
+
+    @media screen and (min-width: $max-md){
+      left: 46%;
+      width: 30%;
+      bottom: -23%;
+    }
   }
 
   .hero__background-heading {
