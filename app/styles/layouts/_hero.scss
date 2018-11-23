@@ -36,8 +36,6 @@
 }
 
 .hero--contacts {
-  margin-bottom: 100px;
-
   &:before {
     display: none;
   }
@@ -58,7 +56,7 @@
 
 .hero--product,
 .hero--main {
-  padding: 110px 15px 70px;
+  padding: 120px 7% 40px;
   height: auto;
   text-align: left;
   max-height: 400px;
@@ -122,14 +120,20 @@
     background: url(../images/hero/hero-bottom-img.png) center center no-repeat;
     background-size: 100%;
     position: absolute;
-    bottom: -23%;
-    left: 46%;
+    bottom: -18%;
+    left: 43%;
     z-index: 2;
-    width: 30%;
+    width: 80%;
     height: 70%;
     object-fit: contain;
     transform: translateX(-50%) translateY(-50%);
     mix-blend-mode: screen;
+
+    @media screen and (min-width: $max-md){
+      left: 46%;
+      width: 30%;
+      bottom: -23%;
+    }
   }
 
   .hero__background-heading {
@@ -153,7 +157,11 @@
   justify-content: space-between;
   background: 0;
   max-width: 1200px;
-  height: 500px;
+  height: 320px;
+
+  @media screen and (min-width: $max-md) {
+    height: 380px;
+  }
 
   .hero__heading {
     font-size: 1.8rem;
@@ -173,7 +181,7 @@
 }
 
 .hero--main {
-  padding: 120px 7% 40px;
+  padding: 210px 15px 70px;
   background: none;
   position: relative;
   max-width: none!important;
