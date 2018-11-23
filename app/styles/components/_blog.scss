@@ -1,11 +1,15 @@
 .blog {
-  padding-bottom: 200px;
+  padding-bottom: 40px;
+
+  @media screen and (min-width: $max-md){
+    padding-bottom: 200px;
+  }
 }
 
 .blog > .container {
   max-width: 1220px;
   width: 110%;
-  padding: 0;
+  padding: 0 4%;
 }
 
 .blog-intro__text {

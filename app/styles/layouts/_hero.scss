@@ -36,8 +36,6 @@
 }
 
 .hero--contacts {
-  margin-bottom: 100px;
-
   &:before {
     display: none;
   }
@@ -58,17 +56,13 @@
 
 .hero--product,
 .hero--main {
-  padding: 210px 15px 70px;
+  padding: 120px 7% 40px;
   height: auto;
   text-align: left;
   max-height: 400px;
   margin-bottom: 0;
   display: flex!important;
   flex-direction: row!important;
-
-  @media screen and (min-width: $max-md) {
-    padding: 110px 15px 70px;
-  }
 }
 
 .hero--catalog {
@@ -163,7 +157,11 @@
   justify-content: space-between;
   background: 0;
   max-width: 1200px;
-  height: 500px;
+  height: 320px;
+
+  @media screen and (min-width: $max-md) {
+    height: 380px;
+  }
 
   .hero__heading {
     font-size: 1.8rem;
@@ -183,7 +181,7 @@
 }
 
 .hero--main {
-  padding: 120px 7% 40px;
+  padding: 210px 15px 70px;
   background: none;
   position: relative;
   max-width: none!important;
