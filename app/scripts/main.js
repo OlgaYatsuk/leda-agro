@@ -25,7 +25,7 @@ document.addEventListener('scroll', () => {
 // scripts for catalog page
 if(productsToggler) {
   if(document.body.clientWidth < 768) {
-    document.querySelector('.products').style.minHeight = document.querySelector('#views-exposed-form-catalog-page-1').clientHeight + 'px';
+    document.querySelector('.products').style.minHeight = document.querySelector('.products__filters').clientHeight + 'px';
   }
 
   productsToggler.addEventListener('click', (e) => {
@@ -334,9 +334,11 @@ function hideGallery() {
   $popUp.removeClass('is-visible');
 }
 
-const $productNum = document.location.search.slice(-1);
+const $productNum = document.location.search.slice(-2);
 const $selectedFilter = $('.js-form-item-tid-' + $productNum);
 $selectedFilter.find('.option').addClass('active');
+
+console.log($productNum, $selectedFilter);
 
 $selectedFilter.on('click', resetSearch);
 

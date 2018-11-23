@@ -6,6 +6,24 @@
   @media(max-width: $max-sm) {
     flex-direction: column;
   }
+
+  .js-pager__items {
+    @media (min-width: $max-xs + 1px) {
+      padding-left: 10px;
+    }
+  }
+
+  .js-pager__items.pager {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+
+    .button {
+      font-size: .85rem;
+      padding: 0.5rem 1rem;
+    }
+  }
 }
 
 .products__dropdown-toggler {
@@ -46,6 +64,10 @@
   }
 }
 
+.products__filters + div {
+  width: 100%;
+}
+
 .js-form-item {
 
   @media (max-width: $max-sm) {
@@ -83,8 +105,9 @@
   justify-content: flex-start;
   flex-wrap: wrap;
   position: relative;
-  width: calc(100% - 191px);
+  //width: calc(100% - 191px);
   align-self: flex-start;
+  width: 100%;
 
   @media (max-width: $max-sm) {
     width: 100%;
@@ -99,7 +122,7 @@
   justify-content: space-between;
   width: calc(20% - 30px);
   min-height: 240px;
-  align-self: flex-start;
+  //align-self: flex-start;
   padding-top: 20px;
   margin-bottom: 30px;
   text-align: center;
@@ -155,6 +178,11 @@
     font-size: 1rem;
     font-weight: bold;
     letter-spacing: .03em;
+    padding: 0 5px 15px;
+
+    @media (max-width: $max-xs) {
+      font-size: 1.5rem;
+    }
   }
 
   .button_buy a {
@@ -163,5 +191,9 @@
     font-weight: bold;
     padding: 0.4rem 1.2rem;
     margin-bottom: 20px;
+
+    @media (max-width: $max-xs) {
+      font-size: 1rem;
+    }
   }
 }

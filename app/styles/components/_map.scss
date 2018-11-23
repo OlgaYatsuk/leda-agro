@@ -3,13 +3,91 @@
   width: 100%;
   overflow: hidden;
 
+  .catalog__title {
+    @media (max-width: $max-sm) {
+      margin-bottom: 15px;
+    }
+  }
+
+  .map__wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: $max-sm) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .map__shops-wrapper {
+    display: flex;
+    width: 400px;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 13px;
+
+    @media (max-width: $max-sm) {
+      padding-bottom: 15px;
+    }
+
+    h6 {
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    ul {
+      padding-top: 20px;
+
+      @media (max-width: $max-sm) {
+        text-align: center;
+      }
+    }
+
+    li {
+      position: relative;
+      padding: 5px 0;
+      transition: transform .3s ease;
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: -15px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: $green;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+      }
+
+      &:hover {
+        transform: scale(1.02);
+      }
+    }
+
+    a {
+      font-weight: 400;
+      color: $white;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
   iframe {
     display: inherit;
     pointer-events: none;
     position: relative;
+    width: calc(100% - 400px);
 
     &.is-clicked {
       pointer-events: auto;
+    }
+
+    @media (max-width: $max-sm) {
+      width: 100%;
     }
   }
 }

@@ -2,6 +2,10 @@
   position: relative;
   margin-bottom: 100px;
 
+  @media (max-width: $max-xs) {
+    margin-bottom: 0;
+  }
+
   .slick-dots {
     left: initial;
     right: 14%;
@@ -11,6 +15,12 @@
       transform: translateX(50%);
       bottom: -80px;
     }
+  }
+}
+
+.peoples-slider__title {
+  @media (max-width: $max-xs) {
+    margin-bottom: 40px;
   }
 }
 

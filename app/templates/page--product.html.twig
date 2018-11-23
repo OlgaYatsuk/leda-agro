@@ -1,5 +1,5 @@
 <main>
-    <section class="hero hero--product container">
+    <section class="hero--product container">
         <article>
             {% if node.field_product_label.value == 1 %}
                 <p class="hero__label novelty-label">{{ 'Новинка'|t }}</p>
@@ -20,23 +20,6 @@
 			{% if node.field_product_image.entity.uri.value != null %}<img src="{{ file_url(node.field_product_image.entity.uri.value) }}" class="product-gallery__img">{% endif %}
             <p class="product-gallery__caption text-small">{{ 'Галерея товара'|t }}</p>
         </div>
-		
-        <div class="product-gallery-window-wrapper js-pop-up">
-            <div class="product-gallery-window js-gallery-slider">
-                {% for entity in node.field_product_gallery %}
-                    <div class="product-gallery-item">
-                        <p class="js-slider-name hidden-name">{% if language == 'uk' %}{{ node.field_product_title_ua.value }}{% else %}{{ node.label }}{% endif %}</p>
-                        <img src="{{ file_url(node.field_product_gallery[loop.index0].entity.uri.value) }}" alt="1" class="product-gallery-item__img">
-                    </div>
-                {% endfor %}
-            </div>
-            <div class="product-gallery-item__controlls">
-                <div class="product-gallery-item__controlls-name js-name-container"></div>
-                <div class="product-gallery__arrows js-arrows"></div>
-                <button class="product-gallery-item__close js-close"><img src="/themes/new/images/svg/close.svg" alt="close"></button>
-            </div>
-        </div>
-		
     </section>
     <section class="product container">
         <ul class="tabs">
@@ -68,6 +51,32 @@
 		<div class="container">
 			<h4 class="catalog__title section-heading">{{ 'Где купить'|t }}</h4>
 		</div>
-		<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1Igd7ceRCWB1ZJCf-sYFibPIao0gJ-nlY" width="100%" height="500" scrolling="no"></iframe>
-	</section>
+		<div class="map__wrapper">
+      <div class="map__shops-wrapper">
+        <h6>Інтернет магазини</h6>
+        <ul>
+          <li><a href="http://fazenda.net.ua/" target="_blank">fazenda.net.ua</a></li>
+          <li><a href="http://semillas.prom.ua" target="_blank">semillas.prom.ua</a></li>
+          <li><a href="http://sempochta.com.ua" target="_blank">sempochta.com.ua</a></li>
+          <li><a href="http://mirsemyan.com.ua" target="_blank">mirsemyan.com.ua</a></li>
+        </ul>
+      </div>
+      <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1Igd7ceRCWB1ZJCf-sYFibPIao0gJ-nlY" width="auto" height="500" scrolling="no"></iframe>
+    </div>
+  </section>
 </main>
+<div class="product-gallery-window-wrapper js-pop-up">
+    <div class="product-gallery-window js-gallery-slider">
+        {% for entity in node.field_product_gallery %}
+            <div class="product-gallery-item">
+                <p class="js-slider-name hidden-name">{% if language == 'uk' %}{{ node.field_product_title_ua.value }}{% else %}{{ node.label }}{% endif %}</p>
+                <img src="{{ file_url(node.field_product_gallery[loop.index0].entity.uri.value) }}" alt="1" class="product-gallery-item__img">
+            </div>
+        {% endfor %}
+    </div>
+    <div class="product-gallery-item__controlls">
+        <div class="product-gallery-item__controlls-name js-name-container"></div>
+        <div class="product-gallery__arrows js-arrows"></div>
+        <button class="product-gallery-item__close js-close"><img src="/themes/new/images/svg/close.svg" alt="close"></button>
+    </div>
+</div>
