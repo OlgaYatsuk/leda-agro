@@ -169,6 +169,7 @@
     top: -10px;
     left: 50%;
     transform: translateX(-50%);
+    font-weight: 600;
     font-size: .625rem;
     text-transform: uppercase;
     color: #333333;
@@ -185,6 +186,7 @@
     font-weight: bold;
     letter-spacing: .03em;
     padding: 0 5px 15px;
+    text-decoration: none;
 
     @media (max-width: $max-xs) {
       font-size: 1.5rem;
