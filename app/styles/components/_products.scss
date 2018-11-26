@@ -70,6 +70,10 @@
 
 .js-form-item {
 
+  .option {
+    cursor: pointer;
+  }
+
   @media (max-width: $max-sm) {
     margin: 5px 0;
   }
