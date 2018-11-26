@@ -1,10 +1,10 @@
 .contacts {
-  position: relative;
-  top: -35%;
+  position: absolute;
+  top: 35%;
   z-index: 2;
 
   @media screen and (min-width: $max-xs) {
-    top: -40%;
+    top: 60%;
   }
 }
 
