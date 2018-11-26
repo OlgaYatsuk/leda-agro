@@ -334,7 +334,7 @@ function hideGallery() {
   $popUp.removeClass('is-visible');
 }
 
-const $productNum = document.location.search.slice(-2);
+const $productNum = document.location.search.split('=')[1];
 const $selectedFilter = $('.js-form-item-tid-' + $productNum);
 $selectedFilter.find('.option').addClass('active');
 
