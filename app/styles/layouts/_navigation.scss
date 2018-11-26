@@ -100,6 +100,11 @@
   padding-left: 30px;
   padding-top: 60px;
 
+  @media (min-width: $max-md) and (max-height: 670px) {
+    padding-top: 40px;
+  }
+
+
   @media (max-width: $max-sm) {
     padding-left: 0;
     padding-top: 30px;
@@ -110,6 +115,10 @@
   display: flex;
   align-items: center;
   padding-bottom: 50px;
+
+  @media (min-width: $max-md) and (max-height: 670px) {
+    padding-bottom: 10px;
+  }
 
   @media (max-width: $max-sm) {
     padding-bottom: 25px;
@@ -186,6 +195,10 @@
   color: $gray-2;
   text-transform: uppercase;
   text-decoration: none;
+
+  @media (min-width: $max-md) and (max-height: 670px) {
+    line-height: 1.6rem;
+  }
 
   @media (max-width: $max-md) {
     line-height: 1.6;
