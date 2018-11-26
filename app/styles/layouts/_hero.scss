@@ -79,11 +79,15 @@
 
 .hero--catalog {
   margin: 0 auto;
-  max-height: 380px;
+  //max-height: 380px;
 
   .hero {
     @media screen and (min-width: $max-sm){
       margin-bottom: 40px;
+    }
+
+    @media (max-width: $max-xs) {
+      margin-bottom: 50px;
     }
 
     &::before {
