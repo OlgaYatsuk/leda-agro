@@ -15,8 +15,13 @@
 }
 
 .page-heading--main-page {
-  font-size: 3rem;
-  margin-top: 3.125rem;
+  font-size: 2rem;
+  margin-top: 2.125rem;
+
+  @media screen and (min-width: $max-sm) {
+    font-size: 3rem;
+    margin-top: 3.125rem;
+  }
 }
 
 .section-heading {
