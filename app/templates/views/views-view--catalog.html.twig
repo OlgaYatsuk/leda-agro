@@ -37,6 +37,7 @@
     dom_id ? 'js-view-dom-id-' ~ dom_id,
   ]
 %}
+
 <div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
   {{ title }}
@@ -50,8 +51,9 @@
 
   {{ exposed }}
   {{ attachment_before }}
-
-  {{ rows }}
+  <div data-drupal-views-infinite-scroll-content-wrapper class="products__content views-infinite-scroll-content-wrapper clearfix">
+	{{ rows }}
+  </div>
   {{ empty }}
   {{ pager }}
 

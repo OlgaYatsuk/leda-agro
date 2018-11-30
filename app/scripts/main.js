@@ -339,7 +339,15 @@ const $selectedFilter = $('.js-form-item-tid-' + $productNum);
 $selectedFilter.find('.option').addClass('active');
 
 $('.js-form-item .option').click(function(){
+
   $('.js-form-item .option').not(this).removeClass('active');
+  let newId = $(this).attr('for').split('-'),
+      location = document.location,
+      pathname = location.pathname,
+      search = location.search,
+      newSearch = search.split('=')[0] + '=' + newId[2];
+
+  history.pushState(null, null, '' + pathname + newSearch);
 });
 
 // $selectedFilter.on('click', resetSearch);

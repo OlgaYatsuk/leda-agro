@@ -223,6 +223,11 @@
       padding: 190px 0 80px;
       max-width: none;
     }
+
+    @media (max-width: $max-xs) {
+      margin-left: 15px;
+      margin-right: 15px;
+    }
   }
 
   &::before {
