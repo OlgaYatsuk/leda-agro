@@ -83,6 +83,10 @@
   min-width: 440px;
   display: inline-block;
 
+  @media (max-width: $max-sm) {
+    vertical-align: top;
+  }
+
   thead {
 
     td {

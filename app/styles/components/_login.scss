@@ -1,0 +1,40 @@
+body.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: url('../images/body-bg.png') no-repeat;
+  background-size: cover;
+  float: left;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  //
+  //&:before {
+  //  content: '';
+  //  position: absolute;
+  //  left: 50%;
+  //  top: 50%;
+  //  transform: translate(-50%, -50%);
+  //  width: 200px;
+  //  height: 100px;
+  //  background: url(../images/logo.png) no-repeat;
+  //}
+
+  label,
+  .description {
+    color: $white;
+  }
+
+  .button {
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    background: $green;
+    color: $white;
+    border: none;
+    line-height: 35px;
+  }
+}
