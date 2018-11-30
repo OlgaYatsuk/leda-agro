@@ -21,7 +21,12 @@
 }
 
 .button--hero {
-  margin-top: 40px;
-  width: 170px;
+  margin-top: 20px;
+  width: 145px;
   outline: none;
+
+  @media screen and (min-width: $max-sm){
+    margin-top: 40px;
+    width: 170px;
+  }
 }
