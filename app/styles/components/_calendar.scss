@@ -77,6 +77,14 @@
 
 .calendar__scrolled-content {
   transition: transform .5s ease;
+
+  @media (max-width: 569px) {
+    width: 1780px;
+  }
+
+  @media (max-width: 380px) {
+    width: 1780px;
+  }
 }
 
 .calendar__table {

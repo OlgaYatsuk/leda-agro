@@ -21,7 +21,7 @@
 
   .map__shops-wrapper {
     display: flex;
-    width: 400px;
+    width: 500px;
     flex-direction: column;
     align-items: center;
     padding-top: 13px;
@@ -80,7 +80,7 @@
     display: inherit;
     pointer-events: none;
     position: relative;
-    width: calc(100% - 400px);
+    width: calc(100% - 500px);
 
     &.is-clicked {
       pointer-events: auto;

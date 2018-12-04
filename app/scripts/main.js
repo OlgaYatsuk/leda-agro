@@ -167,7 +167,7 @@ function buildSlider(slider, content, items, buttons) {
   content.style.width = (sliderWidth * itemsCount + 30) + 'px';
 
   if (sliderWidth <= 569) {
-    content.style.width = (sliderWidth * itemsCount + 500) + 'px';
+    content.style.width = '';//(sliderWidth * itemsCount + 500) + 'px';
   }
 
   buttons.forEach((button) => {
