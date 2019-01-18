@@ -45,100 +45,121 @@
   @@include('./partials/head.html')
   @@include('./partials/navigation.html')
   <main>
-    <section class="hero--product container">
-      <article>
-        <p class="hero__label novelty-label">Новинка</p>
-        <div class="hero-info">
+    <!--<section class="hero&#45;&#45;product container">-->
+      <!--<article>-->
+        <!--<div class="hero-info">-->
+        <!--</div>-->
+      <!--</article>-->
+
+    <!--</section>-->
+    <section class="product__hero">
+      <div class="container">
+        <div class="product__hero-col">
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs__item"><a class="breadcrumbs__item-link" href>Насіння овочів</a></li>
+            <li class="breadcrumbs__item breadcrumbs__item-delimiter">></li>
+            <li class="breadcrumbs__item"><a class="breadcrumbs__item-link" href>Томат високорослий</a></li>
+            <li class="breadcrumbs__item breadcrumbs__item-delimiter">></li>
+            <li class="breadcrumbs__item"><a class="breadcrumbs__item-link" href>Браун кой F1</a></li>
+          </ul>
+          <p class="hero__label novelty-label">Новинка</p>
+          <h2 class="hero__heading heading">Браун кой f1</h2>
+          <img src="./images/hero/hero-img-product.png" alt="product" class="hero__info-img visible-mobile"/>
+          <p class="hero__info-amount text-small">Фасування - 10 од.</p>
+          <a href="#shops" class="button button--hero js-anchor">Придбати</a>
+          <section class="page-select page-select--product visible-mobile">
+            <a href="#" class="page-select__link">
+              <img src="./images/hero/hero-img-product.png" class="page-select__img"/>
+              <img src="./images/svg/arrow-right.svg" alt="prev" class="page-select__arrow"/>
+              <span class="page-select__name text-small">Браун Кой</span>
+            </a>
+            <a href="#" class="page-select__link">
+              <img src="./images/hero/hero-img-product.png" class="page-select__img"/>
+              <span class="page-select__name text-small">Мармара F1</span>
+              <img src="./images/svg/l_arrow.svg" alt="next" class="page-select__arrow"/>
+            </a>
+          </section>
+          <div class="product__hero-tabs">
+            <ul class="tabs">
+              <li class="tabs__link is-active js-tab-link" data-id="id-1"><span>Рослина</span></li>
+              <li class="tabs__link js-tab-link" data-id="id-2"><span>Плід</span></li>
+              <li class="tabs__link js-tab-link" data-id="id-3"><span>Вирощування</span></li>
+            </ul>
+
+            <div class="tabs-content-wrapper">
+              <div class="tabs-content is-active js-tab-content id-1">
+                <img src="images/product-content/product-content-img.svg" alt="img" class="product__icons">
+                <div class="tabs-content__info">
+                  <p class="text"><strong>Браун Кой</strong> - це унікальний гібрид томата типу Марманде. Він має ранній
+                    термін дозрівання.</p>
+                  <p class="text">Браун Кой рослина міцна і велика, з хорошим зав'язуванням плодів та розвиненою кореневою
+                    системою. Оптимальний для посадки у відкритому ґрунті та теплицях.</p>
+                </div>
+              </div>
+
+              <div class="tabs-content js-tab-content id-2">
+                <img src="images/product-content/product-content-img.svg" alt="img" class="product__icons">
+                <div class="tabs-content__info">
+                  <p class="text"><strong>Мармара F1</strong> - це унікальний гібрид томата типу Марманде. Він має ранній
+                    термін дозрівання.</p>
+                  <p class="text">Браун Кой рослина міцна і велика, з хорошим зав'язуванням плодів та розвиненою кореневою
+                    системою. Оптимальний для посадки у відкритому ґрунті та теплицях.</p>
+                </div>
+              </div>
+
+              <div class="tabs-content js-tab-content id-3">
+                <img src="images/product-content/product-content-img.svg" alt="img" class="product__icons">
+                <div class="tabs-content__info">
+                  <p class="text"><strong>Вирощування</strong> - це унікальний гібрид томата типу Марманде. Він має ранній
+                    термін дозрівання.</p>
+                  <p class="text">Браун Кой рослина міцна і велика, з хорошим зав'язуванням плодів та розвиненою кореневою
+                    системою. Оптимальний для посадки у відкритому ґрунті та теплицях.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product__hero-col visible-desktop">
           <img src="./images/hero/hero-img-product.png" alt="product" class="hero__info-img"/>
-          <div>
-            <h2 class="hero__heading heading">Браун кой f1</h2>
-            <p class="hero__info-text text-small">Ексклюзивне насіння гібриду томату з унікальним смаком та
-              забарвленням</p>
-            <p class="hero__info-amount text-small">Фасування - 10 од.</p>
+          <div class="product-gallery js-gallery">
+            <img src="./images/hero/hero-img-tomato.png" class="product-gallery__img"/>
+            <p class="product-gallery__caption text-small">Галерея товару</p>
           </div>
+          <section class="page-select page-select--product">
+            <a href="#" class="page-select__link">
+              <img src="./images/hero/hero-img-product.png" class="page-select__img"/>
+              <img src="./images/svg/arrow-right.svg" alt="prev" class="page-select__arrow"/>
+              <span class="page-select__name text-small">Браун Кой</span>
+            </a>
+            <a href="#" class="page-select__link">
+              <img src="./images/hero/hero-img-product.png" class="page-select__img"/>
+              <span class="page-select__name text-small">Мармара F1</span>
+              <img src="./images/svg/l_arrow.svg" alt="next" class="page-select__arrow"/>
+            </a>
+          </section>
         </div>
-        <a href="#shops" class="button button--hero js-anchor">Придбати</a>
-      </article>
-      <img src="./images/hero/hero-img-tomato.png" alt="tomatoes" class="hero__img">
-      <div class="product-gallery js-gallery">
-        <img src="./images/hero/hero-img-tomato.png" class="product-gallery__img"/>
-        <p class="product-gallery__caption text-small">Галерея товару</p>
-      </div>
-
-      <div class="product-gallery-window-wrapper js-pop-up">
-        <div class="product-gallery-window js-gallery-slider">
-          <div class="product-gallery-item">
-            <p class="js-slider-name hidden-name">Мармара 1</p>
-            <img src="images/image1.png" alt="1" class="product-gallery-item__img">
+        <div class="product-gallery-window-wrapper js-pop-up">
+          <div class="product-gallery-window js-gallery-slider">
+            <div class="product-gallery-item">
+              <p class="js-slider-name hidden-name">Мармара 1</p>
+              <img src="images/image1.png" alt="1" class="product-gallery-item__img">
+            </div>
+            <div class="product-gallery-window__item">
+              <p class="js-slider-name hidden-name">Браун кой f1</p>
+              <img src="images/hits/hit-1.png" alt="1" class="product-gallery-item__img">
+            </div>
+            <div class="product-gallery-item">
+              <p class="js-slider-name hidden-name">Браун1</p>
+              <img src="images/image1.png" alt="1" class="product-gallery-item__img">
+            </div>
           </div>
-          <div class="product-gallery-window__item">
-            <p class="js-slider-name hidden-name">Браун кой f1</p>
-            <img src="images/hits/hit-1.png" alt="1" class="product-gallery-item__img">
-          </div>
-          <div class="product-gallery-item">
-            <p class="js-slider-name hidden-name">Браун1</p>
-            <img src="images/image1.png" alt="1" class="product-gallery-item__img">
-          </div>
-        </div>
-        <div class="product-gallery-item__controlls">
-          <div class="product-gallery-item__controlls-name js-name-container"></div>
-          <div class="product-gallery__arrows js-arrows"></div>
-          <button class="product-gallery-item__close js-close"><img src="images/svg/close.svg" alt="сlose"></button>
-        </div>
-      </div>
-    </section>
-
-    <section class="product container">
-      <ul class="tabs">
-        <li class="tabs__link is-active js-tab-link" data-id="id-1"><span>Рослина</span></li>
-        <li class="tabs__link js-tab-link" data-id="id-2"><span>Плід</span></li>
-        <li class="tabs__link js-tab-link" data-id="id-3"><span>Вирощування</span></li>
-      </ul>
-
-      <div class="tabs-content-wrapper">
-        <div class="tabs-content is-active js-tab-content id-1">
-          <img src="images/product-content/product-content-img.svg" alt="img" class="product__icons">
-          <div class="tabs-content__info">
-            <p class="text"><strong>Браун Кой</strong> - це унікальний гібрид томата типу Марманде. Він має ранній
-              термін дозрівання.</p>
-            <p class="text">Браун Кой рослина міцна і велика, з хорошим зав'язуванням плодів та розвиненою кореневою
-              системою. Оптимальний для посадки у відкритому ґрунті та теплицях.</p>
-          </div>
-        </div>
-
-        <div class="tabs-content js-tab-content id-2">
-          <img src="images/product-content/product-content-img.svg" alt="img" class="product__icons">
-          <div class="tabs-content__info">
-            <p class="text"><strong>Мармара F1</strong> - це унікальний гібрид томата типу Марманде. Він має ранній
-              термін дозрівання.</p>
-            <p class="text">Браун Кой рослина міцна і велика, з хорошим зав'язуванням плодів та розвиненою кореневою
-              системою. Оптимальний для посадки у відкритому ґрунті та теплицях.</p>
-          </div>
-        </div>
-
-        <div class="tabs-content js-tab-content id-3">
-          <img src="images/product-content/product-content-img.svg" alt="img" class="product__icons">
-          <div class="tabs-content__info">
-            <p class="text"><strong>Вирощування</strong> - це унікальний гібрид томата типу Марманде. Він має ранній
-              термін дозрівання.</p>
-            <p class="text">Браун Кой рослина міцна і велика, з хорошим зав'язуванням плодів та розвиненою кореневою
-              системою. Оптимальний для посадки у відкритому ґрунті та теплицях.</p>
+          <div class="product-gallery-item__controlls">
+            <div class="product-gallery-item__controlls-name js-name-container"></div>
+            <div class="product-gallery__arrows js-arrows"></div>
+            <button class="product-gallery-item__close js-close"><img src="images/svg/close.svg" alt="сlose"></button>
           </div>
         </div>
       </div>
-    </section>
-
-    <section class="page-select">
-      <a href="#" class="page-select__link">
-        <img src="./images/hero/hero-img-product.png" class="page-select__img"/>
-        <img src="./images/svg/arrow-right.svg" alt="prev"/>
-        <span class="page-select__name text-small">Браун Кой</span>
-      </a>
-      <a href="#" class="page-select__link">
-        <img src="./images/hero/hero-img-product.png" class="page-select__img"/>
-        <span class="page-select__name text-small">Мармара F1</span>
-        <img src="./images/svg/l_arrow.svg" alt="next"/>
-      </a>
     </section>
 
     <section class="hits">

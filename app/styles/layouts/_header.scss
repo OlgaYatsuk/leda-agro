@@ -102,3 +102,30 @@
     }
   }
 }
+
+.header__lang {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.header__lang-link {
+  display: block;
+  position: relative;
+  font-size: .875rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $gray-2;
+  margin: 0 3px;
+
+  &.active {
+    font-weight: bold;
+  }
+
+  &:hover,
+  &.active {
+    color: #304FFE;
+  }
+}
+

@@ -6,10 +6,17 @@
   text-align: center;
   cursor: pointer;
 
-  @media screen and (min-width: $max-sm) {
+
+
+  @media screen and (min-width: $max-md) {
     display: block;
-    right: 10%;
-    bottom: 35%;
+    right: 30px;
+    top: 200px;
+  }
+
+  @media screen and (min-width: $max-sm) {
+    right: 15px;
+    top: 200px;
   }
 
   &:hover {
@@ -46,6 +53,17 @@
   height: 100vh;
   transition: all .5s;
 
+  &,
+  .product-gallery-window,
+  .slick-list,
+  .slick-track,
+  .slick-slide>div,
+  .product-gallery-item,
+  .slick-slide img {
+    height: 100%;
+
+  }
+
   @media screen and (min-width: $max-md) {
     max-height: none;
   }
@@ -59,7 +77,8 @@
 .product-gallery-item__img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  //object-fit: cover;
+  object-fit: contain;
 }
 
 .product-gallery-item__controlls {
