@@ -176,7 +176,7 @@ function buildSlider(slider, content, items, buttons) {
       e.stopPropagation();
       let eTarget;
 
-      if (e.toElement.classList.contains('calendar__navigation-left')) eTarget = 'left';
+      if (e.toElement.classList.contains('calendar__navigation-right')) eTarget = 'left';
       else eTarget = 'right';
 
       if (eTarget === 'left') scrollLeft();
