@@ -1,11 +1,25 @@
 <!--begin header-->
 <header class="header">
-    <div class="container">
-        <div class="header__wrapper">
-            <a href="#" class="header__nav-toggler"><span></span><span></span><span></span><span></span></a>
-            <a href="{{ '/'|t }}" class="header__logo"><img src="/themes/new/images/logo.png" alt=""></a>
-        </div>
+  <div class="container">
+    <div class="header__wrapper">
+      <a href="#" class="header__nav-toggler">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+      <a href="/" class="header__logo"><img src="/themes/new/images/logo.png" alt="" ></a>
+      <div class="header__lang">
+		{% if language == 'uk' %}
+			<a href="/uk{{ url }}" class="header__lang-link active">Укр</a>
+			<a href="/ru{{ url }}" class="header__lang-link">Рус</a>
+		{% else %}
+			<a href="/uk{{ url_ua }}" class="header__lang-link">Укр</a>
+			<a href="/ru{{ url_ua }}" class="header__lang-link active">Рус</a>
+		{% endif %}
+      </div>
     </div>
+  </div>
 </header>
 <!--end header-->
 
@@ -46,15 +60,6 @@
         </div>
       </div>
     </div>
-  </div>
-  <div class="navigation__lang">
-  {% if language == 'uk' %}
-	<a href="/uk{{ url }}" class="navigation__lang-link active">Укр</a>
-	<a href="/ru{{ url }}" class="navigation__lang-link">Рус</a>
-  {% else %}
-	<a href="/uk{{ url_ua }}" class="navigation__lang-link">Укр</a>
-	<a href="/ru{{ url_ua }}" class="navigation__lang-link active">Рус</a>
-  {% endif %}
   </div>
 </div>
 <!--end navigation-->

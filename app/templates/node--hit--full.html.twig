@@ -1,13 +1,14 @@
 {% if language == 'uk' %}
-	<img src="{% spaceless %}{{ content.field_hit_image }}{% endspaceless %}" alt="" class="hits__item-img">
+	<a href="/uk/node/{{ content.field_product_id.0 }}"><img src="{% spaceless %}{{ content.field_hit_image }}{% endspaceless %}" alt="" class="hits__item-img"></a>
 	<div class="hits__item-info">
-		<h3 class="article-heading">{{ content.field_hit_title_ua }}</h3>
+		<a href="/uk/node/{{ content.field_product_id.0 }}"><h3 class="article-heading">{{ content.field_hit_title_ua }}</h3></a>
 		<div class="hits__item-description">{% spaceless %}{{ content.field_hit_description_ua }}{% endspaceless %}</div>
 	</div>
 {% else %}
-	<img src="{% spaceless %}{{ content.field_hit_image }}{% endspaceless %}" alt="" class="hits__item-img">
+	{{ content.field_product_id.0.value }}
+	<a href="/ru/node/{{ content.field_product_id.0 }}"><img src="{% spaceless %}{{ content.field_hit_image }}{% endspaceless %}" alt="" class="hits__item-img"></a>
 	<div class="hits__item-info">
-		<h3 class="article-heading">{{ label }}</h3>
+		<a href="/ru/node/{{ content.field_product_id.0 }}"><h3 class="article-heading">{{ label }}</h3></a>
 		<div class="hits__item-description">{% spaceless %}{{ content.field_hit_description }}{% endspaceless %}</div>
 	</div>
 {% endif %}

@@ -1,48 +1,56 @@
 <main>
-    <section class="hero--product container">
-        <article>
-            {% if node.field_product_label.value == 1 %}
-                <p class="hero__label novelty-label">{{ 'Новинка'|t }}</p>
-            {% endif %}
-            <div class="hero-info">
-                <img src="{{ file_url(node.field_product_packshot.entity.uri.value) }}" alt="product" class="hero__info-img">
-                <div>
-                    <h2 class="hero__heading heading">{% if language == 'uk' %}{{ node.field_product_title_ua.value }}{% else %}{{ node.label }}{% endif %}</h2>
-                    <p class="hero__info-text text-small">{% if language == 'uk' %}{{ node.field_product_description_ua.value }}{% else %}{{ node.field_product_description.value }}{% endif %}</p>
-                    <p class="hero__info-amount text-small">{% if node.field_product_packing.value != null %}{{ 'Фасовка'|t }} - {{ node.field_product_packing.value }} {% endif %}{% if node.field_product_pack_unit.value != null %}{{ node.field_product_pack_unit.value|t }}{% endif %}</p>
-                </div>
-            </div>
-            <a href="#shops" class="button button--hero js-anchor">{{ 'Приобрести'|t }}</a>
-        </article>
-		{% if node.field_product_image.entity.uri.value != null %}<img src="{{ file_url(node.field_product_image.entity.uri.value) }}" alt="tomatoes" class="hero__img">{% else %}<img src="{{ file_url(node.field_product_packshot.entity.uri.value) }}" alt="tomatoes" class="hero__img">{% endif %}
-        
-		{% if node.field_product_gallery.0.entity.uri.value != null %}
-        <div class="product-gallery js-gallery">
-			{% if node.field_product_image.entity.uri.value != null %}<img src="{{ file_url(node.field_product_image.entity.uri.value) }}" class="product-gallery__img">{% endif %}
-            <p class="product-gallery__caption text-small">{{ 'Галерея товара'|t }}</p>
-        </div>
-		{% endif %}
-    </section>
-    <section class="product container">
-        <ul class="tabs">
-            {% for entity in node.field_product_char %}
-                <li class="tabs__link js-tab-link {% if loop.index0 == 0 %}is-active{% endif %}" data-id="id-{{ loop.index0 }}"><span>{% if language == 'uk' %}{{ node.field_product_char[loop.index0].entity.field_label_ua.value }}{% else %}{{ node.field_product_char[loop.index0].entity.field_label.value }}{% endif %}</span></li>
-            {% endfor %}
-        </ul>
-        <div class="tabs-content-wrapper">
-            {% for entity in node.field_product_char %}
-                <div class="tabs-content {% if loop.index0 == 0 %}is-active{% endif %} js-tab-content id-{{ loop.index0 }}">
-                    {% if node.field_product_char_picture.entity.uri.value != null %}<img src="{{ file_url(node.field_product_char_picture.entity.uri.value) }}" alt="img">{% endif %}
-                    <div class="tabs-content__info">
-                        <p class="text">{% if language == 'uk' %}{{ node.field_product_char[loop.index0].entity.field_description_ua.value|raw }}{% else %}{{ node.field_product_char[loop.index0].entity.field_description.value|raw }}{% endif %}</p>
-                    </div>
-                </div>
-            {% endfor %}
-        </div>
-    </section>
-	
-	{{ page.content }}
-	
+	<section class="product__hero">
+		<div class="container">
+			<div class="product__hero-col">
+				<ul class="breadcrumbs">
+					<li class="breadcrumbs__item"><a class="breadcrumbs__item-link" href="{{ term_url_parent }}">{{ term_name_parent }}</a></li>
+					<li class="breadcrumbs__item breadcrumbs__item-delimiter">></li>
+					<li class="breadcrumbs__item"><a class="breadcrumbs__item-link" href="{{ term_url }}">{{ term_name }}</a></li>
+					<li class="breadcrumbs__item breadcrumbs__item-delimiter">></li>
+					<li class="breadcrumbs__item"><a class="breadcrumbs__item-link">{% if language == 'uk' %}{{ node.field_product_title_ua.value }}{% else %}{{ node.label }}{% endif %}</a></li>
+				</ul>
+				{% if node.field_product_label.value == 1 %}
+					<p class="hero__label novelty-label">{{ 'Новинка'|t }}</p>
+				{% endif %}
+				<h2 class="hero__heading heading">{% if language == 'uk' %}{{ node.field_product_title_ua.value }}{% else %}{{ node.label }}{% endif %}</h2>
+				<img src="{{ file_url(node.field_product_packshot.entity.uri.value) }}" alt="product" class="hero__info-img visible-mobile"/>
+				<p class="hero__info-amount text-small">{% if node.field_product_packing.value != null %}{{ 'Фасовка'|t }} - {{ node.field_product_packing.value }} {% endif %}{% if node.field_product_pack_unit.value != null %}{{ node.field_product_pack_unit.value|t }}{% endif %}</p>
+				<a href="#shops" class="button button--hero js-anchor">{{ 'Приобрести'|t }}</a>
+				<section class="page-select page-select--product visible-mobile">
+					{{ page.content }}
+				</section>
+				<div class="product__hero-tabs">
+					<ul class="tabs">
+						{% for entity in node.field_product_char %}
+							<li class="tabs__link js-tab-link {% if loop.index0 == 0 %}is-active{% endif %}" data-id="id-{{ loop.index0 }}"><span>{% if language == 'uk' %}{{ node.field_product_char[loop.index0].entity.field_label_ua.value }}{% else %}{{ node.field_product_char[loop.index0].entity.field_label.value }}{% endif %}</span></li>
+						{% endfor %}
+					</ul>
+					<div class="tabs-content-wrapper">
+						{% for entity in node.field_product_char %}
+							<div class="tabs-content {% if loop.index0 == 0 %}is-active{% endif %} js-tab-content id-{{ loop.index0 }}">
+								{% if node.field_product_char_picture.entity.uri.value != null %}<img src="{{ file_url(node.field_product_char_picture.entity.uri.value) }}" alt="img" class="product__icons">{% endif %}
+								<div class="tabs-content__info">
+									<p class="text">{% if language == 'uk' %}{{ node.field_product_char[loop.index0].entity.field_description_ua.value|raw }}{% else %}{{ node.field_product_char[loop.index0].entity.field_description.value|raw }}{% endif %}</p>
+								</div>
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+			<div class="product__hero-col visible-desktop">
+				<img src="{{ file_url(node.field_product_packshot.entity.uri.value) }}" alt="product" class="hero__info-img"/>
+				{% if node.field_product_image.entity.uri.value != null %}
+					<div class="product-gallery js-gallery">
+						<img src="{{ file_url(node.field_product_image.entity.uri.value) }}" class="product-gallery__img"/>
+						<p class="product-gallery__caption text-small">{{ 'Галерея товара'|t }}</p>
+					</div>
+				{% endif %}
+				<section class="page-select page-select--product">
+					{{ page.content }}
+				</section>
+			</div>
+		</div>
+	</section>
 	{% if hit_render.0 != null %}
     <section class="hits">
         <h2 class="section-heading">{{ 'Хиты категорий'|t }}</h2>
@@ -71,6 +79,10 @@
 </main>
 <div class="product-gallery-window-wrapper js-pop-up">
     <div class="product-gallery-window js-gallery-slider">
+			<div class="product-gallery-item">
+                <p class="js-slider-name hidden-name">{% if language == 'uk' %}{{ node.field_product_title_ua.value }}{% else %}{{ node.label }}{% endif %}</p>
+                <img src="{{ file_url(node.field_product_image.entity.uri.value) }}" alt="1" class="product-gallery-item__img">
+            </div>
         {% for entity in node.field_product_gallery %}
             <div class="product-gallery-item">
                 <p class="js-slider-name hidden-name">{% if language == 'uk' %}{{ node.field_product_title_ua.value }}{% else %}{{ node.label }}{% endif %}</p>
